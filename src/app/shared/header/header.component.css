@@ -1,0 +1,20 @@
+.contacto {
+    font-size: 12px;
+    color: white;
+}
+
+.input {
+    height: 30px;
+    width: 30vw;
+    border-radius: 20px;
+    border: 1px solid #2d9fd9;
+}
+
+.wInput {
+    width: 100vw;
+}
+
+.iniciarSesion {
+    color: white;
+    text-decoration: underline;
+}
