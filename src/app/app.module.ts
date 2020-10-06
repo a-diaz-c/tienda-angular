@@ -10,7 +10,6 @@ import { PagesModule } from './pages/pages.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NofoundpageComponent
   ],
   imports: [
