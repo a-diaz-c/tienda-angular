@@ -148,14 +148,18 @@ export class ProductosService {
   arrayProductos: ProductoModel[] = [];
 
   constructor() { 
-    /* this.productos.forEach( (producto) => {
+    this.productos.forEach( (producto) => {
       let obj: ProductoModel = new ProductoModel();
       obj.nombre = producto.nombre;
-      this.arrayProductos.push();
-    } ); */
+      obj.imagen = producto.imagen;
+      obj.precio = parseInt(producto.precio);
+      obj.claveProducto = producto.clave_producto;
+      obj.familiaProducto = producto.familia_prod;
+      this.arrayProductos.push(obj);
+    } );
   }
 
   getProductos(){
-    return this.productos;
+    return this.arrayProductos;
   }
 }
