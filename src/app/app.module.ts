@@ -6,6 +6,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NofoundpageComponent } from './404/nofoundpage/nofoundpage.component';
 import { APP_ROUTES } from './app.routes';
 import { PagesModule } from './pages/pages.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

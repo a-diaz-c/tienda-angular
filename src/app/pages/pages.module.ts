@@ -9,6 +9,13 @@ import { PAGES_ROUTES } from './pages.routes';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component'
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
+
+
 @NgModule({
   declarations: [PagesComponent, HomeComponent],
   imports: [
@@ -16,6 +23,9 @@ import { HomeComponent } from './home/home.component'
     PAGES_ROUTES,
     SharedModule,
     FormsModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
 })
 export class PagesModule { }

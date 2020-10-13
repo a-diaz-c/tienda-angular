@@ -1,14 +1,18 @@
-<div class="mb-2">
-    <div class="bg-dark contacto">
-        ¿Tienes alguna duda? Llámanos (744) 484.9493
+<div class="container-fluid bg-dark">
+    <div class="row">
+        <div class=" contacto">
+            ¿Tienes alguna duda? Llámanos (744) 484.9493
+        </div>
     </div>
-    <div class="bg-dark d-none d-lg-block d-print-block">
-        <div class="d-flex flex-row justify-content-between align-items-center">
+    <div class="row m-1 d-flex align-items-center ">
+        <div class="col">
             <div class="ml-1">
-                <img src="../../../assets/images/logo.JPG" class="">
+                <a href=""><img src="../../../assets/images/logo.JPG" class=""></a>
             </div>
+        </div>
+        <div class="col">
             <div>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" style="border-radius: 10px;">
                     <option selected>Selecciona tu tienda</option>
                     <option>Applebee's Mundo E</option>
                     <option>Applebee's Vía Vallejo</option>
@@ -17,60 +21,68 @@
                     <option>Applebee’s Acapulco</option>
                   </select>
             </div>
+        </div>
+        <div class="col">
             <div class="">
                 <input type="text" class="form-control input" placeholder="Buscar Producto">
             </div>
-            <div class="d-flex flex-row m-2 ">
-                <div class="col-6 d-flex align-items-center">
+        </div>
+        <div class="col">
+            <div class="row d-flex align-items-center">
+                <div class="col">
                     <a href="# " class="iniciarSesion">Iniciar Sesion</a>
                 </div>
                 <div class="col">
-                    <a href="#">
-                        <div class="row text-white d-flex align-items-center">
-                            <div class="col-4">
-                                <i class="fas fa-shopping-cart "></i>
-                            </div>
-                            <div class="col-8">
-                                <div style="font-size: 0.7rem">0 Articulos</div>
-                                <div>$ 0.00</div>
-                            </div>
+                    <div class="row text-white d-flex align-items-center">
+                        <a href="#"><i class="fas fa-shopping-cart text-white"></i></a>
+                        <div class="col-10">
+                            <a href="#" class="text-white">
+                                <div class="m-0" style="font-size: 0.7rem">0 Articulos</div>
+                                <div class="m-0">$ 0.00</div>
+                            </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #d11507;">
+        <nav class="navbar navbar-expand-lg m-0 p-0">
+            <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active" *ngFor="let categoria of categorias">
+                    <a [ngClass]="{
+                        'nav-link': categoria.hijo.length == 0, 
+                        'nav-link dropdown-toggle': categoria.hijo.length != 0}" 
+                        href="#">{{categoria.nombre}}</a>
+                </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex flex-row bg-dark">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link text-white" href="#">Features</a>
-                    <a class="nav-item nav-link text-white" href="#">Pricing</a>
-                    <a class="nav-item nav-link text-white" href="#">Disabled</a>
-                </div>
-            </div>
-
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #d11507;">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownDos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #d11507;">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Disabled</a>
+                </li>
+            </ul>
         </nav>
-        <div class="d-block d-lg-none ml-5">
-            <img src="../../../assets/images/logo.JPG" class="">
-        </div>
     </div>
-    <div class="bg-dark d-block d-lg-none col">
-        <select id="inputState" class="form-control" style="border: 1px solid #2d9fd9; width: 90vw;">
-            <option selected>Selecciona tu tienda</option>
-            <option>Applebee's Mundo E</option>
-            <option>Applebee's Vía Vallejo</option>
-            <option>Applebee’s Plaza Carso</option>
-            <option>Applebee's Cuernavaca</option>
-            <option>Applebee’s Acapulco</option>
-          </select>
-    </div>
-    <div class="d-block d-lg-none bg-dark">
-        <input type="text" class="form-control input wInput" placeholder="Buscar Producto">
-    </div>
-
 </div>

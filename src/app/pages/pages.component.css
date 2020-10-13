@@ -1,0 +1,28 @@
+/* @media (min-width: 576px) {
+    mat-sidenav {
+        width: 60% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    mat-sidenav {
+        width: 40% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    mat-sidenav {
+        width: 30% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    mat-sidenav {
+        width: 30% !important;
+    }
+} */
+
+.contacto {
+    font-size: 12px;
+    color: white;
+}

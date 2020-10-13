@@ -1,6 +1,58 @@
-<main>
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #drawer mode="over" opened="false">
+        <mat-toolbar color="accent">
+            <span> Shop Smart </span>
+        </mat-toolbar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="d-lg-none">
+            <div class="container-fluid d-lg-none bg-dark">
+                <div class="row">
+                    <div class=" contacto">
+                        ¿Tienes alguna duda? Llámanos (744) 484.9493
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="m-2 text-white">
+                        <i class="fas fa-bars" (click)="drawer.toggle()"></i>
+                    </div>
+                    <div class="ml-1">
+                        <a href=""><img src="../../../assets/images/logo.JPG" class=""></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ml-4 mt-2">
+                        <select id="inputState" class="form-control" style="border-radius: 10px;">
+                            <option selected>Selecciona tu tienda</option>
+                            <option>Applebee's Mundo E</option>
+                            <option>Applebee's Vía Vallejo</option>
+                            <option>Applebee’s Plaza Carso</option>
+                            <option>Applebee's Cuernavaca</option>
+                            <option>Applebee’s Acapulco</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="text" class="form-control input m-2" placeholder="Buscar Producto" style="border: 1px solid #2d9fd9; border-radius: 20px;">
+                </div>
+            </div>
+            <!-- <mat-toolbar color="warn">
+                <div class="row">
+                    <div class=" contacto">
+                        ¿Tienes alguna duda? Llámanos (744) 484.9493
+                    </div>
+                </div>
+                <mat-icon *ngIf="!drawer.opened" (click)="drawer.toggle()">
+                    menu
+                </mat-icon>
+                <div>Header</div>
+            </mat-toolbar> -->
+        </div>
 
-</main>
+        <main>
+            <app-header class="d-none d-lg-block"></app-header>
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
