@@ -26,3 +26,18 @@
     font-size: 12px;
     color: white;
 }
+
+mat-toolbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-carrio{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.carrito{
+    padding: 10px;
+}
