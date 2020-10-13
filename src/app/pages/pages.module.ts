@@ -12,12 +12,13 @@ import { HomeComponent } from './home/home.component'
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 
 
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent],
+  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,

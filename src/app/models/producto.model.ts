@@ -1,10 +1,10 @@
 export class ProductoModel{
-    claveProducto: String;
-    nombre: String;
+    claveProducto: string;
+    nombre: string;
     precio: number;
-    familiaProducto: String;
-    imagen: String;
-    descripcion: String;
+    familiaProducto: string;
+    imagen: string;
+    descripcion: string;
 
     constructor(){
         this.claveProducto = "";

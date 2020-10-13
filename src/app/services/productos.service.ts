@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { element } from 'protractor';
 import { ProductoModel } from '../models/producto.model';
 
 @Injectable({
@@ -174,6 +175,18 @@ export class ProductosService {
 
   getProductos(){
     return this.arrayProductos;
+  }
+
+  buscarProducto(claveProducto: string){
+    let res = this.productos.find( (element) => element.clave_producto == claveProducto);
+    let obj: ProductoModel = new ProductoModel();
+    obj.nombre = res.nombre;
+      obj.imagen = res.imagen;
+      obj.precio = parseInt(res.precio);
+      obj.claveProducto = res.clave_producto;
+      obj.familiaProducto = res.familia_prod;
+      obj.descripcion = res.descripcion;
+    return obj;
   }
 
   getCategorias(){

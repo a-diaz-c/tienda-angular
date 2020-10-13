@@ -1,8 +1,8 @@
 <div class="card col-lg-12 col-md-12 col-sm-12 ">
-    <img class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap">
+    <a><img [routerLink]="['../producto', producto.claveProducto]" class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap"></a>
     <div class="card-body">
         <div class="row d-flex justify-content-center">
-            <h5 class="card-title">{{producto.nombre}}</h5>
+            <a [routerLink]="['../producto', producto.claveProducto]" ><h5 class="card-title">{{producto.nombre}}</h5></a>
         </div>
 
         <div class="row d-flex justify-content-center">
