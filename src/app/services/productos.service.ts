@@ -6,6 +6,19 @@ import { ProductoModel } from '../models/producto.model';
 })
 export class ProductosService {
 
+  categorias = [
+    {'id': '30', 'nombre': 'Hambuergesas', 'hijos': []},
+    {'id': '40', 'nombre': 'Costillas', 'hijos': []},
+    {'id': '70', 'nombre': 'Cortes de carne', 'hijos': []},
+    {'id': '90', 'nombre': 'Ensaladas', 'hijos': []},
+    {'id': '80', 'nombre': 'Bebidas', 'hijos': [
+      {'id': '8010', 'nombre': 'Con alchol', 'hijos': []},
+      {'id': '8020', 'nombre': 'Sin alchol', 'hijos': []},
+    ]},
+    
+    
+  ];
+
   productos = [
     {
       'clave_producto': '100',
@@ -161,5 +174,9 @@ export class ProductosService {
 
   getProductos(){
     return this.arrayProductos;
+  }
+
+  getCategorias(){
+    return this.categorias;
   }
 }
