@@ -6,6 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductoComponent } from './producto/producto.component';
 
+import { FormsModule } from '@angular/forms';
+
+
+
 
 
 
@@ -15,6 +19,7 @@ import { ProductoComponent } from './producto/producto.component';
     CommonModule,
     PAGES_ROUTES,
     RouterModule,
+    FormsModule,
   ],
   exports: [
     HeaderComponent,
