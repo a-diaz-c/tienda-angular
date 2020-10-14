@@ -14,12 +14,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { IdentificarseComponent } from './identificarse/identificarse.component';
 
 
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent],
+  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,

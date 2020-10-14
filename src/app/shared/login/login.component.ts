@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('modal', {static: false}) modal: ElementRef;
   @ViewChild('modalContent', {static: false}) modalContent: ElementRef
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -41,6 +42,11 @@ export class LoginComponent implements OnInit {
     this.passwordForm = form.controls.password.value;
 
     this.modal.nativeElement.style.display = 'none';
+  }
+
+  signup(){
+    this.modal.nativeElement.style.display = 'none';
+    this.router.navigate(['/signup']);
   }
 
 }
