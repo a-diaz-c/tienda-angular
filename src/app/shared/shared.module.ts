@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductoComponent } from './producto/producto.component';
 
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -14,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ProductoComponent],
+  declarations: [HeaderComponent, FooterComponent, ProductoComponent, LoginComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ProductoComponent,
+    LoginComponent,
   ]
 })
 export class SharedModule { }
