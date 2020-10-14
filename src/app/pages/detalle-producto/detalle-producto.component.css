@@ -1,3 +1,18 @@
-.texto{
+.texto {
     font-size: 14px;
+}
+
+.boton {
+    text-decoration: none;
+    border: 1px solid #d11507;
+    border-radius: 20px;
+    background-color: white;
+    color: #d11507;
+    padding: 5px;
+    outline: none;
+}
+
+.boton:hover {
+    color: white;
+    background-color: #d11507;
 }

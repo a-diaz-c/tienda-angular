@@ -27,17 +27,17 @@
     color: white;
 }
 
-mat-toolbar{
+mat-toolbar {
     display: flex;
     flex-direction: column;
 }
 
-.row-carrio{
+.row-carrio {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
-.carrito{
+.carrito {
     padding: 10px;
 }

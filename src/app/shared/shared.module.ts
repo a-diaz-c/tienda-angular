@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from "@angular/router";
 import { CommonModule } from '@angular/common';
 import { PAGES_ROUTES } from '../pages/pages.routes';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,7 @@ import { ProductoComponent } from './producto/producto.component';
   imports: [
     CommonModule,
     PAGES_ROUTES,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
