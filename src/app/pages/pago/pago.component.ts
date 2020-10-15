@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-pago',
@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagoComponent implements OnInit {
 
+  @ViewChild('formEnvio',{ static: false }) formEnvio: ElementRef;
+  @ViewChild('formRecoger',{ static: false }) formRecoger: ElementRef;
+  @ViewChild('formPaypal',{ static: false }) formPaypal: ElementRef;
+  @ViewChild('formTarjeta',{ static: false }) formTarjeta: ElementRef;
+  @ViewChild('formFactura',{ static: false }) formFactura: ElementRef;
+
   checkLlevar: Boolean = true;
   checkRecoger: Boolean = false;
 
   checkPaypal: boolean = true;
   checkTarjeta: boolean = false;
   checkEfectivo: boolean = false;
+
+  checkFactura: boolean = false;
 
   envio = {
     'nombre': 'Hector',
@@ -42,6 +50,14 @@ export class PagoComponent implements OnInit {
     'rfc': 'KYS010331243',
     'email': '',
     'usoDeCEDI': 'G03 - Gastos en general',
+  };
+
+  datosTarjeta = {
+    'nombre': 'Hector',
+    'numero': '5899 55224 4448 8881',
+    'cp': '33453',
+    'direccion': ' Gastos en general',
+    'cvv': '123',
   };
 
   email: String = "email@ejemplo.com";
@@ -78,6 +94,46 @@ export class PagoComponent implements OnInit {
     this.checkPaypal = false;
     this.checkTarjeta = false;
     this.checkEfectivo = event;
+  }
+
+  mostrarFormEnvio(){
+    this.formEnvio.nativeElement.style.display = 'block';
+  }
+
+  cerrarFormEnvio(){
+    this.formEnvio.nativeElement.style.display = 'none';
+  }
+
+  mostrarFormRecoger(){
+    this.formRecoger.nativeElement.style.display = 'block';
+  }
+
+  cerrarFormRecoger(){
+    this.formRecoger.nativeElement.style.display = 'none';
+  }
+
+  mostrarFormPaypal(){
+    this.formPaypal.nativeElement.style.display = 'block';
+  }
+
+  cerrarFormPaypal(){
+    this.formPaypal.nativeElement.style.display = 'none';
+  }
+
+  mostrarFormTarjeta(){
+    this.formTarjeta.nativeElement.style.display = 'block';
+  }
+
+  cerrarFormTajeta(){
+    this.formTarjeta.nativeElement.style.display = 'none';
+  }
+
+  mostrarFormFactura(){
+    this.formFactura.nativeElement.style.display = 'block';
+  }
+
+  cerrarFormFactura(){
+    this.formFactura.nativeElement.style.display = 'none';
   }
 
 }

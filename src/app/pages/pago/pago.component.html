@@ -1,16 +1,18 @@
 <div class="m-3">
     <div class="row">
         <div class="col-12 col-xl-4">
-            <div class="card">
+            <div class="card mt-2">
                 <div class="card-body">
                     <h5 class="card-title">Datos</h5>
                     <div class=" row">
                         <div class="form-check m-1">
-                            <input [(ngModel)]="checkLlevar" (ngModelChange)="llevarChange($event)" type="checkbox" class="form-check-input" id="llevar">
+                            <input [(ngModel)]="checkLlevar" (ngModelChange)="llevarChange($event)" type="checkbox"
+                                class="form-check-input" id="llevar">
                             <label class="form-check-label" for="llevar">Llevamos tu orden</label>
                         </div>
                         <div class="form-check m-1">
-                            <input [(ngModel)]="checkRecoger" (ngModelChange)="recogerChange($event)" type="checkbox" class="form-check-input" id="recoger">
+                            <input [(ngModel)]="checkRecoger" (ngModelChange)="recogerChange($event)" type="checkbox"
+                                class="form-check-input" id="recoger">
                             <label class="form-check-label" for="recoger">Recoge tu orden</label>
                         </div>
                     </div>
@@ -25,7 +27,7 @@
                             <div class="card-text">{{envio.codigoPostal}}, {{envio.ciudad}}</div>
                             <div class="card-text">{{envio.estado}}, {{envio.pais}}</div>
                             <div class="card-text mt-2">Tel. {{envio.telefono}}</div>
-                            <a class="text-info mt-3">Cambiar</a>
+                            <a (click)="mostrarFormEnvio()" class="text-info mt-3">Cambiar</a>
                         </div>
                     </div>
                     <div class="card" *ngIf="checkRecoger">
@@ -33,29 +35,33 @@
                             <h6 class="card-title">Datos de entrega</h6>
                             <div class="card-text">A nombre de: {{recoger.nombre}} {{recoger.apellidos}}</div>
                             <div class="card-text mt-2">Tel. {{recoger.telefono}}</div>
-                            <div class="card-text" style="font-size: 13px;">Direccion de la tenda: Applebees Plaza Galerias Diana Costera. Acapulco, Gro.</div>
-                            <a class="text-info mt-3">Cambiar</a>
+                            <div class="card-text" style="font-size: 13px;">Direccion de la tenda: Applebees Plaza
+                                Galerias Diana Costera. Acapulco, Gro.</div>
+                            <a (click)="mostrarFormRecoger()" class="text-info mt-3">Cambiar</a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div class="col-12 col-xl-4">
-            <div class="card">
+            <div class="card mt-2">
                 <div class="card-body">
                     <h5 class="card-title">Forma de pago</h5>
                     <div class=" row">
                         <div class="form-check m-1">
-                            <input [(ngModel)]="checkPaypal" (ngModelChange)="paypalChange($event)" type="checkbox" class="form-check-input" id="llevar">
+                            <input [(ngModel)]="checkPaypal" (ngModelChange)="paypalChange($event)" type="checkbox"
+                                class="form-check-input" id="llevar">
                             <label class="form-check-label" for="llevar">Paypal</label>
                         </div>
                         <div class="form-check m-1">
-                            <input [(ngModel)]="checkTarjeta" (ngModelChange)="tarjetaChange($event)" type="checkbox" class="form-check-input" id="recoger">
+                            <input [(ngModel)]="checkTarjeta" (ngModelChange)="tarjetaChange($event)" type="checkbox"
+                                class="form-check-input" id="recoger">
                             <label class="form-check-label" for="recoger">Tarjeta de crédrito/débito</label>
                         </div>
                         <div class="form-check m-1">
-                            <input [(ngModel)]="checkEfectivo" (ngModelChange)="efectivoChange($event)" type="checkbox" class="form-check-input" id="recoger">
+                            <input [(ngModel)]="checkEfectivo" (ngModelChange)="efectivoChange($event)" type="checkbox"
+                                class="form-check-input" id="recoger">
                             <label class="form-check-label" for="recoger">Efectivo</label>
                         </div>
                     </div>
@@ -63,31 +69,29 @@
                         <div class="card-body">
                             <h6 class="card-title">Paypal</h6>
                             <div class="card-text mt-2">{{email}}</div>
-                            <a class="text-info mt-3">Cambiar</a>
+                            <a (click)="mostrarFormPaypal()" class="text-info mt-3">Cambiar</a>
                         </div>
                     </div>
                     <div class="card" *ngIf="checkTarjeta">
                         <div class="card-body">
                             <h6 class="card-title">Tarjeta</h6>
                             <div class="card-text mt-2">{{envio.nombre}} {{envio.apellidos}}</div>
-                            <a class="text-info mt-3">Cambiar</a>
+                            <a (click)="mostrarFormTarjeta()" class="text-info mt-3">Cambiar</a>
                         </div>
                     </div>
                     <div class="card" *ngIf="checkEfectivo">
                         <div class="card-body">
                             <h6 class="card-title">Pagare cuando reciba/recoja mi pedido</h6>
-                            <div class="card-text mt-2">{{envio.nombre}} {{envio.apellidos}}</div>
-                            <a class="text-info mt-3">Cambiar</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-12 col-xl-4">
-            <div class="card bg-light">
+            <div class="card bg-light mt-2">
                 <div class="card-header">Carrito de compras</div>
                 <div class="card-body">
-                  </div>
+                </div>
                 <div class="card-footer">
                     <small class="text-muted">Subtotal $0.00</small>
                     <br>
@@ -99,22 +103,22 @@
     </div>
     <div class="row mt-3">
         <div class="col-12 col-xl-4">
-            <div class="card">
+            <div class="card mt-2">
                 <div class="card-body">
-                    <h5 class="card-title">Datos</h5>
                     <div class=" row">
                         <div class="form-check">
-                            <input [(ngModel)]="checkLlevar" (ngModelChange)="llevarChange($event)" type="checkbox" class="form-check-input" id="llevar">
+                            <input [(ngModel)]="checkFactura" type="checkbox"
+                                class="form-check-input" id="llevar">
                             <label class="form-check-label" for="llevar">Factura</label>
                         </div>
                     </div>
-                    <div class="card" *ngIf="checkLlevar">
-                        <div class="card-body">
+                    <div class="card" [ngClass]="{'div-disabled': !checkFactura }">
+                        <div class="card-body" >
                             <div class="card-text">{{factura.nombre}} </div>
                             <div class="card-text">{{factura.rfc}}</div>
                             <div class="card-text">{{factura.email}}</div>
                             <div class="card-text">{{factura.usoDeCEDI}}</div>
-                            <a class="text-info mt-3">Cambiar</a>
+                            <a (click)="mostrarFormFactura()" class="text-info mt-3">Cambiar</a>
                         </div>
                     </div>
                 </div>
@@ -122,4 +126,187 @@
         </div>
     </div>
     <button type="button" class="btn btn-warning mt-3">Continuar</button>
+</div>
+
+<div id="formEnvio" class="modal" #formEnvio>
+    <div class="modal-content" #modalContent>
+        <span class="close" (click)="cerrarFormEnvio()">&times;</span>
+        <div class="modal-header">
+            <h5 style="color: #d11507;">Direccion De Envío</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombreEnvio">Nombre</label>
+                        <input type="text" class="form-control" id="nombreEnvio">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellidoEnvio">Apellido</label>
+                        <input type="text" class="form-control" id="apellidoEnvio">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="empresaEnvio">Empresa Destino</label>
+                        <input type="email" class="form-control" id="empresaEnvio">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellidoEnvio">Teléfono</label>
+                        <input type="number" class="form-control" id="apellidoEnvio">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="calleEnvio">Calle</label>
+                    <input type="text" class="form-control" id="calleEnvio">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="numExtEnvio">Número Ext</label>
+                        <input type="text" class="form-control" id="numExtEnvio">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="numIntEnv">Número Int</label>
+                        <input type="text" class="form-control" id="numIntEnv">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="cpEnvio">Código Postal</label>
+                        <input type="text" class="form-control" id="cpEnvio">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="ciudadEnvio">Ciudad</label>
+                        <input type="text" class="form-control" id="ciudadEnvio">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="estadoEnvio">Estado</label>
+                        <input type="text" class="form-control" id="estadoEnvio">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="paisEnvio">País</label>
+                        <input type="text" class="form-control" id="paisEnvio">
+                    </div>
+                </div>
+                <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="formEnvio" class="modal" #formRecoger>
+    <div class="modal-content" #modalContent>
+        <span class="close" (click)="cerrarFormRecoger()">&times;</span>
+        <div class="modal-header">
+            <h5 style="color: #d11507;">Entrega En Tienda</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombreRecoger">Nombre</label>
+                        <input type="text" class="form-control" id="nombreRecoger">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellidoRecoger">Apellido</label>
+                        <input type="text" class="form-control" id="apellidoRecoger">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="telefonoRecoger">Teléfono</label>
+                        <input type="number" class="form-control" id="telefonoRecoger">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="formEnvio" class="modal" #formPaypal>
+    <div class="modal-content" #modalContent>
+        <span class="close" (click)="cerrarFormPaypal()">&times;</span>
+        <div class="modal-header">
+            <h5 style="color: #d11507;">Email De Paypal</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="nombreRecoger">Email</label>
+                    <input type="email" class="form-control" id="emailPaypal">
+                </div>
+                <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="formEnvio" class="modal" #formTarjeta>
+    <div class="modal-content" #modalContent>
+        <span class="close" (click)="cerrarFormTajeta()">&times;</span>
+        <div class="modal-header">
+            <h5 style="color: #d11507;">Datos De La Tarjeta</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="nombreTarjeta">Nombre (Como está en la tarjeta)</label>
+                    <input type="text" class="form-control" id="nombreTarjeta">
+                </div>
+                <div class="form-group">
+                    <label for="numeroTarjeta">Número de tarjeta</label>
+                    <input type="number" class="form-control" id="numeroTarjeta">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cvvRecoger">CVV</label>
+                        <input type="text" class="form-control" id="cvvTarjeta">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cpRecoger">Código Postal</label>
+                        <input type="text" class="form-control" id="cpTarjeta">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="numeroTarjeta">Dirección</label>
+                    <input type="number" class="form-control" id="direccionTarjeta">
+                </div>
+                <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="formEnvio" class="modal" #formFactura>
+    <div class="modal-content" #modalContent>
+        <span class="close" (click)="cerrarFormFactura()">&times;</span>
+        <div class="modal-header">
+            <h5 style="color: #d11507;">Datos De Facturación</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="nombrefacura">Razon Social o Nombre</label>
+                    <input type="text" class="form-control" id="nombrefacura">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cvvRecoger">RFC</label>
+                        <input type="text" class="form-control" id="rfcFactura">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cpRecoger">Email De Facturación</label>
+                        <input type="text" class="form-control" id="emailFactura">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="numeroTarjeta">Dirección</label>
+                    <input type="number" class="form-control" id="direccionTarjeta">
+                </div>
+                <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
+            </form>
+        </div>
+    </div>
 </div>
