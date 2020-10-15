@@ -1,1 +1,125 @@
-<p>pago works!</p>
+<div class="m-3">
+    <div class="row">
+        <div class="col-12 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Datos</h5>
+                    <div class=" row">
+                        <div class="form-check m-1">
+                            <input [(ngModel)]="checkLlevar" (ngModelChange)="llevarChange($event)" type="checkbox" class="form-check-input" id="llevar">
+                            <label class="form-check-label" for="llevar">Llevamos tu orden</label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input [(ngModel)]="checkRecoger" (ngModelChange)="recogerChange($event)" type="checkbox" class="form-check-input" id="recoger">
+                            <label class="form-check-label" for="recoger">Recoge tu orden</label>
+                        </div>
+                    </div>
+                    <div class="card" *ngIf="checkLlevar">
+                        <div class="card-body">
+                            <h6 class="card-title">Direccion de envío</h6>
+                            <div class="card-text">{{envio.nombre}} {{envio.apellidos}}</div>
+                            <div class="card-text">{{envio.empresa}}</div>
+                            <div class="card-text">{{envio.calle}}</div>
+                            <div class="card-text">{{envio.referencia}}</div>
+                            <div class="card-text">{{envio.colonis}}</div>
+                            <div class="card-text">{{envio.codigoPostal}}, {{envio.ciudad}}</div>
+                            <div class="card-text">{{envio.estado}}, {{envio.pais}}</div>
+                            <div class="card-text mt-2">Tel. {{envio.telefono}}</div>
+                            <a class="text-info mt-3">Cambiar</a>
+                        </div>
+                    </div>
+                    <div class="card" *ngIf="checkRecoger">
+                        <div class="card-body">
+                            <h6 class="card-title">Datos de entrega</h6>
+                            <div class="card-text">A nombre de: {{recoger.nombre}} {{recoger.apellidos}}</div>
+                            <div class="card-text mt-2">Tel. {{recoger.telefono}}</div>
+                            <div class="card-text" style="font-size: 13px;">Direccion de la tenda: Applebees Plaza Galerias Diana Costera. Acapulco, Gro.</div>
+                            <a class="text-info mt-3">Cambiar</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Forma de pago</h5>
+                    <div class=" row">
+                        <div class="form-check m-1">
+                            <input [(ngModel)]="checkPaypal" (ngModelChange)="paypalChange($event)" type="checkbox" class="form-check-input" id="llevar">
+                            <label class="form-check-label" for="llevar">Paypal</label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input [(ngModel)]="checkTarjeta" (ngModelChange)="tarjetaChange($event)" type="checkbox" class="form-check-input" id="recoger">
+                            <label class="form-check-label" for="recoger">Tarjeta de crédrito/débito</label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input [(ngModel)]="checkEfectivo" (ngModelChange)="efectivoChange($event)" type="checkbox" class="form-check-input" id="recoger">
+                            <label class="form-check-label" for="recoger">Efectivo</label>
+                        </div>
+                    </div>
+                    <div class="card" *ngIf="checkPaypal">
+                        <div class="card-body">
+                            <h6 class="card-title">Paypal</h6>
+                            <div class="card-text mt-2">{{email}}</div>
+                            <a class="text-info mt-3">Cambiar</a>
+                        </div>
+                    </div>
+                    <div class="card" *ngIf="checkTarjeta">
+                        <div class="card-body">
+                            <h6 class="card-title">Tarjeta</h6>
+                            <div class="card-text mt-2">{{envio.nombre}} {{envio.apellidos}}</div>
+                            <a class="text-info mt-3">Cambiar</a>
+                        </div>
+                    </div>
+                    <div class="card" *ngIf="checkEfectivo">
+                        <div class="card-body">
+                            <h6 class="card-title">Pagare cuando reciba/recoja mi pedido</h6>
+                            <div class="card-text mt-2">{{envio.nombre}} {{envio.apellidos}}</div>
+                            <a class="text-info mt-3">Cambiar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-4">
+            <div class="card bg-light">
+                <div class="card-header">Carrito de compras</div>
+                <div class="card-body">
+                  </div>
+                <div class="card-footer">
+                    <small class="text-muted">Subtotal $0.00</small>
+                    <br>
+                    <small class="text-muted">Total $0.00</small>
+                </div>
+                <div class="card-footer">Precio Total $0.00</div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Datos</h5>
+                    <div class=" row">
+                        <div class="form-check">
+                            <input [(ngModel)]="checkLlevar" (ngModelChange)="llevarChange($event)" type="checkbox" class="form-check-input" id="llevar">
+                            <label class="form-check-label" for="llevar">Factura</label>
+                        </div>
+                    </div>
+                    <div class="card" *ngIf="checkLlevar">
+                        <div class="card-body">
+                            <div class="card-text">{{factura.nombre}} </div>
+                            <div class="card-text">{{factura.rfc}}</div>
+                            <div class="card-text">{{factura.email}}</div>
+                            <div class="card-text">{{factura.usoDeCEDI}}</div>
+                            <a class="text-info mt-3">Cambiar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-warning mt-3">Continuar</button>
+</div>
