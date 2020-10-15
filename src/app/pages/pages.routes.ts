@@ -4,6 +4,7 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
 import { HomeComponent } from './home/home.component';
 import { IdentificarseComponent } from './identificarse/identificarse.component';
 import { PagesComponent } from './pages.component';
+import { PagoComponent } from './pago/pago.component';
 
 const pagesRoutes: Routes = [
     {path: "", 
@@ -13,6 +14,7 @@ const pagesRoutes: Routes = [
             {path: "producto/:idProducto", component: DetalleProductoComponent},
             {path: "carrito", component: CarritoComponent},
             {path: "signup", component: IdentificarseComponent},
+            {path: "pago", component: PagoComponent},
             {path: "", redirectTo: "/home", pathMatch: "full" }
         ],  
     }

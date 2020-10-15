@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-identificarse',
@@ -22,7 +23,7 @@ export class IdentificarseComponent implements OnInit {
     confPassword: '',
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -33,6 +34,8 @@ export class IdentificarseComponent implements OnInit {
       Object.values(form.controls).forEach( controll => controll.markAsTouched());
       return;
     }
+
+    this.router.navigate(['/pago']);
   }
 
   onSingup(form: NgForm){

@@ -15,12 +15,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { IdentificarseComponent } from './identificarse/identificarse.component';
+import { PagoComponent } from './pago/pago.component';
 
 
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent],
+  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent, PagoComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,
