@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PagesComponent } from './pages.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { AgmCoreModule } from '@agm/core';
+
 
 import { PAGES_ROUTES } from './pages.routes';
 
@@ -16,12 +18,13 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
 import { CarritoComponent } from './carrito/carrito.component';
 import { IdentificarseComponent } from './identificarse/identificarse.component';
 import { PagoComponent } from './pago/pago.component';
+import { SucursalesComponent } from './sucursales/sucursales.component';
 
 
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent, PagoComponent],
+  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent, PagoComponent, SucursalesComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,
@@ -29,7 +32,10 @@ import { PagoComponent } from './pago/pago.component';
     FormsModule,
     MatIconModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAPoSTQRcYogMBiJCUtW_LJlNTyOT9_H2w'
+    }),
   ],
 })
 export class PagesModule { }

@@ -1,0 +1,27 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-sucursales',
+  templateUrl: './sucursales.component.html',
+  styleUrls: ['./sucursales.component.css']
+})
+export class SucursalesComponent implements OnInit {
+
+  lat = 22.199957;
+  lng = -101.487698;
+  
+  marcadores: any[] = [
+    { lat: '18.934104', lng: ' -99.197179', nombre: "Applebee's Cuernavaca", direccion: 'Plaza Carso, Piso 3 Local R02, Col. Granada, C.P. 11529 Ciudad de México, CDMX.' },
+    { lat: '16.860217', lng: '-99.873522', nombre: "Applebee's Acapulco", direccion: 'Villas del Lago, 62374 Cuernavaca, Mor. Cuernavaca. C.P. 62500' },
+    { lat: '19.487504', lng: '-99.153238', nombre: "Applebee's Vía Vallejo", direccion: 'Calzada Vallejo, No. 1090, Colonia Santa Cruz de las Salinas, Delegación Azcapotzalco, Ciudad de México, D.F.' },
+    { lat: '19.442545', lng: '-99.204091', nombre: "Applebee’s Plaza Carso", direccion: 'Plaza Carso, Piso 3 Local R02, Col. Granada, C.P. 11529 Ciudad de México, CDMX.' },
+    { lat: '25.457571', lng: '-100.979277', nombre: "Applebee´s Galerías Saltillo", direccion: 'Blvd. Nazario S. Ortiz Garza #2345 L-312, Col. Tanque de Peña. Ciudad: Saltillo, Coahuila. CP: 25279 Tel. (844) 485-0596' },
+
+  ]
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
