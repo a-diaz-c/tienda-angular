@@ -1,16 +1,18 @@
 
-<div class="cotainer d-flex justify-content-center">
-    <h1>Sucursales</h1>
-</div>
-<div class="cotainer d-flex justify-content-center mb-4" >
-    <div class="card m-2 col-8">
-        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="5">
-            <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng">
-                <agm-info-window>
-                    <strong>{{marcador.nombre}}</strong>
-                    <p>{{marcador.direccion}}</p>
-                </agm-info-window>
-            </agm-marker>
-          </agm-map>
+<div class="main">
+    <div class="cotainer d-flex justify-content-center">
+        <h1>Sucursales</h1>
+    </div>
+    <div class="cotainer d-flex justify-content-center mb-4" >
+        <div class="card mt-2 mb-2 col-12 col-lg-10 col-xl-8">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="5">
+                <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng">
+                    <agm-info-window>
+                        <strong>{{marcador.nombre}}</strong>
+                        <p>{{marcador.direccion}}</p>
+                    </agm-info-window>
+                </agm-marker>
+              </agm-map>
+        </div>
     </div>
 </div>

@@ -42,9 +42,9 @@ mat-toolbar {
     padding: 10px;
 }
 
-main{
+/* main{
     height: 100vh; 
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-}
+} */

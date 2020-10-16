@@ -1,3 +1,21 @@
 agm-map {
     height: 500px;
 }
+
+@media (min-width: 1200px){
+    agm-map{
+        height: 500px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width:769px){
+    agm-map{
+        height: 500px;
+    }
+  }
+
+@media (max-width: 768px){
+    agm-map{
+      height: 250px;
+  }
+}
