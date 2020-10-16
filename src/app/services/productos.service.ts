@@ -177,7 +177,7 @@ export class ProductosService {
     return this.arrayProductos;
   }
 
-  buscarProducto(claveProducto: string){
+  buscarProducto(claveProducto: string): ProductoModel{
     let res = this.productos.find( (element) => element.clave_producto == claveProducto);
     let obj: ProductoModel = new ProductoModel();
     obj.nombre = res.nombre;

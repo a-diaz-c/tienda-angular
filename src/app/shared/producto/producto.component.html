@@ -8,10 +8,25 @@
         <div class="row d-flex justify-content-center">
             <p class="card-text">${{producto.precio}}</p>
         </div>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         <div class="row d-flex justify-content-center">
-            <input class="col-lg-3 col-md-3 col-sm-3 col-2 mr-3 form-control" type="number" value="{{cantidad}}">
-            <button class="btn btn-secondary">  <i class="fas fa-shopping-cart"></i> Agregar</button>
+            <input [(ngModel)]="cantidad" class="col-lg-3 col-md-3 col-sm-3 col-2 mr-3 form-control" type="number" min="0">
+            <button (click)="agregarProducto()" class="btn btn-secondary">  <i class="fas fa-shopping-cart"></i> Agregar</button>
         </div>
     </div>
 </div>
+
+<div id="myModal" class="modal" #modal>
+    <!-- Modal content -->
+    <div class="modal-content modal-content-width" #modalContent>
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <div class="modal-header">
+          <h5 style="color: #d11507;">Agregado al carrito</h5>
+      </div>
+      <div class="modal-body">
+          <h6>¿Ir al carrito?</h6>
+        <button type="button" class="btn btn-light" (click)="moverAlCarrito()">Si</button>
+        <button type="button" class="btn btn-light" (click)="cerrarModal()">No</button>
+      </div>
+    </div>
+  
+  </div>
