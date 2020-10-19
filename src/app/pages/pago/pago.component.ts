@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-pago',
@@ -61,10 +62,17 @@ export class PagoComponent implements OnInit {
   };
 
   email: String = "email@ejemplo.com";
+  carrito: [] = []
+  total: number = 0;
 
-  constructor() { }
+  constructor(private prodctosService: ProductosService) { }
 
   ngOnInit() {
+    this.carrito = this.prodctosService.cargarCarrito();
+    
+    this.carrito.forEach((element: any) => {
+      this.total += element.precio * element.cantidad;
+     });
   }
 
   llevarChange(event){

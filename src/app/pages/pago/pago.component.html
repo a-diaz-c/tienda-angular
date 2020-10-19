@@ -91,13 +91,17 @@
             <div class="card bg-light mt-2">
                 <div class="card-header">Carrito de compras</div>
                 <div class="card-body">
+                    <div *ngFor="let producto of carrito">
+                        <p class="font-weight-bold">{{producto.nombre}}</p>
+                        <p class="font-weight-light">Cantidad: {{producto.cantidad}}</p>
+                    </div>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">Subtotal $0.00</small>
                     <br>
                     <small class="text-muted">Total $0.00</small>
                 </div>
-                <div class="card-footer">Precio Total $0.00</div>
+                <div class="card-footer">Precio Total ${{total}}</div>
             </div>
         </div>
     </div>
