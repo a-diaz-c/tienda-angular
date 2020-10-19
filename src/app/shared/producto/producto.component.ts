@@ -13,7 +13,7 @@ export class ProductoComponent implements OnInit {
   @Input() producto: ProductoModel;
   @ViewChild('modal', {static: false}) modal: ElementRef;
 
-  cantidad: number = 0;
+  cantidad: number = 1;
 
   constructor(private route: Router, private productoService: ProductosService) { }
 
@@ -23,7 +23,6 @@ export class ProductoComponent implements OnInit {
   agregarProducto(){
     if(this.cantidad <= 0) return;
 
-    let carrito = []; 
     this.producto['cantidad']= this.cantidad;
     /*let productosCarrito = localStorage.getItem('carrito');
     if(productosCarrito){
@@ -42,6 +41,7 @@ export class ProductoComponent implements OnInit {
     this.mostrarModal(); */
 
     this.productoService.agregarProductoCarrito(this.producto);
+    this.mostrarModal();
   }
 
   mostrarModal(){

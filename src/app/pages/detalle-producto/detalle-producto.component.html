@@ -50,15 +50,32 @@
                 </div>
                 <div class="row">
                     <div class="col-7 col-sm-4 col-lg-5 ml-2 mb-2">
-                        <button type="button" class="boton">
+                        <button type="button" class="boton" (click)="agregarAlCarrito()">
                             Agregar al carrito
                         </button>
                     </div>
                     <div class="col-3 col-sm-2 col-lg-3">
-                        <input class="form-control" type="number" [value]="cantidad">
+                        <input class="form-control" type="number"  [(ngModel)]="cantidad">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div id="myModal" class="modal" #modal>
+    <!-- Modal content -->
+    <div class="modal-content modal-content-width" #modalContent>
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <div class="modal-header">
+          <h5 style="color: #d11507;">Agregado al carrito</h5>
+      </div>
+      <div class="modal-body">
+          <h6>¿Ir al carrito?</h6>
+        <button type="button" class="btn btn-light" (click)="moverAlCarrito()">Si</button>
+        <button type="button" class="btn btn-light" (click)="cerrarModal()">No</button>
+      </div>
+    </div>
+  
+  </div>
