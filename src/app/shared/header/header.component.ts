@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { element } from 'protractor';
 import { ProductosService } from 'src/app/services/productos.service';
 
@@ -16,10 +17,11 @@ export class HeaderComponent implements OnInit {
   categorias;
 
    
-  constructor(private productosService: ProductosService) { }
+  constructor(private productosService: ProductosService, private route: Router) { }
 
   ngOnInit() {
     this.categorias = this.productosService.getCategorias();
+    console.log(this.categorias);
     this.cargarCarrito();
     this.actualizarCarrito();
   }
@@ -42,6 +44,11 @@ export class HeaderComponent implements OnInit {
     });
       console.log(carrito);
     });
+  }
+
+
+  mover(familia: string){
+    this.route.navigate(['/familias/' + familia]);
   }
 
   

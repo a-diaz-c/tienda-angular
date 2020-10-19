@@ -19,12 +19,13 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { IdentificarseComponent } from './identificarse/identificarse.component';
 import { PagoComponent } from './pago/pago.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
+import { FamiliasComponent } from './familias/familias.component';
 
 
 
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent, PagoComponent, SucursalesComponent],
+  declarations: [PagesComponent, HomeComponent, DetalleProductoComponent, CarritoComponent, IdentificarseComponent, PagoComponent, SucursalesComponent, FamiliasComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,
