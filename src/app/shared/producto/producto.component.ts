@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductoModel } from 'src/app/models/producto.model';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-producto',
@@ -14,7 +15,7 @@ export class ProductoComponent implements OnInit {
 
   cantidad: number = 0;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private productoService: ProductosService) { }
 
   ngOnInit() {
   }
@@ -24,7 +25,7 @@ export class ProductoComponent implements OnInit {
 
     let carrito = []; 
     this.producto['cantidad']= this.cantidad;
-    let productosCarrito = localStorage.getItem('carrito');
+    /*let productosCarrito = localStorage.getItem('carrito');
     if(productosCarrito){
       carrito =  JSON.parse(productosCarrito);
       let producto = carrito.find(element => element.claveProducto === this.producto.claveProducto);
@@ -38,7 +39,9 @@ export class ProductoComponent implements OnInit {
     }
     this.cantidad = 0;
     localStorage.setItem('carrito',JSON.stringify(carrito));
-    this.mostrarModal();
+    this.mostrarModal(); */
+
+    this.productoService.agregarProductoCarrito(this.producto);
   }
 
   mostrarModal(){

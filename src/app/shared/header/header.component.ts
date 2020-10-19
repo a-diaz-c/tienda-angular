@@ -21,17 +21,27 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.categorias = this.productosService.getCategorias();
     this.cargarCarrito();
+    this.actualizarCarrito();
   }
 
   cargarCarrito(){
-    let carrito = []
-    if(localStorage.getItem('carrito')){
-      carrito = JSON.parse(localStorage.getItem('carrito'));
-      carrito.forEach( element => {
-        this.cantidadCarrito += element.cantidad;
-        this.totalCarrito += element.precio * element.cantidad;
-      });
-    }
+   let carrito = this.productosService.cargarCarrito();
+   carrito.forEach(element => {
+    this.cantidadCarrito += element.cantidad;
+    this.totalCarrito += element.precio * element.cantidad;
+   });
+  }
+
+  actualizarCarrito(){
+    this.productosService.getCarrito$().subscribe( carrito => {
+     this.cantidadCarrito = 0;
+     this.totalCarrito = 0;
+     carrito.forEach( element => {
+      this.cantidadCarrito += element.cantidad;
+      this.totalCarrito += element.precio * element.cantidad;
+    });
+      console.log(carrito);
+    });
   }
 
   

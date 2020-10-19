@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { element } from 'protractor';
+import { Observable, Subject } from 'rxjs';
 import { ProductoModel } from '../models/producto.model';
 
 @Injectable({
@@ -159,7 +160,39 @@ export class ProductosService {
     },
   ];
 
+  private carrito$ = new Subject<any[]>();
+  private carrito = [];
+
   arrayProductos: ProductoModel[] = [];
+
+  agregarProductoCarrito(producto){
+
+    let productosCarrito = localStorage.getItem('carrito');
+
+    if(productosCarrito){
+      this.carrito = JSON.parse(productosCarrito);
+      let productoRepetido = this.carrito.find(element => element.claveProducto === producto.claveProducto);
+      if(productoRepetido){
+        productoRepetido.cantidad = productoRepetido.cantidad + producto.cantidad;
+      }else{
+        this.carrito.push(producto);
+      }
+    }else{
+      this.carrito.push(producto);
+    }
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+    this.carrito$.next(this.carrito);
+  }
+
+  cargarCarrito(){
+    let productosCarrito = localStorage.getItem('carrito');
+
+    return productosCarrito ? JSON.parse(productosCarrito) : [];
+  }
+
+  getCarrito$(): Observable<any []>{
+    return this.carrito$.asObservable();
+  }
 
   constructor() { 
     this.productos.forEach( (producto) => {
