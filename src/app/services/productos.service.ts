@@ -25,7 +25,7 @@ export class ProductosService {
     {
       'clave_producto': '100',
       'nombre': "Texan Burger",
-      'precio': '0',
+      'precio': '90.00',
       'familia_prod': '30',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Texan-burger-e1592004708758.jpg',
@@ -36,7 +36,7 @@ export class ProductosService {
     {
       'clave_producto': '102',
       'nombre': "Cowboy Burger",
-      'precio': '0',
+      'precio': '105.00',
       'familia_prod': '30',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Cowboy-Burger.jpg',
@@ -47,7 +47,7 @@ export class ProductosService {
     {
       'clave_producto': '103',
       'nombre': "Avocado Burger",
-      'precio': '0',
+      'precio': '100.00',
       'familia_prod': '30',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Avocado-Burger.jpg',
@@ -58,7 +58,7 @@ export class ProductosService {
     {
       'clave_producto': '104',
       'nombre': "Applebee's Riblets",
-      'precio': '0',
+      'precio': '160.00',
       'familia_prod': '40',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Riblets-Smaller-Portion.jpg',
@@ -69,7 +69,7 @@ export class ProductosService {
     {
       'clave_producto': '105',
       'nombre': "Double-Glazed Ribs",
-      'precio': '0',
+      'precio': '300.0',
       'familia_prod': '302010',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Double-glazed-Ribs.jpg',
@@ -80,7 +80,7 @@ export class ProductosService {
     {
       'clave_producto': '106',
       'nombre': "Shrimp'N Parmesan Steak",
-      'precio': '0',
+      'precio': '155.00',
       'familia_prod': '70',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Shrimp-Parmesan-Steak-New-Photo.jpg',
@@ -101,7 +101,7 @@ export class ProductosService {
     {
       'clave_producto': '108',
       'nombre': "Bourbon Street Steak",
-      'precio': '0',
+      'precio': '88.00',
       'familia_prod': '70',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Bourbon-Street-Steak.jpg',
@@ -111,7 +111,7 @@ export class ProductosService {
     {
       'clave_producto': '109',
       'nombre': 'Buffalo Salad',
-      'precio': '0',
+      'precio': '80.00',
       'familia_prod': '90',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Buffalo-Salad.jpg',
@@ -121,7 +121,7 @@ export class ProductosService {
     {
       'clave_producto': '110',
       'nombre': "Oriental Chicken Salad",
-      'precio': '0',
+      'precio': '120.00',
       'familia_prod': '90',
       'imagen':
           'https://menu.applebees.com.mx/wp-content/uploads/2020/06/Oriental-Chicken-Salad.jpg',
@@ -131,7 +131,7 @@ export class ProductosService {
     {
       'clave_producto': '111',
       'nombre': "BREWTUS",
-      'precio': '0',
+      'precio': '67.00',
       'familia_prod': '8010',
       'imagen':
           'https://applebees.com.mx/wp-content/uploads/2020/05/BudLight_Brewtusv1a_HR.jpg',
@@ -141,7 +141,7 @@ export class ProductosService {
     {
       'clave_producto': '112',
       'nombre': "Perfect Cosmo",
-      'precio': '0',
+      'precio': '79.00',
       'familia_prod': '8010',
       'imagen':
           'https://applebees.com.mx/wp-content/uploads/2020/05/PerfectCosmo.jpg',
@@ -151,7 +151,7 @@ export class ProductosService {
     {
       'clave_producto': '113',
       'nombre': "Perfect Margarita",
-      'precio': '0',
+      'precio': '58.00',
       'familia_prod': '8010',
       'imagen':
           'https://applebees.com.mx/wp-content/uploads/2020/05/PerfectMargarita.jpg',
@@ -199,7 +199,7 @@ export class ProductosService {
       let obj: ProductoModel = new ProductoModel();
       obj.nombre = producto.nombre;
       obj.imagen = producto.imagen;
-      obj.precio = parseInt(producto.precio);
+      obj.precio = parseFloat(producto.precio);
       obj.claveProducto = producto.clave_producto;
       obj.familiaProducto = producto.familia_prod;
       this.arrayProductos.push(obj);
@@ -215,7 +215,7 @@ export class ProductosService {
     let obj: ProductoModel = new ProductoModel();
     obj.nombre = res.nombre;
       obj.imagen = res.imagen;
-      obj.precio = parseInt(res.precio);
+      obj.precio = parseFloat(res.precio);
       obj.claveProducto = res.clave_producto;
       obj.familiaProducto = res.familia_prod;
       obj.descripcion = res.descripcion;

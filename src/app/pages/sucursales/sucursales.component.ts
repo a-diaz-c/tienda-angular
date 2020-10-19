@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { timingSafeEqual } from 'crypto';
+import { LocationService } from 'src/app/services/location.service';
 
 @Component({
   selector: 'app-sucursales',
@@ -19,9 +21,18 @@ export class SucursalesComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor(private locationService: LocationService) { }
 
   ngOnInit() {
+    this.getLocation();
+  }
+
+  getLocation() {
+    this.locationService.getPosition().then(pos => {
+        this.lat = pos.lat;
+        this.lng = pos.lng;
+        console.log(this.lat  + " - " +  this.lng);
+    });
   }
 
 }

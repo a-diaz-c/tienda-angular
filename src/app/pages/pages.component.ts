@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationService } from '../services/location.service';
 import { ProductosService } from '../services/productos.service';
 
 @Component({
@@ -12,10 +13,15 @@ export class PagesComponent implements OnInit {
   totalCarrito:number = 0;
   categorias;
 
-  constructor(private productosService: ProductosService) { }
+  lat;
+  lng ;
+  
+
+  constructor(private productosService: ProductosService, private locationService: LocationService) { }
 
   ngOnInit() {
     this.categorias = this.productosService.getCategorias();
+    this.getLocation();
     this.cargarCarrito();
     this.actualizarCarrito();
   }
@@ -39,5 +45,13 @@ export class PagesComponent implements OnInit {
        console.log(carrito);
      });
    }
+
+   getLocation() {
+    this.locationService.getPosition().then(pos => {
+        this.lat = pos.lat;
+        this.lng = pos.lng;
+        console.log(this.lat  + " - " +  this.lng);
+    });
+  }
 
 }

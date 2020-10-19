@@ -6,7 +6,7 @@
             </div>
             <div class="col-lg-5 col col-md-12">
                 <h5 class="card-title m-2">{{producto.nombre}}</h5>
-                <h6 class="card-subtitle m-2 text-muted">Precio $ {{producto.precio}}</h6>
+                <h6 class="card-subtitle m-2 text-muted">Precio $ {{producto.precio | number: '1.2-2'}}</h6>
                 <div class="row">
                     <div class="col-1 m-1">
                         <i class="fas fa-truck fa-2x"></i>
