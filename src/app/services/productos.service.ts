@@ -222,7 +222,7 @@ export class ProductosService {
     return obj;
   }
 
-  getCategorias(){
+  getCategorias(): any[]{
     return this.categorias;
   }
 }
