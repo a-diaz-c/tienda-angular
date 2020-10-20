@@ -11,6 +11,7 @@ import { ProductosService } from 'src/app/services/productos.service';
 export class ProductoComponent implements OnInit {
 
   @Input() producto: ProductoModel;
+  @Input() ruta: string;
   @ViewChild('modal', {static: false}) modal: ElementRef;
 
   cantidad: number = 1;

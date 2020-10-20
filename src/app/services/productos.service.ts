@@ -228,6 +228,22 @@ export class ProductosService {
     return obj;
   }
 
+  buscarProductosPorFamilia(claveFamilia: string): ProductoModel []{
+    let res = this.productos.filter( element => element.familia_prod == claveFamilia);
+    let familia: ProductoModel [] = [];
+    res.forEach( element => {
+      let obj: ProductoModel = new ProductoModel();
+      obj.nombre = element.nombre;
+      obj.imagen = element.imagen;
+      obj.precio = parseFloat(element.precio);
+      obj.claveProducto = element.clave_producto;
+      obj.familiaProducto = element.familia_prod;
+      obj.descripcion = element.descripcion;
+      familia.push(obj);
+    });
+    return familia;
+  }
+
   getCategorias(): any[]{
     return this.categorias;
   }

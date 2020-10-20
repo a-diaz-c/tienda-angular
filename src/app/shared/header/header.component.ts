@@ -55,6 +55,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   }
 
   mover(familia: string){
+    console.log('moviendo a ' +familia);
     this.route.navigate(['/productos/' + familia]);
   }
 
@@ -69,6 +70,10 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
       this.renderer.setAttribute(button, 'data-toggle', 'dropdown');
       this.renderer.setAttribute(button, 'id', 'dropdownMenu1');
       this.renderer.appendChild(button, this.renderer.createText(element.nombre));
+      this.renderer.listen(button, 'click', event => {
+        this.mover(element.id);
+      });
+
       let div = this.renderer.createElement('div');
       this.renderer.addClass(div,'dropdown');
 
