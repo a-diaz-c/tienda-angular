@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { element } from 'protractor';
 import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
@@ -27,7 +28,6 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
     console.log(this.categorias);
     this.cargarCarrito();
     this.actualizarCarrito();
-    
   }
 
   ngAfterViewInit(){
@@ -55,7 +55,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   }
 
   mover(familia: string){
-    this.route.navigate(['/familias/' + familia]);
+    this.route.navigate(['/productos/' + familia]);
   }
 
   listaMenu(){
@@ -63,15 +63,53 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
     this.categorias.forEach( element => {
       let button = this.renderer.createElement('button');
       this.renderer.addClass(button, "btn");
-      if(element.hijos.length > 0) 
-        this.renderer.addClass(button,'dropdown-toggle');
       this.renderer.setStyle(button, 'color', 'white');
-      
+      this.renderer.setAttribute(button, 'aria-expanded','false');
+      this.renderer.setAttribute(button, 'aria-haspopup', 'false');
+      this.renderer.setAttribute(button, 'data-toggle', 'dropdown');
+      this.renderer.setAttribute(button, 'id', 'dropdownMenu1');
       this.renderer.appendChild(button, this.renderer.createText(element.nombre));
-      this.renderer.appendChild(this.menuFamilias.nativeElement, button);
+      let div = this.renderer.createElement('div');
+      this.renderer.addClass(div,'dropdown');
+
+      this.renderer.appendChild(this.menuFamilias.nativeElement, div);
+      this.renderer.appendChild(div, button);
+      
+      if(element.hijos.length > 0){
+        this.renderer.addClass(button,'dropdown-toggle');
+        this.listarSubmenu(element.hijos, div);
+      }
+
+      
     });
   }
 
-  
+  listarSubmenu(hijos: any[], padre: any){
+    let ul = this.renderer.createElement('ul');
+    this.renderer.addClass(ul, "dropdown-menu");
+    this.renderer.addClass(ul, "multi-level");
+    this.renderer.setAttribute(ul, 'role', 'menu');
+    this.renderer.setAttribute(ul, 'aria-labelledby', 'dropdownMenu');
+    hijos.forEach(element => {
+      let li = this.renderer.createElement('li');
+      let a = this.renderer.createElement('a');
+      this.renderer.appendChild(a, this.renderer.createText(element.nombre));
+      this.renderer.listen(a, 'click', event => {
+        this.mover(element.id);
+      });
+      this.renderer.appendChild(li, a);
+     
+      this.renderer.appendChild(ul, li);
 
+      if(element.hijos.length > 0){
+        this.renderer.addClass(a, 'dropdown-item');
+        this.renderer.addClass(li, 'dropdown-submenu');
+        this.listarSubmenu(element.hijos, li);
+      }else
+      this.renderer.addClass(li, 'dropdown-item');
+
+      this.renderer.appendChild(padre, ul);
+    });
+
+  }
 }

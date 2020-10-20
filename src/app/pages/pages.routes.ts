@@ -18,7 +18,7 @@ const pagesRoutes: Routes = [
             {path: "signup", component: IdentificarseComponent},
             {path: "pago", component: PagoComponent},
             {path: "sucursales", component: SucursalesComponent},
-            {path: "familias/:familia", component: FamiliasComponent},
+            {path: "productos/:familia", component: FamiliasComponent},
             {path: "", redirectTo: "/home", pathMatch: "full" }
         ],  
     }

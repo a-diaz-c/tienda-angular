@@ -48,12 +48,13 @@
         </div>
     </div>
     <div class="row" style="background-color: #d11507;">
-        <div #menu>
+        <nav class="navbar navbar-expand-lg m-0 p-0" #menu>
 
-        </div>
+        </nav>
+
         <!-- <nav class="navbar navbar-expand-lg m-0 p-0">
             <div class="dropdown" *ngFor="let categoria of categorias">
-                <button (click)="mover(categoria.id)" class="btn" [ngClass]="{'dropdown-toggle': categoria.hijos.length > 0}" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                <button class="btn dropdown" [ngClass]="{'dropdown-toggle': categoria.hijos.length > 0}" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
                   {{categoria.nombre}}
                 </button>
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu" *ngIf="categoria.hijos.length > 0">

@@ -9,7 +9,13 @@ import { ProductoModel } from '../models/producto.model';
 export class ProductosService {
 
   categorias = [
-    {'id': '30', 'nombre': 'Hambuergesas', 'hijos': []},
+    {'id': '30', 'nombre': 'Hambuergesas', 'hijos': [
+      {'id': '3010', 'nombre': 'Pollo', 'hijos': [
+        {'id': '301010', 'nombre': 'Doble', 'hijos': []},
+        {'id': '302010', 'nombre': 'Sensilla', 'hijos': []},
+      ]},
+      {'id': '3010', 'nombre': 'Res', 'hijos': []},
+    ]},
     {'id': '40', 'nombre': 'Costillas', 'hijos': []},
     {'id': '70', 'nombre': 'Cortes de carne', 'hijos': []},
     {'id': '90', 'nombre': 'Ensaladas', 'hijos': []},
