@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 import { element } from 'protractor';
 import { LocationService } from '../services/location.service';
 import { ProductosService } from '../services/productos.service';
@@ -11,6 +13,7 @@ import { ProductosService } from '../services/productos.service';
 export class PagesComponent implements OnInit, AfterViewInit {
 
   @ViewChild('lista', {static: false}) listaMenu: ElementRef;
+  @ViewChild('drawer', {static: false}) drawer: MatSidenav;
 
   cantidadCarrito: number = 0;
   totalCarrito:number = 0;
@@ -22,7 +25,8 @@ export class PagesComponent implements OnInit, AfterViewInit {
 
   constructor(private productosService: ProductosService, 
               private locationService: LocationService,
-              private renderer: Renderer2) { }
+              private renderer: Renderer2,
+              private route: Router) { }
 
   ngOnInit() {
     this.categorias = this.productosService.getCategorias();
@@ -32,7 +36,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(){
-    this.listarMenu();
+    this.listarMenu(this.categorias,this.listaMenu.nativeElement);
   }
 
   cargarCarrito(){
@@ -63,12 +67,12 @@ export class PagesComponent implements OnInit, AfterViewInit {
     });
   }
 
-  listarMenu(){
-    let ul = this.renderer.createElement('ul');
-    this.renderer.addClass(ul, 'list-group');
-    this.renderer.appendChild(this.listaMenu.nativeElement, ul);
+  listarMenu(array: any [], padre){
+    let ul = this.renderer.createElement('ul')
+    this.renderer.addClass(ul,'list-group');
+    this.renderer.appendChild(padre, ul);
 
-    this.categorias.forEach(element => {
+    array.forEach((element: any) => {
       let li = this.renderer.createElement('li');
       this.renderer.setStyle(li, 'list-style', 'none');
       this.renderer.setStyle(li, 'padding-right', '0px');
@@ -93,10 +97,19 @@ export class PagesComponent implements OnInit, AfterViewInit {
         this.renderer.setAttribute(div, 'id', 'collapse' + element.id);
         this.renderer.appendChild(li, div);
 
-        let ul 
-
+        this.listarMenu(element.hijos, div);
+      }else{
+        this.renderer.listen(button, 'click', event => {
+          this.mover(element.id);
+        });
       }
     });
   }
+
+  mover(familia: string){
+    this.route.navigate(['/productos/' + familia]);
+    this.drawer.opened = false;
+/*     this.renderer.setProperty(this.drawer.nativeElement,'opened','false');
+ */  }
 
 }
