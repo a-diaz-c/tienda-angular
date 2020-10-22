@@ -70,9 +70,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
       this.renderer.setAttribute(button, 'data-toggle', 'dropdown');
       this.renderer.setAttribute(button, 'id', 'dropdownMenu1');
       this.renderer.appendChild(button, this.renderer.createText(element.nombre));
-      this.renderer.listen(button, 'click', event => {
-        this.mover(element.id);
-      });
+      
 
       let div = this.renderer.createElement('div');
       this.renderer.addClass(div,'dropdown');
@@ -83,6 +81,10 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
       if(element.hijos.length > 0){
         this.renderer.addClass(button,'dropdown-toggle');
         this.listarSubmenu(element.hijos, div);
+      }else{
+        this.renderer.listen(button, 'click', event => {
+          this.mover(element.id);
+        });
       }
 
       
@@ -99,9 +101,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
       let li = this.renderer.createElement('li');
       let a = this.renderer.createElement('a');
       this.renderer.appendChild(a, this.renderer.createText(element.nombre));
-      this.renderer.listen(a, 'click', event => {
-        this.mover(element.id);
-      });
+      
       this.renderer.appendChild(li, a);
      
       this.renderer.appendChild(ul, li);
@@ -110,8 +110,12 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
         this.renderer.addClass(a, 'dropdown-item');
         this.renderer.addClass(li, 'dropdown-submenu');
         this.listarSubmenu(element.hijos, li);
-      }else
-      this.renderer.addClass(li, 'dropdown-item');
+      }else{
+        this.renderer.addClass(li, 'dropdown-item');
+        this.renderer.listen(a, 'click', event => {
+          this.mover(element.id);
+        });
+      }
 
       this.renderer.appendChild(padre, ul);
     });
