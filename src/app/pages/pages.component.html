@@ -1,13 +1,15 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav #drawer mode="over" opened="false" style="width: 250px;">
         <mat-toolbar style="background-color: #d11507; height: 200px;">
-            <div class="">
-                <div class="m-3 p-3 text-white">
+            <div class="" >
+                <div class="mt-3 pt-2 mb-3 pb-2 text-white">
                     <app-login [width]="100"></app-login>
                 </div>
             </div>
-            <div class="row-carrio">
-                <a [routerLink]="['/carrito']" (click)="drawer.opened=false" class="carrito"><i class="fas fa-shopping-cart text-white"></i></a>
+            <div class="row-carrito" >
+                <a [routerLink]="['/carrito']" (click)="drawer.opened=false" class="carrito">
+                    <i class="fas fa-shopping-cart text-white"></i>
+                </a>
                 <div class="carrito">
                     <a [routerLink]="['/carrito']" (click)="drawer.opened=false" class="text-white">
                         <div class="m-0" style="font-size: 0.7rem">{{cantidadCarrito}} Articulos</div>
