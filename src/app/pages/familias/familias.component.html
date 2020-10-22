@@ -1,4 +1,8 @@
 <div class=" m-2">
+
+    <div class="d-flex justify-content-center" *ngIf="productos.length == 0">
+        <h1 class="text-secondary">No se encontraron productos</h1>
+    </div>
     
     <div class="card-columns m-4">
         <app-producto [producto]="producto" ruta="../../producto" *ngFor="let producto of productos"></app-producto>

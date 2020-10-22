@@ -1,5 +1,7 @@
-<div class="card col-lg-12 col-md-12 col-sm-12 ">
-    <a><img [routerLink]="[ruta, producto.claveProducto]" class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap"></a>
+<div class="card col-lg-12 col-md-12 col-sm-12 text-center">
+    <a [routerLink]="[ruta, producto.claveProducto]">
+        <img  class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap">
+    </a>
     <div class="card-body">
         <div class="row d-flex justify-content-center">
             <a [routerLink]="[ruta, producto.claveProducto]" ><h5 class="card-title">{{producto.nombre}}</h5></a>
