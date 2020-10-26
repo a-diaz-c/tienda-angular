@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NofoundpageComponent } from './404/nofoundpage/nofoundpage.component';
 import { APP_ROUTES } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -22,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     APP_ROUTES,
     PagesModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     
   ],
   providers: [],
