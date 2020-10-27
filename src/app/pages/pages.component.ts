@@ -44,6 +44,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
     this.colorHader = this.globalconfig.getcolorHeader();
     this.colorMenu = this.globalconfig.getColorMenu();
     this.icono = this.globalconfig.getIcono();
+    console.log(location.origin);
   }
 
   ngAfterViewInit(){
