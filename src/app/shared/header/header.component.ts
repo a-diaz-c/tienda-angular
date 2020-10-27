@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { element } from 'protractor';
+import { GlobalConfig } from 'src/app/config/config';
+import { ConfigCliente } from 'src/app/models/clienteConfig';
 import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
@@ -17,17 +19,25 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
 
 
   categorias = [];
-
+  globalconfig: GlobalConfig;
+  colorHader: string;
+  colorMenu: string;
+  icono: string;
    
   constructor(private productosService: ProductosService, 
               private route: Router,
-              private renderer: Renderer2) { }
+              private renderer: Renderer2) { 
+                this.globalconfig = GlobalConfig.getInstance();
+}
 
   ngOnInit() {
     this.categorias = this.productosService.getCategorias();
     console.log(this.categorias);
     this.cargarCarrito();
     this.actualizarCarrito();
+    this.colorHader = this.globalconfig.getcolorHeader();
+    this.colorMenu = this.globalconfig.getColorMenu();
+    this.icono = this.globalconfig.getIcono();
   }
 
   ngAfterViewInit(){

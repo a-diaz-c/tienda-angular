@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalConfig } from 'src/app/config/config';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  color: string;
+  icon: string;
+  globalconfig: GlobalConfig;
+  
+
+  constructor() { 
+    this.globalconfig = GlobalConfig.getInstance();
+  }
 
   ngOnInit() {
+    this.color = this.globalconfig.getColorMenu();
+    this.icon = this.globalconfig.getIcono();
+    
   }
 
 }

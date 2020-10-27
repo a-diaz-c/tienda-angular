@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } fr
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { element } from 'protractor';
+import { GlobalConfig } from '../config/config';
 import { LocationService } from '../services/location.service';
 import { ProductosService } from '../services/productos.service';
 
@@ -18,21 +19,31 @@ export class PagesComponent implements OnInit, AfterViewInit {
   cantidadCarrito: number = 0;
   totalCarrito:number = 0;
   categorias: any [];
+  globalconfig: GlobalConfig;
 
   lat;
   lng ;
+
+  colorHader: string;
+  colorMenu: string;
+  icono: string;
   
 
   constructor(private productosService: ProductosService, 
               private locationService: LocationService,
               private renderer: Renderer2,
-              private route: Router) { }
+              private route: Router) { 
+                this.globalconfig = GlobalConfig.getInstance();
+  }
 
   ngOnInit() {
     this.categorias = this.productosService.getCategorias();
     this.getLocation();
     this.cargarCarrito();
-    this.actualizarCarrito();
+    this.actualizarCarrito()
+    this.colorHader = this.globalconfig.getcolorHeader();
+    this.colorMenu = this.globalconfig.getColorMenu();
+    this.icono = this.globalconfig.getIcono();
   }
 
   ngAfterViewInit(){

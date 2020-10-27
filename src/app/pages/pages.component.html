@@ -1,6 +1,6 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav #drawer mode="over" opened="false" style="width: 250px;">
-        <mat-toolbar style="background-color: #d11507; height: 200px;">
+        <mat-toolbar [style.background-color]="colorMenu">
             <div class="" >
                 <div class="mt-3 pt-2 mb-3 pb-2 text-white">
                     <app-login [width]="100"></app-login>
@@ -19,28 +19,11 @@
             </div>
         </mat-toolbar>
         <div #lista>
-            <!-- <ul class="list-group">
-                <li style="list-style: none; padding-right: 0px;" *ngFor="let categoria of categorias">
-                    <button class="btn" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + categoria.id" aria-expanded="false" aria-controls="collapseExample">
-                        {{categoria.nombre}} 
-                        <i class="fas fa-angle-down" *ngIf="categoria.hijos.length > 0"></i>
-                    </button>
-                    <div class="collapse" id="collapse{{categoria.id}}" *ngIf="categoria.hijos.length > 0">
-                        <ul class="list-group">
-                            <li style="list-style: none; padding-right: 0px;" *ngFor="let hijo of categoria.hijos">
-                                <button class="btn" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + categoria.id" aria-expanded="false" aria-controls="collapseExample">
-                                    {{hijo.nombre}}
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul> -->
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="d-lg-none">
-            <div class="container-fluid d-lg-none bg-dark">
+            <div class="container-fluid d-lg-none" [style.background-color]="colorHader">
                 <div class="row">
                     <div class=" contacto text-warning">
                         Tienda Demo Desarrollada por <a class="text-warning" href="www.kingo.com.mx">www.kingo.com.mx</a>
@@ -51,7 +34,7 @@
                         <i class="fas fa-bars" (click)="drawer.toggle()"></i>
                     </div>
                     <div class="ml-1">
-                        <a href=""><img src="../../../assets/images/logo.JPG" class=""></a>
+                        <a href=""><img [src]="icono"></a>
                     </div>
                 </div>
                 <div class="row">
@@ -70,17 +53,6 @@
                     <input type="text" class="form-control input m-2" placeholder="Buscar Producto" style="border: 1px solid #2d9fd9; border-radius: 20px;">
                 </div>
             </div>
-            <!-- <mat-toolbar color="warn">
-                <div class="row">
-                    <div class=" contacto">
-                        ¿Tienes alguna duda? Llámanos (744) 484.9493
-                    </div>
-                </div>
-                <mat-icon *ngIf="!drawer.opened" (click)="drawer.toggle()">
-                    menu
-                </mat-icon>
-                <div>Header</div>
-            </mat-toolbar> -->
         </div>
 
         <main>
