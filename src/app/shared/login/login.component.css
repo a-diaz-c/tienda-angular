@@ -35,16 +35,8 @@
     cursor: pointer;
   }
   
-  @media (max-width: 768px){
-    .btn-color{
-        background-color: #d11507;
-        color: white;
-    }
-  }
 
-  @media (min-width: 992px){
-    .btn-color{
-      background-color: #343a40;
-      color: white;
-    }
-}
+  .btn-color{
+    background-color: transparent;
+    color: white; 
+  }

@@ -8,7 +8,7 @@ export class ConfiguracionService {
 
   clientes = [
     {
-      'id': '1',
+      'id': 'applebees',
       'nombre': "Apple Bee's",
       'colorMenu': '#d11507',
       'colorHeader': '#292b2c',
@@ -16,13 +16,29 @@ export class ConfiguracionService {
           'https://www.applebees.com/-/media/applebees/images/logos/logo.png?h=88&la=en&w=162&hash=167634130AC39DB0286D56EF0F8AEDF717BC3205',
     },
     {
-      'id': '2',
+      'id': 'TiendaMaines',
       'nombre': "Jule",
       'colorMenu': '#EBA40D',
       'colorHeader': '#722616',
       'icono':
           'https://juleacapulco.com/wp-content/uploads/2016/09/logo_jule_blanco.png',
     },
+    {
+      'id': 'gruporoca',
+      'nombre': "Grupo Roca",
+      'colorMenu': '#F5800A',
+      'colorHeader': '#020D50',
+      'icono':
+          'http://gruporocasa.com/wp-content/uploads/2018/05/Logo-Pagina-Web.jpg',
+    },
+    {
+      'id': 'farmacia',
+      'nombre': "Famacia",
+      'colorMenu': '#0036FF',
+      'colorHeader': '#D90505',
+      'icono':
+          'https://sucursales.fahorro.com/img/upload/logo-fa.png',
+    }
   ];
 
   constructor() { }

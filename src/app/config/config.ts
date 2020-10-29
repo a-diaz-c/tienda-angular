@@ -7,13 +7,15 @@ export class GlobalConfig {
     private configService: ConfiguracionService = new ConfiguracionService();
 
     private confingClient: ConfigCliente;
-    private constructor() { 
-        this.confingClient = this.configService.getCliente("2");
+    private constructor(url: string) {
+        console.log(url);
+        this.confingClient = this.configService.getCliente(url);
     }
 
     public static getInstance(): GlobalConfig {
+        let ruta = location.href.split('/');
         if (!GlobalConfig.instance) {
-            GlobalConfig.instance = new GlobalConfig();
+            GlobalConfig.instance = new GlobalConfig(ruta[3]);
         }
 
         return GlobalConfig.instance;

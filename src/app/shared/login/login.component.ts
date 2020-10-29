@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GlobalConfig } from 'src/app/config/config';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  globalconfig: GlobalConfig;
+  color: string;
   passwordForm: string= "";
   emailForm: string = "";
 
@@ -17,7 +20,9 @@ export class LoginComponent implements OnInit {
   @ViewChild('modal', {static: false}) modal: ElementRef;
   @ViewChild('modalContent', {static: false}) modalContent: ElementRef
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) { 
+    this.globalconfig = GlobalConfig.getInstance();
+  }
 
   ngOnInit() {
   }
@@ -48,5 +53,6 @@ export class LoginComponent implements OnInit {
     this.modal.nativeElement.style.display = 'none';
     this.router.navigate(['/signup']);
   }
+
 
 }
