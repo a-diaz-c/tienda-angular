@@ -5,11 +5,13 @@ export class GlobalConfig {
 
     private static instance: GlobalConfig;
     private configService: ConfiguracionService = new ConfiguracionService();
+    private usuario: string;
 
     private confingClient: ConfigCliente;
     private constructor(url: string) {
         console.log(url);
-        this.confingClient = this.configService.getCliente(url);
+        this.usuario = "gruporoca";
+        this.confingClient = this.configService.getCliente("gruporoca");
     }
 
     public static getInstance(): GlobalConfig {
@@ -40,6 +42,10 @@ export class GlobalConfig {
 
     public getIcono(){
         return this.confingClient.icono;
+    }
+
+    public getUsuario(){
+        return this.usuario;
     }
 
 

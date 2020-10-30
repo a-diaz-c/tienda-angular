@@ -26,8 +26,8 @@ export class ConfiguracionService {
     {
       'id': 'gruporoca',
       'nombre': "Grupo Roca",
-      'colorMenu': '#F5800A',
-      'colorHeader': '#020D50',
+      'colorMenu': '#1565C0',
+      'colorHeader': '#2196F3',
       'icono':
           'http://gruporocasa.com/wp-content/uploads/2018/05/Logo-Pagina-Web.jpg',
     },

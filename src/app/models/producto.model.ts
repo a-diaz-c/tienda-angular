@@ -5,6 +5,7 @@ export class ProductoModel{
     familiaProducto: string;
     imagen: string;
     descripcion: string;
+    usuario: string;
 
     constructor(){
         this.claveProducto = "";
@@ -13,6 +14,7 @@ export class ProductoModel{
         this.familiaProducto = "";
         this.imagen = "";
         this.descripcion = "";
+        this.usuario = "";
     }
     
 }
