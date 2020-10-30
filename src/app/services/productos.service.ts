@@ -281,17 +281,6 @@ export class ProductosService {
       'marca': 'Wal front',
       'usuario': 'gruporoca'
     },
-    {
-      'clave_producto': '1110',
-      'nombre':
-          "Vino Tinto Casa Madero 3V Cabernet Sauvignon Merlot Tempranillo - 750 ml",
-      'precio': '389',
-      'familia_prod': '2010',
-      'imagen':
-          'https://images-na.ssl-images-amazon.com/images/I/516AQ85fNhL._AC_SL1000_.jpg',
-      'marca': 'Madero',
-      'usuario': 'gruporoca'
-    },
   ];
 
   private carrito$ = new Subject<any[]>();
