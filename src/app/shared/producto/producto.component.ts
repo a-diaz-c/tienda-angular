@@ -20,7 +20,7 @@ export class ProductoComponent implements OnInit {
 
   ngOnInit() {
     if(this.producto.nombre.length > 100){
-      this.producto.nombre = this.producto.nombre.substring(0, 100) + "...";
+      this.producto.nombre = this.producto.nombre.substring(0, 80) + "...";
     }
   }
 
