@@ -37,7 +37,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.categorias = this.productosService.getCategorias();
+    this.categorias = this.productosService.getCategorias(this.globalconfig.getUsuario()).categorias;
     this.getLocation();
     this.cargarCarrito();
     this.actualizarCarrito()

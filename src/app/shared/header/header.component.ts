@@ -31,8 +31,9 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
 }
 
   ngOnInit() {
-    this.categorias = this.productosService.getCategorias();
-    console.log(this.categorias);
+    let usuario  = this.productosService.getCategorias(this.globalconfig.getUsuario());
+    this.categorias = usuario.categorias;
+    console.log(usuario.categorias);
     this.cargarCarrito();
     this.actualizarCarrito();
     this.colorHader = this.globalconfig.getcolorHeader();

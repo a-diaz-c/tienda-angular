@@ -9,22 +9,43 @@ import { ProductoModel } from '../models/producto.model';
 export class ProductosService {
 
   categorias = [
-    {'id': '30', 'nombre': 'Hambuergesas', 'hijos': [
-      {'id': '3010', 'nombre': 'Pollo', 'hijos': [
-        {'id': '301010', 'nombre': 'Doble', 'hijos': []},
-        {'id': '302010', 'nombre': 'Sensilla', 'hijos': []},
+    {'usuario': 'gruporoca',
+    'categorias':[
+      {'id': '10', 'nombre': 'Alimento', 'hijos': [
+        {'id': '1010', 'nombre': 'Carnes', 'hijos':[]},
+        {'id': '1020', 'nombre': 'Verduras', 'hijos':[]},
+      ]
+    },
+      {'id': '20', 'nombre': 'Bedidas', 'hijos':[
+        {'id': '2010', 'nombre': 'Vinos', 'hijos':[]},
+      ]
+    },
+      {'id': '30', 'nombre': 'Ferreteria', 'hijos':[
+        {'id': '3010', 'nombre': 'Tornillos', 'hijos':[]},
+        {'id': '3020', 'nombre': 'Herramientas', 'hijos':[
+          {'id': '302010', 'nombre': 'Electricidad', 'hijos':[]},
+          {'id': '302020', 'nombre': 'Accesorio de Herramientas', 'hijos':[]},
+        ]},
       ]},
-      {'id': '3010', 'nombre': 'Res', 'hijos': []},
+    ]
+  },
+    {'usuario':'applebees',
+    'categorias':[
+      {'id': '30', 'nombre': 'Hambuergesas', 'hijos': [
+        {'id': '3010', 'nombre': 'Pollo', 'hijos': [
+          {'id': '301010', 'nombre': 'Doble', 'hijos': []},
+          {'id': '302010', 'nombre': 'Sensilla', 'hijos': []},
+        ]},
+        {'id': '3010', 'nombre': 'Res', 'hijos': []},
+      ]},
+      {'id': '40', 'nombre': 'Costillas', 'hijos': []},
+      {'id': '70', 'nombre': 'Cortes de carne', 'hijos': []},
+      {'id': '90', 'nombre': 'Ensaladas', 'hijos': []},
+      {'id': '80', 'nombre': 'Bebidas', 'hijos': [
+        {'id': '8010', 'nombre': 'Con alchol', 'hijos': []},
+        {'id': '8020', 'nombre': 'Sin alchol', 'hijos': []},
+      ]}, 
     ]},
-    {'id': '40', 'nombre': 'Costillas', 'hijos': []},
-    {'id': '70', 'nombre': 'Cortes de carne', 'hijos': []},
-    {'id': '90', 'nombre': 'Ensaladas', 'hijos': []},
-    {'id': '80', 'nombre': 'Bebidas', 'hijos': [
-      {'id': '8010', 'nombre': 'Con alchol', 'hijos': []},
-      {'id': '8020', 'nombre': 'Sin alchol', 'hijos': []},
-    ]},
-    
-    
   ];
 
   productos = [
@@ -362,7 +383,7 @@ export class ProductosService {
     return familia;
   }
 
-  getCategorias(): any[]{
-    return this.categorias;
+  getCategorias(usuario: string): any{
+    return this.categorias.find( (element) =>  element.usuario == usuario);
   }
 }
