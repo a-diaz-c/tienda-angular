@@ -46,6 +46,17 @@ export class ProductosService {
         {'id': '8020', 'nombre': 'Sin alchol', 'hijos': []},
       ]}, 
     ]},
+    {'usuario':'farmacia',
+    'categorias':[
+      {'id': '41', 'nombre': 'Farmacia', 'hijos': []},
+      {'id': '42', 'nombre': 'Diabetes', 'hijos': []},
+      {'id': '43', 'nombre': 'Me Quiero Bien', 'hijos': []},
+      {'id': '44', 'nombre': 'Bebés', 'hijos': []},
+      {'id': '45', 'nombre': 'Derma', 'hijos': []},
+      {'id': '46', 'nombre': 'Belleza', 'hijos': []},
+      {'id': '47', 'nombre': 'Higiene Personal', 'hijos': []},
+      {'id': '48', 'nombre': 'Bienestar Sexual', 'hijos': []},
+    ]}
   ];
 
   productos = [
@@ -293,7 +304,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1100',
+      'clave_producto': '1110',
       'nombre': "Wera 05056491001 Juego de Herramientas con 39 Piezas",
       'precio': '2140.34',
       'familia_prod': '302010',
@@ -302,6 +313,150 @@ export class ProductosService {
       'marca': 'Wal front',
       'usuario': 'gruporoca'
     },
+    {
+      'clave_producto': '1120',
+      'nombre': "CIRUELAX FORTE 24 COMPRIMIDOS",
+      'precio': '141.50',
+      'familia_prod': '41',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/8/7803510003409_3.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1130',
+      'nombre': "MARCA DEL AHORRO BENCILPENICILINA PROC/CRISTA 400000UI",
+      'precio': '44.00',
+      'familia_prod': '41',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7502223700208.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1140',
+      'nombre': "NESTLÉ OTIFIBRE SUPLEMENTO ALIMENTICIO 125 G",
+      'precio': '165.00',
+      'familia_prod': '41',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7501058644329_1.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1150',
+      'nombre': "PACK MEDIDOR SELECT PLUS FLEX + 1 CAJA DE 50 TIRAS TIRA",
+      'precio': '622.00',
+      'familia_prod': '42',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7501554500556.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1160',
+      'nombre': "MICRODACYN 60 240 ML SOLUCION",
+      'precio': '233.50',
+      'familia_prod': '42',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7503006698323_1.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1170',
+      'nombre': "TRUSNACK PURE COCOA 120 G",
+      'precio': '62.00',
+      'familia_prod': '43',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7503015190221_1.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1180',
+      'nombre': "VIDANAT CLOROFILA CON SPIRULINA 500 ML",
+      'precio': '92.00',
+      'familia_prod': '43',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7501060802861_1.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1190',
+      'nombre': "FORMULA LÁCTEA NAN 3 OPTIPRO BAJA EN LACTOSA 800 GR",
+      'precio': '236.00',
+      'familia_prod': '44',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7501058627933_1.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1200',
+      'nombre': "UMBRELLA BASE COMPACTA SPF 50 DURAZNO",
+      'precio': '518.00',
+      'familia_prod': '45',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/7/7703281002369.jpg',
+      'marca': '',
+      'descripcion':
+          'Protector solar facial compacto',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1210',
+      'nombre': "EUCERIN KIDS SUN SPRAY FPS 50+ 200ML",
+      'precio': '566.00',
+      'familia_prod': '45',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/4/0/4005800230073_1.jpg',
+      'marca': '',
+      'descripcion':
+          'Ciruelax® Forte laxante 100% de origen natural para el estreñimiento crónico por su mayor concentración de senósidos, ayudando a mantener la regularidad del intestinos haciendo efecto en un lapso de entre 8 a 12 horas tras la ingesta',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1220',
+      'nombre': "BIODERMA ABCDERM MOUSSANT 1000 ML",
+      'precio': '381.00',
+      'familia_prod': '45',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/3/4/3401397163618.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1230',
+      'nombre': "PRESERVATIVO PRUDENCE CLÁSICO CON 3 PIEZAS",
+      'precio': '38.00',
+      'familia_prod': '48',
+      'imagen':
+          'https://www.fahorro.com/media/catalog/product/cache/3fba745dcec88e97bfe808bedc471260/7/5/7502214980015.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'farmacia',
+    }
   ];
 
   private carrito$ = new Subject<any[]>();
