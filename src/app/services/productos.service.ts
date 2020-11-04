@@ -56,7 +56,8 @@ export class ProductosService {
       {'id': '46', 'nombre': 'Belleza', 'hijos': []},
       {'id': '47', 'nombre': 'Higiene Personal', 'hijos': []},
       {'id': '48', 'nombre': 'Bienestar Sexual', 'hijos': []},
-    ]}
+    ]},
+    {'usuario': 'kingo', 'categorias': []},
   ];
 
   productos = [
@@ -456,6 +457,90 @@ export class ProductosService {
       'descripcion':
           '',
       'usuario':'farmacia',
+    },
+    {
+      'clave_producto': '1510',
+      'nombre': "EscuSoft-Inscripciones-Online",
+      'precio': '3800.00',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/06/1-Fichas-Online.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
+      'clave_producto': '1520',
+      'nombre': "Factura Electrónica Nube + 100 Timbres Fiscal",
+      'precio': '800.00',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/07/1-Factura-Electronica.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
+      'clave_producto': '1530',
+      'nombre': "Maines ADMIN",
+      'precio': '2500.00',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-ADMIN.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
+      'clave_producto': '1540',
+      'nombre': "Maines Nómina Electrónica",
+      'precio': '',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/07/1-Nomina.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
+      'clave_producto': '1550',
+      'nombre': "Maines-Restaurant",
+      'precio': '2500.00',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-Restaurant.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
+      'clave_producto': '1560',
+      'nombre': "Maines-XML Descargas",
+      'precio': '600.00',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-XML.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
+      'clave_producto': '1570',
+      'nombre': "Servidor para Clases Online",
+      'precio': '',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/03/1-Clases-Online.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
     }
   ];
 

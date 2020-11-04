@@ -34,6 +34,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
               private renderer: Renderer2,
               private route: Router) { 
                 this.globalconfig = GlobalConfig.getInstance();
+                console.log(this.globalconfig);
   }
 
   ngOnInit() {

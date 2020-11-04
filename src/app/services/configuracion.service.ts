@@ -12,6 +12,7 @@ export class ConfiguracionService {
       'nombre': "Apple Bee's",
       'colorMenu': '#d11507',
       'colorHeader': '#292b2c',
+      'carousel': true,
       'icono':
           'https://www.applebees.com/-/media/applebees/images/logos/logo.png?h=88&la=en&w=162&hash=167634130AC39DB0286D56EF0F8AEDF717BC3205',
     },
@@ -20,6 +21,7 @@ export class ConfiguracionService {
       'nombre': "Jule",
       'colorMenu': '#EBA40D',
       'colorHeader': '#722616',
+      'carousel': true,
       'icono':
           'https://juleacapulco.com/wp-content/uploads/2016/09/logo_jule_blanco.png',
     },
@@ -28,6 +30,7 @@ export class ConfiguracionService {
       'nombre': "Grupo Roca",
       'colorMenu': '#1565C0',
       'colorHeader': '#2196F3',
+      'carousel': true,
       'icono':
           'http://gruporocasa.com/wp-content/uploads/2018/05/Logo-Pagina-Web.jpg',
     },
@@ -36,8 +39,18 @@ export class ConfiguracionService {
       'nombre': "Famacia",
       'colorMenu': '#0036FF',
       'colorHeader': '#D90505',
+      'carousel': true,
       'icono':
           'https://sucursales.fahorro.com/img/upload/logo-fa.png',
+    },
+    {
+      'id': 'kingo',
+      'nombre': "Kingo Systems",
+      'colorMenu': '#1565C0',
+      'colorHeader': '#2196F3',
+      'carousel': false,
+      'icono':
+          'http://kingo.com.mx/wp-content/uploads/2019/06/LogotipoPaginaWeb.png',
     }
   ];
 
@@ -45,6 +58,6 @@ export class ConfiguracionService {
 
 
   getCliente(id: String): ConfigCliente{
-    return this.clientes.find( element => element.id ==  id);
+    return this.clientes.find( element => element.id == id);
   }
 }
