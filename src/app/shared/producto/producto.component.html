@@ -1,10 +1,10 @@
-<div class="card col-lg-12 col-md-12 col-sm-12 text-center" style="height: 350px;">
+<div class="card col-lg-12 col-md-12 col-sm-12 card-producto" style="height: 350px;">
     <a [routerLink]="[ruta, producto.claveProducto]">
         <img  class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap" style="max-height: 200px; max-width: 200px;">
     </a>
-    <div class="card-body">
+    <div class="card-body" style="flex: none;">
         <div class="row d-flex justify-content-center">
-            <a [routerLink]="[ruta, producto.claveProducto]" ><h5 class="card-title">{{producto.nombre}}</h5></a>
+            <a [routerLink]="[ruta, producto.claveProducto]" ><h6 class="card-title">{{producto.nombre}}</h6></a>
         </div>
 
         <div class="row d-flex justify-content-center">

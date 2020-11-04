@@ -19,8 +19,9 @@ export class ProductoComponent implements OnInit {
   constructor(private route: Router, private productoService: ProductosService) { }
 
   ngOnInit() {
-    if(this.producto.nombre.length > 100){
-      this.producto.nombre = this.producto.nombre.substring(0, 80) + "...";
+    if(this.producto.nombre.length > 40){
+      this.producto.nombre = this.producto.nombre.substring(0, 40) + "...";
+      
     }
   }
 
