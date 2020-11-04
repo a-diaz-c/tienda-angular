@@ -573,8 +573,9 @@ export class ProductosService {
     },
     {'usuario':'gruporoca',
     'carousel': [
-       'https://www.cemexpuertorico.com/documents/46756837/46757588/construrama-logo-blue.png/d36bcc4a-c6ce-7f5e-6225-dea4ba85aa41?t=1534890676932',
-       'https://construramasantafehmo.com/img/3823/748.jpeg',
+       'https://www.cemexmexico.com/documents/27057941/49641127/home-soluciones.jpg',
+       'https://www.cemexmexico.com/documents/27057941/49642387/2020-home-banner-memoria-ds-2019.jpg',
+       'https://www.cemexmexico.com/documents/27057941/49642387/2020-home-banner-ponte-a-prueba.jpg',
        'https://acerosycomplementos.com.mx/wp-content/uploads/2018/07/1.jpg'
      ]
     },

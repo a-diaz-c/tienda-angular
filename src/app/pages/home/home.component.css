@@ -6,3 +6,20 @@
 app-producto{
     padding: 10px;
 }
+
+.carousel-item, img{
+    height: 100% !important;
+    width:  100% !important;
+}
+
+@media (min-width: 768px){
+    .carousel-inner{
+        height: 300px;
+    }
+}
+
+@media (max-width: 767px){
+    .carousel-inner{
+        height: 150px;
+    }
+}
