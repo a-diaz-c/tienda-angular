@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { element } from 'protractor';
 import { Observable, Subject } from 'rxjs';
 import { ProductoModel } from '../models/producto.model';
 
@@ -495,6 +494,18 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
+      'clave_producto': '1580',
+      'nombre': "Maines Contabilidad",
+      'precio': '2500.00',
+      'familia_prod': '',
+      'imagen':
+          'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-Contabilidad.jpg',
+      'marca': '',
+      'descripcion':
+          '',
+      'usuario':'kingo',
+    },
+    {
       'clave_producto': '1540',
       'nombre': "Maines Nómina Electrónica",
       'precio': '',
@@ -542,6 +553,31 @@ export class ProductosService {
           '',
       'usuario':'kingo',
     }
+  ];
+
+  carousel = [
+    {'usuario': 'applebees', 
+     'carousel': [
+       'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/img1.JPG?alt=media&token=a401e09d-ad71-42ba-987b-2c6719868e55',
+       'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/img2.JPG?alt=media&token=823aa356-b978-4d0f-8b85-603955c5efba',
+       'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/img3.JPG?alt=media&token=09dec8f2-5636-4321-8601-75d1629b9dfe'
+     ]
+    },
+    {'usuario':'farmacia',
+     'carousel': [
+       'https://www.fahorro.com/media/never8/Teleorientacion-medica-integral-1400x480_5f9ed55d6c3e2.jpg',
+       'https://www.fahorro.com/media/never8/Nido-nov-1400x480_5f9ed6252a590.jpg',
+       'https://www.fahorro.com/media/never8/Agrifen-nov-1400X480_5f9ed6f944b50.jpg',
+       'https://www.fahorro.com/media/never8/Buenfin-oct-1400x480_5f9ed495a791b.jpg', 
+     ]
+    },
+    {'usuario':'gruporoca',
+    'carousel': [
+       'https://www.cemexpuertorico.com/documents/46756837/46757588/construrama-logo-blue.png/d36bcc4a-c6ce-7f5e-6225-dea4ba85aa41?t=1534890676932',
+       'https://construramasantafehmo.com/img/3823/748.jpeg',
+       'https://acerosycomplementos.com.mx/wp-content/uploads/2018/07/1.jpg'
+     ]
+    },
   ];
 
   private carrito$ = new Subject<any[]>();
@@ -625,5 +661,9 @@ export class ProductosService {
 
   getCategorias(usuario: string): any{
     return this.categorias.find( (element) =>  element.usuario == usuario);
+  }
+
+  getCarousel(usuario: string):  any{
+    return this.carousel.find( (element) =>  element.usuario == usuario);
   }
 }
