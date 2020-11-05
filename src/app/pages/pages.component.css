@@ -46,16 +46,16 @@ mat-toolbar {
     padding: 5px;
 }
 
-/* main{
+main{
     height: 100vh; 
-    display: flex;
+/*     display: flex;
     justify-content: space-between;
-    flex-direction: column;
-} */
+    flex-direction: column; */
+}
 
 .flotante {
     display:scroll;
     position:fixed;
     bottom:40px;
-    right:0px;
+    right:20px;
 }

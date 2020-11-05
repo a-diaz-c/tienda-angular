@@ -34,10 +34,12 @@
                     <app-login [width]="30"></app-login>
                 </div>
                 <div class="col">
-                    <div class="row text-white d-flex align-items-center">
-                        <a [routerLink]="['/carrito']"><i class="fas fa-shopping-cart text-white"></i></a>
+                    <div class="row d-flex align-items-center">
+                        <a [routerLink]="['/carrito']"><i class="fas fa-shopping-cart" 
+                            [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'"></i></a>
                         <div class="col-10">
-                            <a [routerLink]="['/carrito']" class="text-white">
+                            <a [routerLink]="['/carrito']" 
+                            [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'">
                                 <div class="m-0" style="font-size: 0.7rem">{{cantidadCarrito}} Articulos</div>
                                 <div class="m-0">$ {{totalCarrito | number: '1.2-2' }}</div>
                             </a>

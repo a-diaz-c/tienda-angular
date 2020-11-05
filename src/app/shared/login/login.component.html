@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-color p-0" [style.color]="color" (click)="mostrarModal()">
+<button type="button" class="btn btn-color p-0" [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'" (click)="mostrarModal()">
     Iniciar Sesion
 </button>
 
@@ -9,7 +9,7 @@
     <div class="modal-content" #modalContent>
       <span class="close" (click)="cerrarModal()">&times;</span>
       <div class="modal-header">
-          <h5 style="color: #d11507;">Iniciar Sesion</h5>
+          <h5 [ngClass]="globalconfig.getcolorHeader() != '#FFFFFF' ? 'text-secondary' : 'text-white'">Iniciar Sesion</h5>
       </div>
   
       <div class="modal-body">

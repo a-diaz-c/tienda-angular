@@ -11,7 +11,7 @@ import { GlobalConfig } from 'src/app/config/config';
 export class LoginComponent implements OnInit {
 
   globalconfig: GlobalConfig;
-  color: string;
+  colorHeader: string;
   passwordForm: string= "";
   emailForm: string = "";
 
@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.colorHeader = this.globalconfig.getcolorHeader();
   }
 
   mostrarModal(){

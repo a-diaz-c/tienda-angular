@@ -8,17 +8,18 @@
             </div>
             <div class="row-carrito" >
                 <a [routerLink]="['/carrito']" (click)="drawer.opened=false" class="carrito">
-                    <i class="fas fa-shopping-cart text-white"></i>
+                    <i class="fas fa-shopping-cart" 
+                    [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'"></i>
                 </a>
                 <div class="carrito">
-                    <a [routerLink]="['/carrito']" (click)="drawer.opened=false" class="text-white">
+                    <a [routerLink]="['/carrito']" (click)="drawer.opened=false" [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'">
                         <div class="m-0" style="font-size: 0.7rem">{{cantidadCarrito}} Articulos</div>
                         <div class="m-0">$ {{totalCarrito | number: '1.2-2'}}</div>
                     </a>
                 </div>
             </div>
         </mat-toolbar>
-        <div #lista>
+        <div #lista >
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -31,7 +32,7 @@
                 </div>
                 <div class="row ">
                     <div class="m-2 text-white">
-                        <i class="fas fa-bars" (click)="drawer.toggle()"></i>
+                        <i class="fas fa-bars" (click)="drawer.toggle()" [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'"></i>
                     </div>
                     <div class="ml-1">
                         <a href=""><img [src]="icono"></a>

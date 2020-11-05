@@ -38,10 +38,9 @@ export class ConfiguracionService {
       'id': 'farmacia',
       'nombre': "Famacia",
       'colorMenu': '#0036FF',
-      'colorHeader': '#D90505',
+      'colorHeader': '#FFFFFF',
       'carousel': true,
-      'icono':
-          'https://sucursales.fahorro.com/img/upload/logo-fa.png',
+      'icono': 'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/farmacia.png?alt=media&token=9b972909-ef61-4834-8090-97682c34dc34'
     },
     {
       'id': 'kingo',
