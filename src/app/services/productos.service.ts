@@ -212,7 +212,7 @@ export class ProductosService {
       'clave_producto': '1140',
       'nombre': "Fiero, Alambre Galvanizado, Calibre 22, Kilogramos",
       'precio': '',
-      'familia_prod': '6010',
+      'familia_prod': '6210',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w5NTY1MHxpbWFnZS9qcGVnfGltYWdlcy9oZjUvaDAwLzg4NDQzMjE5NDc2NzguanBnfDA5ZTBmNTE4YWNiZWI3OTgwZjA5NTZlNjNjNGMwMTRlYzU1ODZiYTY3MmIzZDNjMDZjMWM2ZGY2MjA3M2Y3YWE',
       'marca': 'Cemex',
@@ -222,7 +222,7 @@ export class ProductosService {
       'clave_producto': '1150',
       'nombre': "Bronco, Alambre Puas 34Kg 340M Cal12 Roll, Pieza",
       'precio': '',
-      'familia_prod': '6010',
+      'familia_prod': '6210',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjMyMzN8aW1hZ2UvanBlZ3xpbWFnZXMvaGUyL2hiZi84ODQ0MzIxOTE0OTEwLmpwZ3xjM2QzNDk0YzJjYmZlM2Q2MTExYjgxMmEyMmY3MTQzMDJhMGZkYzZlMmY4NzUwNzJlMzkzY2M5NDAxZjUyNTg5',
       'marca': 'Cemex',
@@ -232,7 +232,7 @@ export class ProductosService {
       'clave_producto': '1160',
       'nombre': "Tabique Rojo Recocido 5 X 12 X 23 cm, Pieza",
       'precio': '',
-      'familia_prod': '62',
+      'familia_prod': '63',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2NzU4MHxpbWFnZS9qcGVnfGltYWdlcy9oMTkvaDAzLzg4ODAwNDM5ODI4NzguanBnfDkwYThlYjk3MTRmOWEyNDY2OWExMGU1ZGNiNzc5NmJiMzAzZjIzZDUzMjAwZjk3N2MzZDZkNDE3NDhmNjA3ODM',
       'marca': 'Cemex',
@@ -242,7 +242,7 @@ export class ProductosService {
       'clave_producto': '1170',
       'nombre': "Ladrillo Rojo 2 X 12 X 23 cm, Millar",
       'precio': '',
-      'familia_prod': '62',
+      'familia_prod': '63',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wyODYwMnxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGNhLzg4ODAwNDQxNzk0ODYuanBnfDUzMTJhOTE1MWRlNTdjMjc2ZDRlMzIwYWQ3OWRmOTgwYjhlZjEzNGMxMmJjOTAwYWFkODQzM2E2Y2JiYWE1OGY',
       'marca': 'Cemex',
