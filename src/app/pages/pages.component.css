@@ -52,3 +52,10 @@ mat-toolbar {
     justify-content: space-between;
     flex-direction: column;
 } */
+
+.flotante {
+    display:scroll;
+    position:fixed;
+    bottom:40px;
+    right:0px;
+}

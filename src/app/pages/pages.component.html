@@ -1,6 +1,6 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav #drawer mode="over" opened="false" style="width: 250px;">
-        <mat-toolbar [style.background-color]="colorMenu">
+        <mat-toolbar [style.background-color]="colorHader">
             <div class="" >
                 <div class="mt-3 pt-2 mb-3 pb-2 text-white">
                     <app-login [width]="100"></app-login>
@@ -60,5 +60,8 @@
             <router-outlet></router-outlet>
             <app-footer></app-footer>
         </main>
+        <a class='flotante' href='https://api.whatsapp.com/send?phone=7441686612&text=Probando la aplicacion web' >
+            <img src='assets/images/paypal.png' border="0"/>
+        </a>
     </mat-sidenav-content>
 </mat-sidenav-container>
