@@ -37,10 +37,10 @@ export class ConfiguracionService {
     {
       'id': 'farmacia',
       'nombre': "Famacia",
-      'colorMenu': '#0036FF',
+      'colorMenu': '#135188',
       'colorHeader': '#FFFFFF',
       'carousel': true,
-      'icono': 'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/farmacia.png?alt=media&token=9b972909-ef61-4834-8090-97682c34dc34'
+      'icono': 'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/farmacia.jpg?alt=media&token=a641616d-a759-4a80-b9e0-4b9825483063'
     },
     {
       'id': 'kingo',
