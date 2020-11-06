@@ -62,7 +62,7 @@ export class PagoComponent implements OnInit {
   };
 
   email: String = "email@ejemplo.com";
-  carrito: [] = []
+  carrito: any [] = []
   total: number = 0;
 
   constructor(private prodctosService: ProductosService) { }
