@@ -15,6 +15,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
 
   @ViewChild('lista', {static: false}) listaMenu: ElementRef;
   @ViewChild('drawer', {static: false}) drawer: MatSidenav;
+  @ViewChild('header', {static: false}) header: ElementRef;
 
   cantidadCarrito: number = 0;
   totalCarrito:number = 0;
@@ -49,6 +50,15 @@ export class PagesComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     this.listarMenu(this.categorias,this.listaMenu.nativeElement);
+    this.addColorHeader();
+  }
+
+  private addColorHeader(){
+    if(this.globalconfig.getUsuario() == 'gruporoca')
+      this.renderer.setStyle(this.header.nativeElement, 'background', `linear-gradient(-90deg, ${this.colorHader}, white)`);
+    else{
+      this.renderer.setStyle(this.header.nativeElement, 'background', this.colorHader);
+    }
   }
 
   cargarCarrito(){

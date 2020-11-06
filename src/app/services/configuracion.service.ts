@@ -29,7 +29,7 @@ export class ConfiguracionService {
       'id': 'gruporoca',
       'nombre': "Grupo Roca",
       'colorMenu': '#1565C0',
-      'colorHeader': '#2196F3',
+      'colorHeader': '#FF640C',
       'carousel': true,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo-Portada.png?alt=media&token=7b110546-88cc-42b5-8722-29f5b49a9b3d',
