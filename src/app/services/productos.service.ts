@@ -17,7 +17,10 @@ export class ProductosService {
       {'id': '63', 'nombre': 'Otros Materiales', 'hijos': []},
       {'id': '64', 'nombre': 'Acabados', 'hijos': []},
       {'id': '65', 'nombre': 'Plomería', 'hijos': []},
-      {'id': '66', 'nombre': 'Material Eléctrico', 'hijos': []},
+      {'id': '66', 'nombre': 'Material Eléctrico', 'hijos': [
+        {'id': '6610', 'nombre': 'Conectores y Accesorios Eléctricos', 'hijos': []},
+        {'id': '6620', 'nombre': 'Canalización y Fijación', 'hijos': []},
+      ]},
     ]
   },
     {'usuario':'applebees',
@@ -180,7 +183,7 @@ export class ProductosService {
       'descripcion': ''
     },
     {
-      'clave_producto': '1110',
+      'clave_producto': '1510',
       'nombre': "Cemento CEMEX EXTRA",
       'precio': '',
       'familia_prod': '60',
@@ -190,7 +193,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1120',
+      'clave_producto': '1520',
       'nombre': "Cemento CEMEX Impercem",
       'precio': '',
       'familia_prod': '60',
@@ -199,7 +202,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1130',
+      'clave_producto': '1530',
       'nombre': "Cemento Blanco CEMEX",
       'precio': '',
       'familia_prod': '60',
@@ -209,7 +212,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1140',
+      'clave_producto': '1540',
       'nombre': "Fiero, Alambre Galvanizado, Calibre 22, Kilogramos",
       'precio': '',
       'familia_prod': '6210',
@@ -219,7 +222,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1150',
+      'clave_producto': '1550',
       'nombre': "Bronco, Alambre Puas 34Kg 340M Cal12 Roll, Pieza",
       'precio': '',
       'familia_prod': '6210',
@@ -229,7 +232,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1160',
+      'clave_producto': '1560',
       'nombre': "Tabique Rojo Recocido 5 X 12 X 23 cm, Pieza",
       'precio': '',
       'familia_prod': '63',
@@ -239,7 +242,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1170',
+      'clave_producto': '1570',
       'nombre': "Ladrillo Rojo 2 X 12 X 23 cm, Millar",
       'precio': '',
       'familia_prod': '63',
@@ -249,7 +252,7 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1180',
+      'clave_producto': '1580',
       'nombre': "Weno, Cemento Acrilico 3.8 L, Pieza",
       'precio': '',
       'familia_prod': '64',
@@ -259,12 +262,62 @@ export class ProductosService {
       'usuario': 'gruporoca'
     },
     {
-      'clave_producto': '1190',
+      'clave_producto': '1590',
       'nombre': "Grano Gris #2, Saco",
       'precio': '',
       'familia_prod': '64',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w0MTc2MDV8aW1hZ2UvanBlZ3xpbWFnZXMvaDk3L2hkNy84ODgyMDM1ODUxMjk0LmpwZ3xiNDQ3Y2NjZTcxMzM0NDE2MTE1ZWQ1NWNhZWNiNjU2NDk0NzdlY2Q4MmM2MmYxYWQ0N2M1M2Y0Y2ViNTVjZDQ2',
+      'marca': 'GENÉRICO',
+      'usuario': 'gruporoca'
+    },
+    {
+      'clave_producto': '1600',
+      'nombre': "Foset, Adaptador Macho De Cpvc Con Inserto Metálico (19 Mm) 3/4', Pieza",
+      'precio': '',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2ODIyNXxpbWFnZS9qcGVnfGltYWdlcy9oZmQvaDk3Lzg4NjExNjU3NDgyNTQuanBnfDc1MDYzZmVhMTc2OTJiMDIxZjdlZDZlMTAyOWZmYmM2YzI1NjYyOGI2NWMyMGQyZDM1N2E1NjE3ZDgwM2I1NTE',
+      'marca': 'GENÉRICO',
+      'usuario': 'gruporoca'
+    },
+    {
+      'clave_producto': '1610',
+      'nombre': "Cnx, Cpvc Tee 1/2\" Flow Guard, Pieza",
+      'precio': '',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w1MjUwOXxpbWFnZS9qcGVnfGltYWdlcy9oZDUvaGI0Lzg4NjY3MTI1NTE0NTQuanBnfDg2MmU5ZTFjZDBmMzllNmQ3N2QyMzI5Mjg3YzA3MTA2MWU0YmRkMzQ3MjBiZWI3ZWYyOWYzZmI5NzE1NWU3Mzg',
+      'marca': 'GENÉRICO',
+      'usuario': 'gruporoca'
+    },
+    {
+      'clave_producto': '1620',
+      'nombre': "Iusa, Cobre Codo Rosca Ext. 1/2\", Pieza",
+      'precio': '',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjY1NDh8aW1hZ2UvanBlZ3xpbWFnZXMvaGQwL2hmMS84ODY2NzEyOTQ0NjcwLmpwZ3wwMjM3YjcyZTI0NDRhOTZhN2RhODBmOWU4YjE0YWIzNTU0NTAxNWZkMGE5ZGMzNGU0NjVhMzllYWFlOWQ4MGFj',
+      'marca': 'GENÉRICO',
+      'usuario': 'gruporoca'
+    },
+    {
+      'clave_producto': '1630',
+      'nombre': "Volteck, Plafón Redondo Decorativo 15W 6500K Led, Pieza",
+      'precio': '',
+      'familia_prod': '6610',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2MDc4OXxpbWFnZS9qcGVnfGltYWdlcy9oZjYvaDU0Lzg4OTkwMDk2NDI1MjYuanBnfDM0NjZhOTQyOWUxOTJjY2VmYjQ1MmQ0MjgyMDE3MmI4ZjMwOWQyODU3ZWRhOTM1OTZiNzE2MDczMjRjODRmYmE',
+      'marca': 'GENÉRICO',
+      'usuario': 'gruporoca'
+    },
+    {
+      'clave_producto': '1640',
+      'nombre': "Volteck, Contacto Doble, Línea Italiana, Pieza",
+      'precio': '',
+      'familia_prod': '6610',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wyMTMwMnxpbWFnZS9qcGVnfGltYWdlcy9oYzcvaDhhLzg4NTI5MzU0MDk2OTQuanBnfDVhNzljYzFlNjlkMDI0NGRjMjQyM2JiMDE0MzliM2I4MGY5YWZkNjQ0ZjRlMjUxNzA2OTk0MzczYTBjYThjNmM',
       'marca': 'GENÉRICO',
       'usuario': 'gruporoca'
     },
@@ -528,10 +581,11 @@ export class ProductosService {
     },
     {'usuario':'gruporoca',
     'carousel': [
-       'https://www.cemexmexico.com/documents/27057941/49641127/home-soluciones.jpg',
-       'https://www.cemexmexico.com/documents/27057941/49642387/2020-home-banner-memoria-ds-2019.jpg',
-       'https://www.cemexmexico.com/documents/27057941/49642387/2020-home-banner-ponte-a-prueba.jpg',
-       'https://acerosycomplementos.com.mx/wp-content/uploads/2018/07/1.jpg'
+       'http://kingo.com.mx/wp-content/uploads/2020/11/1-Slider.jpg',
+       'http://kingo.com.mx/wp-content/uploads/2020/11/3-Slider.jpg',
+       'http://kingo.com.mx/wp-content/uploads/2020/11/4-Slider.jpg',
+       'http://kingo.com.mx/wp-content/uploads/2020/11/5-Slider.jpg',
+       'http://kingo.com.mx/wp-content/uploads/2020/11/6-Slider-ROCA.jpg'
      ]
     },
   ];

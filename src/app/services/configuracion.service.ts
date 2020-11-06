@@ -32,7 +32,7 @@ export class ConfiguracionService {
       'colorHeader': '#2196F3',
       'carousel': true,
       'icono':
-          'http://gruporocasa.com/wp-content/uploads/2018/05/Logo-Pagina-Web.jpg',
+          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo-Portada.png?alt=media&token=7b110546-88cc-42b5-8722-29f5b49a9b3d',
     },
     {
       'id': 'farmacia',

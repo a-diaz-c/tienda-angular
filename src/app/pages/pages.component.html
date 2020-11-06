@@ -35,7 +35,7 @@
                         <i class="fas fa-bars" (click)="drawer.toggle()" [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'"></i>
                     </div>
                     <div class="ml-1">
-                        <a href=""><img [src]="icono"></a>
+                        <a [routerLink]="['/home']"><img [src]="icono"></a>
                     </div>
                 </div>
                 <div class="row">
@@ -62,7 +62,7 @@
             <app-footer></app-footer>
         </main>
         <a class='flotante' href='https://api.whatsapp.com/send?phone=7441686612&text=Probando la aplicacion web' >
-            <img src='assets/images/paypal.png' border="0"/>
+            <img class="whatsapp" src='http://kingo.com.mx/wp-content/uploads/2020/11/Whatsapp.png' border="0"/>
         </a>
     </mat-sidenav-content>
 </mat-sidenav-container>

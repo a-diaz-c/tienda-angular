@@ -56,6 +56,11 @@ main{
 .flotante {
     display:scroll;
     position:fixed;
-    bottom:40px;
+    bottom:20px;
     right:20px;
+}
+
+.whatsapp{
+    height: 70px;
+    width: 70px;
 }
