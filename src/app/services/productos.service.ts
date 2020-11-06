@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { element } from 'protractor';
 import { Observable, Subject } from 'rxjs';
 import { ProductoModel } from '../models/producto.model';
 
@@ -614,16 +615,32 @@ export class ProductosService {
     this.carrito$.next(this.carrito);
   }
 
+  removerProducto(producto: string){
+    this.carrito = JSON.parse(localStorage.getItem('carrito'));
+
+    let index = this.carrito.findIndex( element => element.claveProducto === producto);
+    this.carrito.splice(index, 1);
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+    this.carrito$.next(this.carrito);
+  }
+  
+
   cargarCarrito(){
     let productosCarrito = localStorage.getItem('carrito');
-
-    return productosCarrito ? JSON.parse(productosCarrito) : [];
+    if(productosCarrito) {
+      this.carrito = JSON.parse(productosCarrito);
+      this.carrito$.next(this.carrito);
+      return this.carrito;
+    }else
+      return [];
   }
 
   getCarrito$(): Observable<any []>{
     return this.carrito$.asObservable();
   }
 
+  
+///Datos simulados--------
   constructor() { 
     this.productos.forEach( (producto) => {
       let obj: ProductoModel = new ProductoModel();
