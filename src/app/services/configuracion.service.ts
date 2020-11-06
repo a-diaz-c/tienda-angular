@@ -28,7 +28,7 @@ export class ConfiguracionService {
     {
       'id': 'gruporoca',
       'nombre': "Grupo Roca",
-      'colorMenu': '#1565C0',
+      'colorMenu': '#333333',
       'colorHeader': '#FF640C',
       'carousel': true,
       'icono':
