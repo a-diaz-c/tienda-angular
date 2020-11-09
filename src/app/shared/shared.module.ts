@@ -8,6 +8,7 @@ import { ProductoComponent } from './producto/producto.component';
 
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { TiendasComponent } from './tiendas/tiendas.component';
 
 
 
@@ -15,7 +16,7 @@ import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ProductoComponent, LoginComponent],
+  declarations: [HeaderComponent, FooterComponent, ProductoComponent, LoginComponent, TiendasComponent],
   imports: [
     CommonModule,
     PAGES_ROUTES,
@@ -27,6 +28,7 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     ProductoComponent,
     LoginComponent,
+    TiendasComponent,
   ]
 })
 export class SharedModule { }
