@@ -67,8 +67,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
      carrito.forEach( element => {
       this.cantidadCarrito += element.cantidad;
       this.totalCarrito += element.precio * element.cantidad;
-    });
-      console.log(carrito);
+      });
     });
   }
 

@@ -1,9 +1,10 @@
 <div class="container">
     <h2 class="card-title">Carrito</h2>
     <div>
-        <div class="d-none d-sm-block d-sm-none">
+        <div class="d-none d-lg-block">
             <div class="row">
-                <div class="col-lg-6">Articulo</div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">Articulo</div>
                 <div class="col-lg-2">Precio</div>
                 <div class="col-lg-2">Cantidad</div>
                 <div class="col-lg-2">Total</div>
@@ -11,19 +12,55 @@
         </div>
         
         <div>
-            <div class="row mt-2 mb-2 card-item" *ngFor="let item of itemsCarrito">
-                <div class="col-lg-1"><div class="btn" (click)="removeItem(item.claveProducto)"><i id="remove" class="fas fa-minus-circle fa-2x"></i></div></div>
-                <div class="col-lg-5" >
-                    <div class="row">
-                        <div class="col-6">
+            <div class="row align-items-center mt-3 mb-3 card-item " *ngFor="let item of itemsCarrito" style="">
+                <div class="col-lg-1 col-md-1"><div class="btn" (click)="removeItem(item.claveProducto)"><i id="remove" class="fas fa-minus-circle fa-2x"></i></div></div>
+                <div class="col-lg-5 col-md-11">
+                    <div class="row align-items-center" >
+                        <div class="col-4">
                             <img src="{{item.imagen}}" alt="" style="height: 100px; width: 100px;">
                         </div>
-                        <div class="col-6">{{item.nombre}}</div>
+                        <div class="col-8">
+                            <div class="row">
+                               <h6 class="font-weight-bold">{{item.nombre}}</h6>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-10 input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Precio</span>
+                                        <span class="input-group-text" style="background-color: transparent;">${{item.precio | number: '1.2-2'}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-10 col-md-5 input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Cantidad</span>
+                                      </div>
+                                      <input class="form-control" type="number" min="0" value="{{item.cantidad}}" (change)="modificarCarito(item.claveProducto, $event.target.value)" >
+                                </div>
+                            </div>
+                            <div class="row d-lg-none">
+                                <div class="col-10 input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Total</span>
+                                        <span class="input-group-text" style="background-color: transparent;">{{item.cantidad * item.precio | number: '1.2-2'}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2">{{item.precio | number: '1.2-2'}}</div>
-                <div class="col-lg-2"><input class="" type="number" value="{{item.cantidad}}"></div>
-                <div class="col-lg-2">{{item.cantidad * item.precio | number: '1.2-2'}}</div>
+                <div class="col-lg-2 d-none d-lg-block">${{item.precio | number: '1.2-2'}}</div>
+                <div class="col-lg-2 d-none d-lg-block "><input class="form-control" type="number"  min="0" value="{{item.cantidad}}" (change)="modificarCarito(item.claveProducto, $event.target.value)" ></div>
+                <div class="col-lg-2 d-none d-lg-block">{{item.cantidad * item.precio | number: '1.2-2'}}</div>
+            </div>
+            <div class="row card-item mt-3 mb-3">
+                <div class="col-6">
+                   <h3> Total: ${{total | number: '1.2-2'}}</h3>
+                </div>
+                <div class="col-6">
+                    <h5>Articulos: {{productosTotal}}</h5>
+                </div>
             </div>
         </div>
     </div>

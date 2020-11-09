@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       let div = this.renderer.createElement('div');
       this.renderer.addClass(div, 'carousel-item');
       this.renderer.appendChild(this.imagesCarousel.nativeElement, div);
-      console.log(index == 0);
       if(index == 0) {
         this.renderer.addClass(li, 'active');
         this.renderer.addClass(div, 'active');

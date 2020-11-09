@@ -186,7 +186,7 @@ export class ProductosService {
     {
       'clave_producto': '1510',
       'nombre': "Cemento CEMEX EXTRA",
-      'precio': '',
+      'precio': '152.51',
       'familia_prod': '60',
       'imagen':
           'https://www.cemexmexico.com/documents/27057941/46475685/tarjeta-productos-cemento-extra-3.jpg/33521c2b-5d52-ad27-b70b-ae72f72b1d09?t=1603467297227',
@@ -196,7 +196,7 @@ export class ProductosService {
     {
       'clave_producto': '1520',
       'nombre': "Cemento CEMEX Impercem",
-      'precio': '',
+      'precio': '154.00',
       'familia_prod': '60',
       'imagen': 'https://www.cemexmexico.com/documents/27057941/46475685/cemex-mexico-saco-impercem.png/6e54b096-0ec8-722b-1d2c-697eb1676ca0?t=1596755641896',
       'marca': 'Wal front',
@@ -205,7 +205,7 @@ export class ProductosService {
     {
       'clave_producto': '1530',
       'nombre': "Cemento Blanco CEMEX",
-      'precio': '',
+      'precio': '130.00',
       'familia_prod': '60',
       'imagen':
           'https://www.cemexmexico.com/documents/27057941/46475685/cemex-mexico-saco-cemento-blanco.png/5a84f09b-e0e3-86c1-5287-708573f85910?t=1596755640882',
@@ -215,7 +215,7 @@ export class ProductosService {
     {
       'clave_producto': '1540',
       'nombre': "Fiero, Alambre Galvanizado, Calibre 22, Kilogramos",
-      'precio': '',
+      'precio': '68.60',
       'familia_prod': '6210',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w5NTY1MHxpbWFnZS9qcGVnfGltYWdlcy9oZjUvaDAwLzg4NDQzMjE5NDc2NzguanBnfDA5ZTBmNTE4YWNiZWI3OTgwZjA5NTZlNjNjNGMwMTRlYzU1ODZiYTY3MmIzZDNjMDZjMWM2ZGY2MjA3M2Y3YWE',
@@ -225,7 +225,7 @@ export class ProductosService {
     {
       'clave_producto': '1550',
       'nombre': "Bronco, Alambre Puas 34Kg 340M Cal12 Roll, Pieza",
-      'precio': '',
+      'precio': '25.50',
       'familia_prod': '6210',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjMyMzN8aW1hZ2UvanBlZ3xpbWFnZXMvaGUyL2hiZi84ODQ0MzIxOTE0OTEwLmpwZ3xjM2QzNDk0YzJjYmZlM2Q2MTExYjgxMmEyMmY3MTQzMDJhMGZkYzZlMmY4NzUwNzJlMzkzY2M5NDAxZjUyNTg5',
@@ -235,7 +235,7 @@ export class ProductosService {
     {
       'clave_producto': '1560',
       'nombre': "Tabique Rojo Recocido 5 X 12 X 23 cm, Pieza",
-      'precio': '',
+      'precio': '3.12',
       'familia_prod': '63',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2NzU4MHxpbWFnZS9qcGVnfGltYWdlcy9oMTkvaDAzLzg4ODAwNDM5ODI4NzguanBnfDkwYThlYjk3MTRmOWEyNDY2OWExMGU1ZGNiNzc5NmJiMzAzZjIzZDUzMjAwZjk3N2MzZDZkNDE3NDhmNjA3ODM',
@@ -245,7 +245,7 @@ export class ProductosService {
     {
       'clave_producto': '1570',
       'nombre': "Ladrillo Rojo 2 X 12 X 23 cm, Millar",
-      'precio': '',
+      'precio': '6.99',
       'familia_prod': '63',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wyODYwMnxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGNhLzg4ODAwNDQxNzk0ODYuanBnfDUzMTJhOTE1MWRlNTdjMjc2ZDRlMzIwYWQ3OWRmOTgwYjhlZjEzNGMxMmJjOTAwYWFkODQzM2E2Y2JiYWE1OGY',
@@ -255,7 +255,7 @@ export class ProductosService {
     {
       'clave_producto': '1580',
       'nombre': "Weno, Cemento Acrilico 3.8 L, Pieza",
-      'precio': '',
+      'precio': '100.00',
       'familia_prod': '64',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMDMxNzV8aW1hZ2UvanBlZ3xpbWFnZXMvaDRmL2gxZC84ODc0OTc4NTc0MzY2LmpwZ3xmY2MxOWJmMzg1YTZlOGJjMzg5YmY5OTcwMmI4MGRjN2E4ZGIxYjA1YmM5NTM0ODcwODNhNWU0ZDc5N2U1ZWY0',
@@ -265,7 +265,7 @@ export class ProductosService {
     {
       'clave_producto': '1590',
       'nombre': "Grano Gris #2, Saco",
-      'precio': '',
+      'precio': '580.00',
       'familia_prod': '64',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w0MTc2MDV8aW1hZ2UvanBlZ3xpbWFnZXMvaDk3L2hkNy84ODgyMDM1ODUxMjk0LmpwZ3xiNDQ3Y2NjZTcxMzM0NDE2MTE1ZWQ1NWNhZWNiNjU2NDk0NzdlY2Q4MmM2MmYxYWQ0N2M1M2Y0Y2ViNTVjZDQ2',
@@ -275,7 +275,7 @@ export class ProductosService {
     {
       'clave_producto': '1600',
       'nombre': "Foset, Adaptador Macho De Cpvc Con Inserto Metálico (19 Mm) 3/4', Pieza",
-      'precio': '',
+      'precio': '22.00',
       'familia_prod': '65',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2ODIyNXxpbWFnZS9qcGVnfGltYWdlcy9oZmQvaDk3Lzg4NjExNjU3NDgyNTQuanBnfDc1MDYzZmVhMTc2OTJiMDIxZjdlZDZlMTAyOWZmYmM2YzI1NjYyOGI2NWMyMGQyZDM1N2E1NjE3ZDgwM2I1NTE',
@@ -285,7 +285,7 @@ export class ProductosService {
     {
       'clave_producto': '1610',
       'nombre': "Cnx, Cpvc Tee 1/2\" Flow Guard, Pieza",
-      'precio': '',
+      'precio': '22.00',
       'familia_prod': '65',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w1MjUwOXxpbWFnZS9qcGVnfGltYWdlcy9oZDUvaGI0Lzg4NjY3MTI1NTE0NTQuanBnfDg2MmU5ZTFjZDBmMzllNmQ3N2QyMzI5Mjg3YzA3MTA2MWU0YmRkMzQ3MjBiZWI3ZWYyOWYzZmI5NzE1NWU3Mzg',
@@ -295,7 +295,7 @@ export class ProductosService {
     {
       'clave_producto': '1620',
       'nombre': "Iusa, Cobre Codo Rosca Ext. 1/2\", Pieza",
-      'precio': '',
+      'precio': '20.00',
       'familia_prod': '65',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjY1NDh8aW1hZ2UvanBlZ3xpbWFnZXMvaGQwL2hmMS84ODY2NzEyOTQ0NjcwLmpwZ3wwMjM3YjcyZTI0NDRhOTZhN2RhODBmOWU4YjE0YWIzNTU0NTAxNWZkMGE5ZGMzNGU0NjVhMzllYWFlOWQ4MGFj',
@@ -305,7 +305,7 @@ export class ProductosService {
     {
       'clave_producto': '1630',
       'nombre': "Volteck, Plafón Redondo Decorativo 15W 6500K Led, Pieza",
-      'precio': '',
+      'precio': '55.00',
       'familia_prod': '6610',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2MDc4OXxpbWFnZS9qcGVnfGltYWdlcy9oZjYvaDU0Lzg4OTkwMDk2NDI1MjYuanBnfDM0NjZhOTQyOWUxOTJjY2VmYjQ1MmQ0MjgyMDE3MmI4ZjMwOWQyODU3ZWRhOTM1OTZiNzE2MDczMjRjODRmYmE',
@@ -315,7 +315,7 @@ export class ProductosService {
     {
       'clave_producto': '1640',
       'nombre': "Volteck, Contacto Doble, Línea Italiana, Pieza",
-      'precio': '',
+      'precio': '60.00',
       'familia_prod': '6610',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wyMTMwMnxpbWFnZS9qcGVnfGltYWdlcy9oYzcvaDhhLzg4NTI5MzU0MDk2OTQuanBnfDVhNzljYzFlNjlkMDI0NGRjMjQyM2JiMDE0MzliM2I4MGY5YWZkNjQ0ZjRlMjUxNzA2OTk0MzczYTBjYThjNmM',
@@ -620,6 +620,18 @@ export class ProductosService {
 
     let index = this.carrito.findIndex( element => element.claveProducto === producto);
     this.carrito.splice(index, 1);
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+    this.carrito$.next(this.carrito);
+  }
+
+  modificarCarrito(producto: string, cantidad: number){
+    this.carrito = JSON.parse(localStorage.getItem('carrito'));
+    this.carrito.forEach(element => {
+      if(element.claveProducto === producto){
+        element.cantidad = cantidad;
+        return true;
+      }
+    });
     localStorage.setItem('carrito', JSON.stringify(this.carrito));
     this.carrito$.next(this.carrito);
   }
