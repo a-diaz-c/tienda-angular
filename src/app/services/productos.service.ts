@@ -667,6 +667,8 @@ export class ProductosService {
   }
 
   getProductos(usuario: string){
+    if(usuario === 'materialestellez' || usuario === 'autopistadelsol')
+      usuario = 'gruporoca';
     return this.arrayProductos.filter( (element) => element.usuario == usuario);
   }
 
@@ -699,10 +701,14 @@ export class ProductosService {
   }
 
   getCategorias(usuario: string): any{
+    if(usuario === 'materialestellez' || usuario === 'autopistadelsol')
+      usuario = 'gruporoca';
     return this.categorias.find( (element) =>  element.usuario == usuario);
   }
 
   getCarousel(usuario: string):  any{
+    if(usuario === 'materialestellez' || usuario === 'autopistadelsol')
+      usuario = 'gruporoca';
     return this.carousel.find( (element) =>  element.usuario == usuario);
   }
 }
