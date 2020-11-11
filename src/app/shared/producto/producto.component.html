@@ -1,4 +1,24 @@
-<div class="card col-lg-12 col-md-12 col-sm-12 card-producto" style="height: 350px;">
+<div class="card">
+    <div class="row justify-content-center">
+        <a [routerLink]="[ruta, producto.claveProducto]">
+            <img  class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap" style="max-height: 200px; max-width: 200px;">
+        </a>
+    </div>
+    <div class="card-body" style="flex: none;">
+        <div class="row d-flex justify-content-center">
+            <a [routerLink]="[ruta, producto.claveProducto]" ><h6 class="card-title">{{producto.nombre}}</h6></a>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <p class="card-text">${{producto.precio | number: '1.2-2'}}</p>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <input [(ngModel)]="cantidad" class="col-lg-3 col-md-3 col-sm-3 col-2 mr-3 form-control" type="number" min="0">
+            <button (click)="agregarProducto()" class="btn btn-secondary">  <i class="fas fa-shopping-cart"></i> Agregar</button>
+        </div>
+    </div>
+</div>
+<!-- <div class="card" style="height: 350px; max-width: 250px;" >
     <a [routerLink]="[ruta, producto.claveProducto]">
         <img  class="card-img-top img-card" src="{{producto.imagen}}" alt="Card image cap" style="max-height: 200px; max-width: 200px;">
     </a>
@@ -15,7 +35,7 @@
             <button (click)="agregarProducto()" class="btn btn-secondary">  <i class="fas fa-shopping-cart"></i> Agregar</button>
         </div>
     </div>
-</div>
+</div> -->
 
 <div id="myModal" class="modal" #modal>
     <!-- Modal content -->

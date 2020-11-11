@@ -32,7 +32,7 @@ export class ConfiguracionService {
       'colorHeader': '#FF640C',
       'carousel': true,
       'icono':
-          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo-Portada.png?alt=media&token=7b110546-88cc-42b5-8722-29f5b49a9b3d',
+          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo-Portada.png?alt=media&token=aa36d0f4-ee12-4b1d-8411-76e3c3e3d025',
     },
     {
       'id': 'farmacia',
