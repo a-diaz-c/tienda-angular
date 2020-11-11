@@ -571,7 +571,137 @@ export class ProductosService {
       'descripcion':
           '',
       'usuario':'kingo',
-    }
+    },
+    {
+      'clave_producto': '2000',
+      'nombre': "Bulto De Cemento Holcin Apasco 50 Kg",
+      'precio': '152.51',
+      'familia_prod': '60',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_762813-MLM43148022200_082020-O.webp',
+      'marca': '',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2003',
+      'nombre': "Fiero, Alambre Galvanizado, Calibre 22, Kilogramos",
+      'precio': '68.60',
+      'familia_prod': '6210',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w5NTY1MHxpbWFnZS9qcGVnfGltYWdlcy9oZjUvaDAwLzg4NDQzMjE5NDc2NzguanBnfDA5ZTBmNTE4YWNiZWI3OTgwZjA5NTZlNjNjNGMwMTRlYzU1ODZiYTY3MmIzZDNjMDZjMWM2ZGY2MjA3M2Y3YWE',
+      'marca': 'Cemex',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2004',
+      'nombre': "Bronco, Alambre Puas 34Kg 340M Cal12 Roll, Pieza",
+      'precio': '25.50',
+      'familia_prod': '6210',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjMyMzN8aW1hZ2UvanBlZ3xpbWFnZXMvaGUyL2hiZi84ODQ0MzIxOTE0OTEwLmpwZ3xjM2QzNDk0YzJjYmZlM2Q2MTExYjgxMmEyMmY3MTQzMDJhMGZkYzZlMmY4NzUwNzJlMzkzY2M5NDAxZjUyNTg5',
+      'marca': 'Cemex',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2004',
+      'nombre': "Tabique Rojo Recocido 5 X 12 X 23 cm, Pieza",
+      'precio': '3.12',
+      'familia_prod': '63',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2NzU4MHxpbWFnZS9qcGVnfGltYWdlcy9oMTkvaDAzLzg4ODAwNDM5ODI4NzguanBnfDkwYThlYjk3MTRmOWEyNDY2OWExMGU1ZGNiNzc5NmJiMzAzZjIzZDUzMjAwZjk3N2MzZDZkNDE3NDhmNjA3ODM',
+      'marca': 'Cemex',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2005',
+      'nombre': "Ladrillo Rojo 2 X 12 X 23 cm, Millar",
+      'precio': '6.99',
+      'familia_prod': '63',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wyODYwMnxpbWFnZS9qcGVnfGltYWdlcy9oMTMvaGNhLzg4ODAwNDQxNzk0ODYuanBnfDUzMTJhOTE1MWRlNTdjMjc2ZDRlMzIwYWQ3OWRmOTgwYjhlZjEzNGMxMmJjOTAwYWFkODQzM2E2Y2JiYWE1OGY',
+      'marca': 'Cemex',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2006',
+      'nombre': "Weno, Cemento Acrilico 3.8 L, Pieza",
+      'precio': '100.00',
+      'familia_prod': '64',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMDMxNzV8aW1hZ2UvanBlZ3xpbWFnZXMvaDRmL2gxZC84ODc0OTc4NTc0MzY2LmpwZ3xmY2MxOWJmMzg1YTZlOGJjMzg5YmY5OTcwMmI4MGRjN2E4ZGIxYjA1YmM5NTM0ODcwODNhNWU0ZDc5N2U1ZWY0',
+      'marca': 'Cemex',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2007',
+      'nombre': "Grano Gris #2, Saco",
+      'precio': '580.00',
+      'familia_prod': '64',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w0MTc2MDV8aW1hZ2UvanBlZ3xpbWFnZXMvaDk3L2hkNy84ODgyMDM1ODUxMjk0LmpwZ3xiNDQ3Y2NjZTcxMzM0NDE2MTE1ZWQ1NWNhZWNiNjU2NDk0NzdlY2Q4MmM2MmYxYWQ0N2M1M2Y0Y2ViNTVjZDQ2',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2008',
+      'nombre': "Foset, Adaptador Macho De Cpvc Con Inserto Metálico (19 Mm) 3/4', Pieza",
+      'precio': '22.00',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2ODIyNXxpbWFnZS9qcGVnfGltYWdlcy9oZmQvaDk3Lzg4NjExNjU3NDgyNTQuanBnfDc1MDYzZmVhMTc2OTJiMDIxZjdlZDZlMTAyOWZmYmM2YzI1NjYyOGI2NWMyMGQyZDM1N2E1NjE3ZDgwM2I1NTE',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2010',
+      'nombre': "Cresco, Codo Pvc Sanitario 45 X 4\", Pieza",
+      'precio': '16.62',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wzOTc0M3xpbWFnZS9qcGVnfGltYWdlcy9oN2IvaDYyLzg4NzQ0ODgzOTc4NTQuanBnfDY0OTg5YmMwMWFkYTA1ODQ4MTYxMmMzZGI5MTI5MGFlMTU0ZTlkYWRjZjkwODgyMmNhMzgwYTY2M2ZkNDgwZjQ',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2011',
+      'nombre': "Cnx, Cpvc Tee 1/2\" Flow Guard, Pieza",
+      'precio': '22.00',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w1MjUwOXxpbWFnZS9qcGVnfGltYWdlcy9oZDUvaGI0Lzg4NjY3MTI1NTE0NTQuanBnfDg2MmU5ZTFjZDBmMzllNmQ3N2QyMzI5Mjg3YzA3MTA2MWU0YmRkMzQ3MjBiZWI3ZWYyOWYzZmI5NzE1NWU3Mzg',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2012',
+      'nombre': "Iusa, Cobre Codo Rosca Ext. 1/2\", Pieza",
+      'precio': '20.00',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxMjY1NDh8aW1hZ2UvanBlZ3xpbWFnZXMvaGQwL2hmMS84ODY2NzEyOTQ0NjcwLmpwZ3wwMjM3YjcyZTI0NDRhOTZhN2RhODBmOWU4YjE0YWIzNTU0NTAxNWZkMGE5ZGMzNGU0NjVhMzllYWFlOWQ4MGFj',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2013',
+      'nombre': "Volteck, Plafón Redondo Decorativo 15W 6500K Led, Pieza",
+      'precio': '55.00',
+      'familia_prod': '6610',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2MDc4OXxpbWFnZS9qcGVnfGltYWdlcy9oZjYvaDU0Lzg4OTkwMDk2NDI1MjYuanBnfDM0NjZhOTQyOWUxOTJjY2VmYjQ1MmQ0MjgyMDE3MmI4ZjMwOWQyODU3ZWRhOTM1OTZiNzE2MDczMjRjODRmYmE',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
+    {
+      'clave_producto': '2014',
+      'nombre': "Volteck, Contacto Doble, Línea Italiana, Pieza",
+      'precio': '60.00',
+      'familia_prod': '6610',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wyMTMwMnxpbWFnZS9qcGVnfGltYWdlcy9oYzcvaDhhLzg4NTI5MzU0MDk2OTQuanBnfDVhNzljYzFlNjlkMDI0NGRjMjQyM2JiMDE0MzliM2I4MGY5YWZkNjQ0ZjRlMjUxNzA2OTk0MzczYTBjYThjNmM',
+      'marca': 'GENÉRICO',
+      'usuario': 'autopistadelsol'
+    },
   ];
 
   carousel = [
@@ -677,7 +807,7 @@ export class ProductosService {
   }
 
   getProductos(usuario: string){
-    if(usuario === 'materialestellez' || usuario === 'autopistadelsol')
+    if(usuario === 'materialestellez')
       usuario = 'gruporoca';
     return this.arrayProductos.filter( (element) => element.usuario == usuario);
   }
