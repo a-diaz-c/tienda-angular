@@ -189,26 +189,26 @@ export class ProductosService {
       'precio': '152.51',
       'familia_prod': '60',
       'imagen':
-          'https://www.cemexmexico.com/documents/27057941/46475685/tarjeta-productos-cemento-extra-3.jpg/33521c2b-5d52-ad27-b70b-ae72f72b1d09?t=1603467297227',
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w3NDUyNTB8aW1hZ2UvcG5nfGltYWdlcy9oYmMvaGZiLzg4NzAyODgwOTczMTAucG5nfDM2YWQ5YTdlY2U2ZmQ1MDQwYWI5NzM2ZWY5MDAyYTljMjcwOGIxODM5YTJhNTZjZTliMDY1ZmU1NDg3NGRlOGY',
       'marca': 'Wal front',
       'usuario': 'gruporoca'
     },
     {
       'clave_producto': '1520',
-      'nombre': "Cemento CEMEX Impercem",
+      'nombre': "Tolteca, Cemento Impercem Cpc30R 50 Kg, Saco",
       'precio': '154.00',
       'familia_prod': '60',
-      'imagen': 'https://www.cemexmexico.com/documents/27057941/46475685/cemex-mexico-saco-impercem.png/6e54b096-0ec8-722b-1d2c-697eb1676ca0?t=1596755641896',
+      'imagen': 'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wxNDI0NTl8aW1hZ2UvanBlZ3xpbWFnZXMvaDZlL2hkYy84OTQyNzk5MDYxMDIyLmpwZ3xlNjE1NDE4ZjQ0Y2ExN2NjMDAwOGQ1MTFmMTIwMTE1MjhkMmNmMmFlZDc2ZTlkZDhhMDdlNGQ0MjIzNTE5ZmU0',
       'marca': 'Wal front',
       'usuario': 'gruporoca'
     },
     {
       'clave_producto': '1530',
-      'nombre': "Cemento Blanco CEMEX",
+      'nombre': "Cemex, Cemento Blanco Cpc30Rb 25 Kg, Saco",
       'precio': '130.00',
       'familia_prod': '60',
       'imagen':
-          'https://www.cemexmexico.com/documents/27057941/46475685/cemex-mexico-saco-cemento-blanco.png/5a84f09b-e0e3-86c1-5287-708573f85910?t=1596755640882',
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wzMjg1MTJ8aW1hZ2UvcG5nfGltYWdlcy9oNzkvaGEwLzg4NDQzMTk5ODE1OTgucG5nfDA4ZDVkYTQ1NTEzNmEzODQ2ZjYyZDNhMWNiNGMxYjJkMjJlNzAyYWYxNDE4NjI3OWM0MDhkM2ZmYWY1YjhlMjY',
       'marca': 'Cemex',
       'usuario': 'gruporoca'
     },
@@ -279,6 +279,16 @@ export class ProductosService {
       'familia_prod': '65',
       'imagen':
           'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3w2ODIyNXxpbWFnZS9qcGVnfGltYWdlcy9oZmQvaDk3Lzg4NjExNjU3NDgyNTQuanBnfDc1MDYzZmVhMTc2OTJiMDIxZjdlZDZlMTAyOWZmYmM2YzI1NjYyOGI2NWMyMGQyZDM1N2E1NjE3ZDgwM2I1NTE',
+      'marca': 'GENÉRICO',
+      'usuario': 'gruporoca'
+    },
+    {
+      'clave_producto': '1601',
+      'nombre': "Cresco, Codo Pvc Sanitario 45 X 4\", Pieza",
+      'precio': '16.62',
+      'familia_prod': '65',
+      'imagen':
+          'https://www.construrama.com/medias/?context=bWFzdGVyfGltYWdlc3wzOTc0M3xpbWFnZS9qcGVnfGltYWdlcy9oN2IvaDYyLzg4NzQ0ODgzOTc4NTQuanBnfDY0OTg5YmMwMWFkYTA1ODQ4MTYxMmMzZGI5MTI5MGFlMTU0ZTlkYWRjZjkwODgyMmNhMzgwYTY2M2ZkNDgwZjQ',
       'marca': 'GENÉRICO',
       'usuario': 'gruporoca'
     },

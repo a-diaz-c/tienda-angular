@@ -43,6 +43,15 @@ export class ConfiguracionService {
       'icono': 'http://kingo.com.mx/wp-content/uploads/2020/11/Logotipo-Farmacia-Bahia-azul.png'
     },
     {
+      'id': 'kingo',
+      'nombre': "Kingo Systems",
+      'colorMenu': '#1565C0',
+      'colorHeader': '#2196F3',
+      'carousel': false,
+      'icono':
+          'http://kingo.com.mx/wp-content/uploads/2019/06/LogotipoPaginaWeb.png',
+    },
+    {
       'id': 'autopistadelsol',
       'nombre': "Materiales autopista del sol",
       'colorMenu': '#333333',
@@ -54,8 +63,8 @@ export class ConfiguracionService {
     {
       'id': 'materialestellez',
       'nombre': "Materiales Tellez de Acapulco",
-      'colorMenu': '#333333',
-      'colorHeader': '#FF640C',
+      'colorMenu': '#033E73',
+      'colorHeader': '#FFFFFF',
       'carousel': true,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/materiales.jpg?alt=media&token=7db32105-24e7-4d28-8104-0eeeb5e7aac2',
