@@ -10,8 +10,8 @@ export class GlobalConfig {
     private confingClient: ConfigCliente;
     private constructor(url: string) {
         console.log(url);
-        this.usuario = 'gruporoca';
-        this.confingClient = this.configService.getCliente('gruporoca');
+        this.usuario = 'autopistadelsol';
+        this.confingClient = this.configService.getCliente('autopistadelsol');
     }
 
     public static getInstance(): GlobalConfig {

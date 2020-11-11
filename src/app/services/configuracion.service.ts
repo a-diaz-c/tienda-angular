@@ -55,10 +55,10 @@ export class ConfiguracionService {
       'id': 'autopistadelsol',
       'nombre': "Materiales autopista del sol",
       'colorMenu': '#333333',
-      'colorHeader': '#FF640C',
+      'colorHeader': '#FFFFFF',
       'carousel': true,
       'icono':
-          'http://kingo.com.mx/wp-content/uploads/2020/11/Logotipo-Farmacia-Bahia-azul.png',
+          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/logo.png?alt=media&token=21402a6f-e87a-4b5a-b450-0af322452346',
     },
     {
       'id': 'materialestellez',
