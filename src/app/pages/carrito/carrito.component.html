@@ -24,26 +24,24 @@
                                <h6 class="font-weight-bold">{{item.nombre}}</h6>
                             </div>
                             <div class="row d-lg-none">
-                                <div class="col-10 input-group mb-3">
+                                <div class="col-10 mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">Precio</span>
-                                        <span class="input-group-text" style="background-color: transparent;">${{item.precio | number: '1.2-2'}}</span>
+                                        <h6 class="mr-2">Precio: </h6>
+                                        <h6 >${{item.precio | number: '1.2-2'}}</h6>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row d-lg-none">
-                                <div class="col-10 col-md-5 input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Cantidad</span>
-                                      </div>
-                                      <input class="form-control" type="number" min="0" value="{{item.cantidad}}" (change)="modificarCarito(item.claveProducto, $event.target.value)" >
+                            <div class="col-10 col-md-5 mb-3 ">
+                                <div class="row d-lg-none d-flex align-items-center">
+                                    <h6 class="mr-2">Cantidad: </h6>
+                                    <input class="form-control" type="number" min="0" value="{{item.cantidad}}" (change)="modificarCarito(item.claveProducto, $event.target.value)" >                                    
                                 </div>
                             </div>
                             <div class="row d-lg-none">
-                                <div class="col-10 input-group mb-3">
+                                <div class="col-10 input-group mb-3 ">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">Total</span>
-                                        <span class="input-group-text" style="background-color: transparent;">{{item.cantidad * item.precio | number: '1.2-2'}}</span>
+                                        <h6 class="mr-2">Total: </h6>
+                                        <h6 >{{item.cantidad * item.precio | number: '1.2-2'}}</h6>
                                     </div>
                                 </div>
                             </div>
