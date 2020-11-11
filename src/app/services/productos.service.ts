@@ -729,6 +729,13 @@ export class ProductosService {
        'http://kingo.com.mx/wp-content/uploads/2020/11/6-Slider-ROCA.jpg'
      ]
     },
+    {'usuario':'materialestellez',
+    'carousel': [
+       'http://kingo.com.mx/wp-content/uploads/2020/11/3-Tellez-Roble.jpg',
+       'http://kingo.com.mx/wp-content/uploads/2020/11/1-Tellez-Roble.jpg',
+       'http://www.vibromex.com.mx/img/banners/BANNER-CEMENTO2-1200X340-PX.jpg',
+     ]
+    },
   ];
 
   private carrito$ = new Subject<any[]>();
@@ -847,7 +854,7 @@ export class ProductosService {
   }
 
   getCarousel(usuario: string):  any{
-    if(usuario === 'materialestellez' || usuario === 'autopistadelsol')
+    if( usuario === 'autopistadelsol')
       usuario = 'gruporoca';
     return this.carousel.find( (element) =>  element.usuario == usuario);
   }
