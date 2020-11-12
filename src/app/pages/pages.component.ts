@@ -48,7 +48,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(){
-    this.listarMenu(this.categorias,this.listaMenu.nativeElement);
+    this.listarMenu(this.categorias,this.listaMenu.nativeElement, true);
     this.addColorHeader();
   }
 
@@ -87,17 +87,22 @@ export class PagesComponent implements OnInit, AfterViewInit {
     });
   }
 
-  listarMenu(array: any [], padre){
-    let ul = this.renderer.createElement('ul')
+  listarMenu(array: any [], padre, root: boolean){
+    let ul = this.renderer.createElement('ul');
     this.renderer.addClass(ul,'list-group');
+    this.renderer.setStyle(ul, 'width', '100%');
     this.renderer.appendChild(padre, ul);
 
     array.forEach((element: any) => {
       let li = this.renderer.createElement('li');
       this.renderer.setStyle(li, 'list-style', 'none');
       this.renderer.setStyle(li, 'padding-right', '0px');
+      if(root) this.renderer.addClass(li, 'root');
       let button = this.renderer.createElement('button');
       this.renderer.addClass(button, 'btn');
+      this.renderer.addClass(button, 'd-flex');
+      this.renderer.addClass(button, 'justify-content-start');
+      this.renderer.setStyle(button, 'width', '100%');
       this.renderer.setAttribute(button, 'type','button');
       this.renderer.setAttribute(button, 'data-toggle', 'collapse');
       this.renderer.setAttribute(button, 'data-target', '#collapse' + element.id);
@@ -110,6 +115,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
         let icon = this.renderer.createElement('li');
         this.renderer.addClass(icon, 'fas');
         this.renderer.addClass(icon, 'fa-angle-down');
+        this.renderer.addClass(icon, 'ml-1');
         this.renderer.appendChild(button,icon);
 
         let div = this.renderer.createElement('div');
@@ -117,7 +123,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
         this.renderer.setAttribute(div, 'id', 'collapse' + element.id);
         this.renderer.appendChild(li, div);
 
-        this.listarMenu(element.hijos, div);
+        this.listarMenu(element.hijos, div, false);
       }else{
         this.renderer.listen(button, 'click', event => {
           this.mover(element.id);
