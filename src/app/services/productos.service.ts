@@ -53,6 +53,13 @@ export class ProductosService {
       {'id': '48', 'nombre': 'Bienestar Sexual', 'hijos': []},
     ]},
     {'usuario': 'kingo', 'categorias': []},
+    {'usuario': 'zapateria', 'categorias': [
+      {'id': '70', 'nombre': 'Tenis', 'hijos': []},
+      {'id': '71', 'nombre': 'Botas y Botinetas', 'hijos': []},
+      {'id': '72', 'nombre': 'Sandalias y Ojotas', 'hijos': []},
+      {'id': '73', 'nombre': 'Mocasines y Náuticos', 'hijos': []},
+      {'id': '74', 'nombre': 'Zapatillas y Tacones', 'hijos': []},
+    ]},
   ];
 
   productos = [
@@ -702,6 +709,38 @@ export class ProductosService {
       'marca': 'GENÉRICO',
       'usuario': 'autopistadelsol'
     },
+    {
+      'clave_producto': '2201',
+      'nombre': "Zapato",
+      'precio': '600.00',
+      'familia_prod': '73',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_2X_704745-MLM31221157341_062019-F.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'color': [ 
+          {'nombre':'cafe', 'image': 'https://http2.mlstatic.com/D_NQ_NP_2X_704745-MLM31221157341_062019-F.webp', 'codigo': '#804000'}, 
+          {'nombre':'azul', 'image': 'https://http2.mlstatic.com/D_NQ_NP_2X_702439-MLM31228577835_062019-F.webp', 'codigo': '#004380'}
+        ],
+        'talla': [ '22', '23', '24', '25']
+      }
+    },
+    {
+      'clave_producto': '2202',
+      'nombre': "Zapato",
+      'precio': '600.00',
+      'familia_prod': '73',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_2X_616580-MLM40581948747_012020-F.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': [ '22', '23', '24', '25']
+      }
+    },
   ];
 
   carousel = [
@@ -809,6 +848,7 @@ export class ProductosService {
       obj.claveProducto = producto.clave_producto;
       obj.familiaProducto = producto.familia_prod;
       obj.usuario = producto.usuario;
+      obj.otros = producto.otros;
       this.arrayProductos.push(obj);
     } );
   }
@@ -828,6 +868,7 @@ export class ProductosService {
       obj.claveProducto = res.clave_producto;
       obj.familiaProducto = res.familia_prod;
       obj.descripcion = res.descripcion;
+      obj.otros = res.otros;
     return obj;
   }
 

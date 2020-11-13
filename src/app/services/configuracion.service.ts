@@ -69,6 +69,15 @@ export class ConfiguracionService {
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/materiales.jpg?alt=media&token=7db32105-24e7-4d28-8104-0eeeb5e7aac2',
     },
+    {
+      'id': 'zapateria',
+      'nombre': "Zapateria Acapulco",
+      'colorMenu': '#033E73',
+      'colorHeader': '#FFFFFF',
+      'carousel': false,
+      'icono':
+          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/materiales.jpg?alt=media&token=7db32105-24e7-4d28-8104-0eeeb5e7aac2',
+    },
   ];
 
   constructor() { }

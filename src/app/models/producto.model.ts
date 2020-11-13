@@ -6,6 +6,7 @@ export class ProductoModel{
     imagen: string;
     descripcion: string;
     usuario: string;
+    otros: any
 
     constructor(){
         this.claveProducto = "";

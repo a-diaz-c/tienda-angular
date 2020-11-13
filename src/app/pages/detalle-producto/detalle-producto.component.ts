@@ -12,12 +12,14 @@ export class DetalleProductoComponent implements OnInit {
 
   producto: ProductoModel;
   cantidad: number = 1;
+  image: string;
   @ViewChild('modal', {static: false}) modal: ElementRef;
 
   constructor(private route: ActivatedRoute, private productosService: ProductosService, private routes: Router) { }
 
   ngOnInit() {
     this.producto = this.productosService.buscarProducto(this.route.snapshot.paramMap.get('idProducto'));
+    this.image = this.producto.imagen;
     console.log(this.producto);
   }
 
@@ -42,6 +44,10 @@ export class DetalleProductoComponent implements OnInit {
 
   moverAlCarrito(){
     this.routes.navigate(['/carrito']);
+  }
+
+  cambiarImagen(color: string){
+    this.image = color;
   }
 
 }

@@ -2,11 +2,28 @@
     <div class="card m-2 ">
         <div class="row">
             <div class="col-lg-7 col-md-11 col-11">
-                <img class="card-img-top m-2" [src]="producto.imagen" alt="Card image cap">
+                <img class="card-img-top m-2" [src]="image" alt="Foto del producto">
             </div>
             <div class="col-lg-5 col col-md-12">
                 <h5 class="card-title m-2">{{producto.nombre}}</h5>
                 <h6 class="card-subtitle m-2 text-muted">Precio $ {{producto.precio | number: '1.2-2'}}</h6>
+                <div *ngIf="producto.otros">
+                    <div class="row" *ngIf="producto.otros.talla">
+                        <div class="col ml-1 mt-1 mb-3">
+                            <select id="inputState" class="form-control" style="border-radius: 10px; width: 100px;">
+                                <option selected>Talla</option>
+                                <option *ngFor="let talla of producto.otros.talla">{{talla}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row ml-1" *ngIf="producto.otros.color">
+                       <div class=" ml-1 mr-1" *ngFor="let color of producto.otros.color"> 
+                           <button class="btn btn-circulo" [style.background-color]="color.codigo" 
+                                   (click)="cambiarImagen(color.image)"></button>
+                       </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-1 m-1">
                         <i class="fas fa-truck fa-2x"></i>
@@ -24,8 +41,8 @@
                     </div>
                     <div class="col">
                         <div class="ml-3">
-                            <h5>Envíos Gratis</h5>
-                            <div class="texto">Monto minimo puede variar por tienda y zona</div>
+                            <h5>Garantía</h5>
+                            <div class="texto">Calidad</div>
                         </div>
                     </div>
                 </div>
@@ -35,8 +52,8 @@
                     </div>
                     <div class="col">
                         <div class="ml-3">
-                            <h5>Envíos Gratis</h5>
-                            <div class="texto">Monto minimo puede variar por tienda y zona</div>
+                            <h5>Click & Pick up</h5>
+                            <div class="texto">Compra en línea y recoge tu pedido en tienda</div>
                         </div>
                     </div>
                 </div>
