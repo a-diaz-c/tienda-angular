@@ -54,11 +54,11 @@ export class ProductosService {
     ]},
     {'usuario': 'kingo', 'categorias': []},
     {'usuario': 'zapateria', 'categorias': [
-      {'id': '70', 'nombre': 'Tenis', 'hijos': []},
-      {'id': '71', 'nombre': 'Botas y Botinetas', 'hijos': []},
-      {'id': '72', 'nombre': 'Sandalias y Ojotas', 'hijos': []},
-      {'id': '73', 'nombre': 'Mocasines y Náuticos', 'hijos': []},
-      {'id': '74', 'nombre': 'Zapatillas y Tacones', 'hijos': []},
+      {'id': '01', 'nombre': 'Tenis', 'hijos': []},
+      {'id': '02', 'nombre': 'Botas y Botinetas', 'hijos': []},
+      {'id': '03', 'nombre': 'Sandalias y Ojotas', 'hijos': []},
+      {'id': '04', 'nombre': 'Mocasines y Náuticos', 'hijos': []},
+      {'id': '05', 'nombre': 'Zapatillas y Tacones', 'hijos': []},
     ]},
   ];
 
@@ -484,7 +484,7 @@ export class ProductosService {
       'usuario':'farmacia',
     },
     {
-      'clave_producto': '1510',
+      'clave_producto': '3510',
       'nombre': "EscuSoft-Inscripciones-Online",
       'precio': '3800.00',
       'familia_prod': '',
@@ -496,7 +496,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1520',
+      'clave_producto': '3520',
       'nombre': "Factura Electrónica Nube + 100 Timbres Fiscal",
       'precio': '800.00',
       'familia_prod': '',
@@ -508,7 +508,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1530',
+      'clave_producto': '3530',
       'nombre': "Maines ADMIN",
       'precio': '2500.00',
       'familia_prod': '',
@@ -520,7 +520,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1580',
+      'clave_producto': '3580',
       'nombre': "Maines Contabilidad",
       'precio': '2500.00',
       'familia_prod': '',
@@ -532,7 +532,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1540',
+      'clave_producto': '3540',
       'nombre': "Maines Nómina Electrónica",
       'precio': '',
       'familia_prod': '',
@@ -544,7 +544,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1550',
+      'clave_producto': '3550',
       'nombre': "Maines-Restaurant",
       'precio': '2500.00',
       'familia_prod': '',
@@ -556,7 +556,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1560',
+      'clave_producto': '3560',
       'nombre': "Maines-XML Descargas",
       'precio': '600.00',
       'familia_prod': '',
@@ -568,7 +568,7 @@ export class ProductosService {
       'usuario':'kingo',
     },
     {
-      'clave_producto': '1570',
+      'clave_producto': '3570',
       'nombre': "Servidor para Clases Online",
       'precio': '',
       'familia_prod': '',
@@ -713,7 +713,7 @@ export class ProductosService {
       'clave_producto': '2201',
       'nombre': "Zapato",
       'precio': '600.00',
-      'familia_prod': '73',
+      'familia_prod': '04',
       'descripcion':'',
       'imagen':
           'https://http2.mlstatic.com/D_NQ_NP_2X_704745-MLM31221157341_062019-F.webp',
@@ -731,7 +731,7 @@ export class ProductosService {
       'clave_producto': '2202',
       'nombre': "Zapato",
       'precio': '600.00',
-      'familia_prod': '73',
+      'familia_prod': '04',
       'descripcion':'',
       'imagen':
           'https://http2.mlstatic.com/D_NQ_NP_2X_616580-MLM40581948747_012020-F.webp',
@@ -739,7 +739,100 @@ export class ProductosService {
       'usuario': 'zapateria',
       'otros': {
         'talla': [ '22', '23', '24', '25']
-      }
+      },
+    },
+    {
+      'clave_producto': '2203',
+      'nombre': "Zapatos Acuáticos Playa",
+      'precio': '197',
+      'familia_prod': '01',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_655645-MLM30752881573_052019-O.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': ['21', '22', '23', '24', '25','26', '27'],
+        'color': [ 
+          {'nombre':'Ibiza Rey', 'image': 'https://http2.mlstatic.com/D_NQ_NP_655645-MLM30752881573_052019-O.webp', 'codigo': 'blue'}, 
+          {'nombre':'Negro', 'image': 'https://http2.mlstatic.com/D_NQ_NP_651031-MLM31158969138_062019-O.webp', 'codigo': 'black'},
+          {'nombre':'Negro', 'image': 'https://http2.mlstatic.com/D_NQ_NP_752670-MLM31158957295_062019-O.webp', 'codigo': 'red'},
+        ],
+      },
+    },
+    {
+      'clave_producto': '2204',
+      'nombre': "Zapato Piel Borrego Alto 6 Cm. Confort Manet 2104 Cof 178789",
+      'precio': '600.00',
+      'familia_prod': '05',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_829784-MLM32007298681_082019-O.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': [ '22', '23', '24', '25']
+      },
+    },
+    {
+      'clave_producto': '2205',
+      'nombre': "Armada Botas Industriales Seguridad Trabajo Casquillo 101",
+      'precio': '529',
+      'familia_prod': '02',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_966338-MLM41250310351_032020-O.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': [ '22', '23', '24', '25']
+      },
+    },
+    {
+      'clave_producto': '2206',
+      'nombre': "Armada Botas Industriales Seguridad Trabajo Casquillo 150",
+      'precio': '529',
+      'familia_prod': '02',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_717294-MLM41250271160_032020-O.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': ['26', '27', '28', '29']
+      },
+    },
+    {
+      'clave_producto': '2207',
+      'nombre': "Zapato Tenis Para Dama Deportes Color Rosa Claro",
+      'precio': '359',
+      'familia_prod': '01',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_609115-MLM40947440107_022020-O.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': ['21', '22', '23', '24', '25'],
+        'color': [ 
+          {'nombre':'Negro', 'image': 'https://http2.mlstatic.com/D_NQ_NP_609115-MLM40947440107_022020-O.webp', 'codigo': 'black'}, 
+          {'nombre':'Rosa', 'image': 'https://http2.mlstatic.com/D_NQ_NP_666984-MLM31239002325_062019-O.webp', 'codigo': 'pink'},
+        ],
+      },
+    },
+    {
+      'clave_producto': '2208',
+      'nombre': "Zapatos Casuales Para Dama Stylo 135 Beige",
+      'precio': '237',
+      'familia_prod': '05',
+      'descripcion':'',
+      'imagen':
+          'https://http2.mlstatic.com/D_NQ_NP_745714-MLM32895411880_112019-O.webp',
+      'marca': 'GENÉRICO',
+      'usuario': 'zapateria',
+      'otros': {
+        'talla': [ '22', '23', '24', '25']
+      },
     },
   ];
 

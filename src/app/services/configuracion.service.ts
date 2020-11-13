@@ -76,7 +76,7 @@ export class ConfiguracionService {
       'colorHeader': '#FFFFFF',
       'carousel': false,
       'icono':
-          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/materiales.jpg?alt=media&token=7db32105-24e7-4d28-8104-0eeeb5e7aac2',
+          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/zapato-logo.png?alt=media&token=e440f765-851c-46f3-8caa-b0a8c7d2a3f4',
     },
   ];
 

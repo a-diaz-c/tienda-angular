@@ -29,7 +29,6 @@
 
 .mat-toolbar {
     display: flex;
-    
     flex-direction: column;
     align-items:flex-start !important;
     height: 150px;
