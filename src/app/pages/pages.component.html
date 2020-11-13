@@ -1,5 +1,5 @@
 <mat-sidenav-container class="example-container">
-    <mat-sidenav #drawer mode="over" opened="false" style="width: 300px; position: fixed;">
+    <mat-sidenav #drawer mode="over" opened="false" style="width: 300px; position: fixed;" [style.background]="colorHader=='#FFFFFF' ? '#f7f7f7' : '#FFFFFF'">
         <mat-toolbar style="padding: 0px;" [style.background]="colorHader">
             <div class="" >
                 <div class="mt-3 mb-3 ml-2 text-white">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </mat-toolbar>
-        <div #lista [style.background]="colorHader=='#FFFFFF' ? '#f7f7f7' : '#FFFFFF'" class="d-flex justify-content-start">
+        <div #lista  class="d-flex justify-content-start">
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
