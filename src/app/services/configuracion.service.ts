@@ -78,6 +78,25 @@ export class ConfiguracionService {
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/zapateria.jpg?alt=media&token=dfd127c5-ef95-4efc-87bb-fd3719089234',
     },
+    {
+      'id': 'pollo',
+      'nombre': "Pollo Caliente",
+      'colorMenu': '#E30E07',
+      'colorHeader': '#F1E936',
+      'carousel': false,
+      'icono':
+          'https://ii.ct-stc.com/2/logos/empresas/2019/08/26/ea155f2615fc45c29c06212600949thumbnail.png',
+    },
+    {
+      'id': 'tarascos',
+      'nombre': "Los Tarascos",
+      'colorMenu': '#f90',
+      'colorHeader': '#0461dd',
+      'carousel': false,
+      'icono':
+          'https://lostarascos.com.mx/wp-content/themes/tarascos/dist/images/logo-white.png',
+    },
+    
   ];
 
   constructor() { }
