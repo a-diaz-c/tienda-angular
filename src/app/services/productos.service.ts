@@ -723,18 +723,31 @@ export class ProductosService {
     },
     {
       'clave_producto': '2201',
-      'nombre': "Zapato",
+      'nombre': "Zapato Mocasin Fresco De Caballero Textil Marinero",
       'precio': '600.00',
       'familia_prod': '04',
       'descripcion':'',
       'imagen':
-          'https://http2.mlstatic.com/D_NQ_NP_2X_704745-MLM31221157341_062019-F.webp',
+          'https://http2.mlstatic.com/D_NQ_NP_600298-MLM31999602748_082019-O.webp',
       'marca': 'GENÉRICO',
       'usuario': 'zapateria',
       'otros': {
         'color': [ 
-          {'nombre':'cafe', 'image': 'https://http2.mlstatic.com/D_NQ_NP_2X_704745-MLM31221157341_062019-F.webp', 'codigo': '#804000'}, 
-          {'nombre':'azul', 'image': 'https://http2.mlstatic.com/D_NQ_NP_2X_702439-MLM31228577835_062019-F.webp', 'codigo': '#004380'}
+          {'nombre':'cafe', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_600298-MLM31999602748_082019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_945299-MLM31999605847_082019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_632646-MLM31999606199_082019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_969781-MLM31999606357_082019-O.webp'
+            
+
+          ], 'codigo': '#004380'}, 
+          {'nombre':'azul', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_980184-MLM31999603190_082019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_753573-MLM31999606193_082019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_977934-MLM31999606408_082019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_949428-MLM31999608941_082019-O.webp'
+            
+        ], 'codigo': '#804000'}
         ],
         'talla': [ '22', '23', '24', '25']
       }
@@ -766,9 +779,21 @@ export class ProductosService {
       'otros': {
         'talla': ['21', '22', '23', '24', '25','26', '27'],
         'color': [ 
-          {'nombre':'Ibiza Rey', 'image': 'https://http2.mlstatic.com/D_NQ_NP_655645-MLM30752881573_052019-O.webp', 'codigo': 'blue'}, 
-          {'nombre':'Negro', 'image': 'https://http2.mlstatic.com/D_NQ_NP_651031-MLM31158969138_062019-O.webp', 'codigo': 'black'},
-          {'nombre':'Negro', 'image': 'https://http2.mlstatic.com/D_NQ_NP_752670-MLM31158957295_062019-O.webp', 'codigo': 'red'},
+          {'nombre':'Ibiza Rey', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_655645-MLM30752881573_052019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_974537-MLM31158969083_062019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_656863-MLM31158974041_062019-O.webp'
+          ], 'codigo': 'blue'}, 
+          {'nombre':'Negro', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_651031-MLM31158969138_062019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_873502-MLM31158985018_062019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_749667-MLM31158958235_062019-O.webp'
+          ], 'codigo': 'black'},
+          {'nombre':'Rojo', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_752670-MLM31158957295_062019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_846261-MLM31158980590_062019-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_661399-MLM31158965717_062019-O.webp'
+          ], 'codigo': 'red'},
         ],
       },
     },
@@ -827,8 +852,17 @@ export class ProductosService {
       'otros': {
         'talla': ['21', '22', '23', '24', '25'],
         'color': [ 
-          {'nombre':'Negro', 'image': 'https://http2.mlstatic.com/D_NQ_NP_609115-MLM40947440107_022020-O.webp', 'codigo': 'black'}, 
-          {'nombre':'Rosa', 'image': 'https://http2.mlstatic.com/D_NQ_NP_666984-MLM31239002325_062019-O.webp', 'codigo': 'pink'},
+          {'nombre':'Negro', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_609115-MLM40947440107_022020-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_691105-MLM40947440106_022020-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_683860-MLM40947424342_022020-O.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_857935-MLM40947387946_022020-O.webp',
+          ], 'codigo': 'black'}, 
+          {'nombre':'Rosa', 'image': [
+            'https://http2.mlstatic.com/D_NQ_NP_666984-MLM31239002325_062019-O.webp',
+            'https://http2.mlstatic.com/D_Q_NP_831102-MLM31239002122_062019-R.webp',
+            'https://http2.mlstatic.com/D_NQ_NP_877207-MLM31238995109_062019-O.webp'
+          ], 'codigo': 'pink'},
         ],
       },
     },

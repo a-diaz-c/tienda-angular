@@ -1,9 +1,26 @@
 <div class="container">
     <div class="card m-2 ">
         <div class="row">
-            <div class="col-lg-7 col-md-11 col-11">
-                <img class="card-img-top m-2" [src]="image" alt="Foto del producto">
+            <div class="col-lg-1 col-md-11 col-11 d-none d-lg-block">
+                <div class="btn-imagen" *ngFor="let imagen of imagenes" (click)="cambiarImagen(imagen)">
+                    <img class="card-img-top m-2" [src]="imagen" alt="Foto del producto">                    
+                </div>
             </div>
+            <div class="col-lg-6 col-md-11 col-11">
+                <img class="card-img-top m-2 d-none d-lg-block" [src]="image" alt="Foto del producto">
+                <div id="carouselExampleControls" class="carousel slide d-lg-none" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner" #imagesCarousel>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>  
             <div class="col-lg-5 col col-md-12">
                 <h5 class="card-title m-2">{{producto.nombre}}</h5>
                 <h6 class="card-subtitle m-2 text-muted">Precio $ {{producto.precio | number: '1.2-2'}}</h6>
@@ -19,7 +36,7 @@
                     <div class="row ml-1" *ngIf="producto.otros.color">
                        <div class=" ml-1 mr-1" *ngFor="let color of producto.otros.color"> 
                            <button class="btn btn-circulo" [style.background-color]="color.codigo" 
-                                   (click)="cambiarImagen(color.image)"></button>
+                                   (click)="cambiarColor(color.image)" (touchend)="cambiarColor(color.image)"></button>
                        </div>
                     </div>
                 </div>

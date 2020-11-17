@@ -24,6 +24,20 @@
   border-radius: 15px;
 }
 
+.btn-imagen{
+  height: 90px;
+  width: 90px;
+  border: 1px black;
+  border-radius: 15px;
+}
+
+.btn-imagen:hover {background-color: #C4C2C1}
+
+.btn-imagen img{
+  width: 80px; 
+  height: 70px;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
