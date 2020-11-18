@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
-import { element } from 'protractor';
+import { NavigationEnd, Router } from '@angular/router';
 import { GlobalConfig } from '../config/config';
 import { LocationService } from '../services/location.service';
 import { ProductosService } from '../services/productos.service';
@@ -45,6 +44,13 @@ export class PagesComponent implements OnInit, AfterViewInit {
     this.colorHader = this.globalconfig.getcolorHeader();
     this.colorMenu = this.globalconfig.getColorMenu();
     this.icono = this.globalconfig.getIcono();
+
+    this.route.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
 
   ngAfterViewInit(){

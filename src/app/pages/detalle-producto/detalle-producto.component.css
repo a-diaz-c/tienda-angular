@@ -38,6 +38,29 @@
   height: 70px;
 }
 
+div.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+div.clasificacion input {
+  position: absolute;
+  top: -100px;
+}
+
+div.clasificacion label {
+  float: right;
+  color: #333;
+  font-size: 25px;
+}
+
+div.clasificacion label:hover,
+div.clasificacion label:hover ~ label,
+div.clasificacion input:checked ~ label {
+  color: #0275d8;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

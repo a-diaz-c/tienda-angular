@@ -16,6 +16,7 @@ export class DetalleProductoComponent implements OnInit {
   imagenes: string [] = [];
   @ViewChild('modal', {static: false}) modal: ElementRef;
   @ViewChild('imagesCarousel', {static: false}) imagesCarousel: ElementRef;
+  divCarousle;
 
   constructor(private route: ActivatedRoute, 
               private productosService: ProductosService, 
@@ -30,14 +31,21 @@ export class DetalleProductoComponent implements OnInit {
         this.imagenes = this.producto.otros.color[0].image;
       }
     }
+    
     console.log(this.producto);
   }
 
   ngAfterViewInit(){
+    this.carouselProducto();
+  }
+
+  private carouselProducto(){
+    this.divCarousle = this.renderer.createElement('div');
+    this.renderer.appendChild(this.imagesCarousel.nativeElement, this.divCarousle);
     if(this.imagenes.length == 0){
       let div = this.renderer.createElement('div');
       this.renderer.addClass(div, 'carousel-item');
-      this.renderer.appendChild(this.imagesCarousel.nativeElement, div);
+      this.renderer.appendChild(this.divCarousle, div);
       this.renderer.addClass(div, 'active');
       let img = this.renderer.createElement('img');
       this.renderer.addClass(img, 'm-2');
@@ -48,7 +56,7 @@ export class DetalleProductoComponent implements OnInit {
     this.imagenes.forEach((element, index) => {
       let div = this.renderer.createElement('div');
       this.renderer.addClass(div, 'carousel-item');
-      this.renderer.appendChild(this.imagesCarousel.nativeElement, div);
+      this.renderer.appendChild(this.divCarousle, div);
       if(index == 0) {
         this.renderer.addClass(div, 'active');
       }
@@ -64,8 +72,6 @@ export class DetalleProductoComponent implements OnInit {
     if(this.cantidad <= 0) return;
 
     console.log(this.producto);
-
-
     this.producto['cantidad']= this.cantidad;
     this.productosService.agregarProductoCarrito(this.producto);
     this.mostrarModal();
@@ -84,8 +90,11 @@ export class DetalleProductoComponent implements OnInit {
   }
 
   cambiarColor(color: string []){
+    console.log(color);
     this.imagenes = color;
     this.image = color[0];
+    this.renderer.removeChild(this.imagesCarousel.nativeElement, this.divCarousle)
+    this.carouselProducto();
   }
 
   cambiarImagen(color: string ){
