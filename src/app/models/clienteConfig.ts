@@ -5,6 +5,7 @@ export class ConfigCliente{
     colorHeader: string;
     icono: string;
     carousel: boolean;
+    sucursales: boolean;
 
     constructor(){
         this.id = "";
@@ -13,6 +14,7 @@ export class ConfigCliente{
         this.colorMenu = "";
         this.icono = "";
         this.carousel = true;
+        this.sucursales = false;
     }
     
 }

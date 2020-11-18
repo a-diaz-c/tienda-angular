@@ -1060,6 +1060,12 @@ export class ProductosService {
     },
   ];
 
+  sucursales = [
+    {'usuario': 'gruporoca', 'sucursales' : [
+      'Acapulco - La Sabana', 'Tierra Colorada', 'Petaquillas'
+    ]}
+  ];
+
   private carrito$ = new Subject<any[]>();
   private carrito = [];
 
@@ -1181,5 +1187,9 @@ export class ProductosService {
     if( usuario === 'autopistadelsol')
       usuario = 'gruporoca';
     return this.carousel.find( (element) =>  element.usuario == usuario);
+  }
+
+  getSucursales(usuario: string): any{
+    return this.sucursales.find( (element)=>  element.usuario == usuario);
   }
 }

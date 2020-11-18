@@ -1,8 +1,6 @@
-<div>
+<div *ngIf="globalconfig.sucursales()">
     <select id="inputState" class="form-control" style="border-radius: 10px;">
         <option selected>Selecciona tu tienda</option>
-        <option>Acapulco - La Sabana</option>
-        <option>Tierra Colorada</option>
-        <option>Petaquillas</option>
+        <option *ngFor="let suscursal of sucursaleItem">{{suscursal}}</option>
       </select>
 </div>

@@ -10,8 +10,8 @@ export class GlobalConfig {
     private confingClient: ConfigCliente;
     private constructor(url: string) {
         console.log(url);
-        this.usuario = url;
-        this.confingClient = this.configService.getCliente(url);
+        this.usuario = 'kingo';
+        this.confingClient = this.configService.getCliente('kingo');
     }
 
     public static getInstance(): GlobalConfig {
@@ -50,6 +50,10 @@ export class GlobalConfig {
 
     public getCarousel(){
         return this.confingClient.carousel;
+    }
+
+    public sucursales(){
+        return this.confingClient.sucursales;
     }
 
 

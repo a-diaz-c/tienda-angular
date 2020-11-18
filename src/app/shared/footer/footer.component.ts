@@ -21,6 +21,7 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
     this.color = this.globalconfig.getColorMenu();
     this.icon = this.globalconfig.getIcono();
+    console.log(this.color);
     
   }
 

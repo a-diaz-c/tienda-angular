@@ -42,13 +42,14 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   ngAfterViewInit(){
     this.listaMenu();
     this.addColorHeader();
+    console.log(this.colorHader);
   }
 
   private addColorHeader(){
     if(this.globalconfig.getUsuario() == 'gruporoca')
       this.renderer.setStyle(this.header.nativeElement, 'background', `linear-gradient(-90deg, ${this.colorHader}, white)`);
     else{
-      this.renderer.setStyle(this.header.nativeElement, 'background', this.colorHader);
+      this.renderer.setStyle(this.header.nativeElement, 'background-color', this.colorHader);
     }
   }
 

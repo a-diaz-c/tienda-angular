@@ -13,6 +13,7 @@ export class ConfiguracionService {
       'colorMenu': '#d11507',
       'colorHeader': '#292b2c',
       'carousel': true,
+      'sucursales': false,
       'icono':
           'https://www.applebees.com/-/media/applebees/images/logos/logo.png?h=88&la=en&w=162&hash=167634130AC39DB0286D56EF0F8AEDF717BC3205',
     },
@@ -22,6 +23,7 @@ export class ConfiguracionService {
       'colorMenu': '#EBA40D',
       'colorHeader': '#722616',
       'carousel': true,
+      'sucursales': false,
       'icono':
           'https://juleacapulco.com/wp-content/uploads/2016/09/logo_jule_blanco.png',
     },
@@ -31,6 +33,7 @@ export class ConfiguracionService {
       'colorMenu': '#333333',
       'colorHeader': '#FF640C',
       'carousel': true,
+      'sucursales': true,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo-Portada.png?alt=media&token=aa36d0f4-ee12-4b1d-8411-76e3c3e3d025',
     },
@@ -40,14 +43,16 @@ export class ConfiguracionService {
       'colorMenu': '#135188',
       'colorHeader': '#FFFFFF',
       'carousel': true,
+      'sucursales': false,
       'icono': 'http://kingo.com.mx/wp-content/uploads/2020/11/Logotipo-Farmacia-Bahia-azul.png'
     },
     {
       'id': 'kingo',
       'nombre': "Kingo Systems",
       'colorMenu': '#1565C0',
-      'colorHeader': '#2196F3',
+      'colorHeader': '#1565C0',
       'carousel': false,
+      'sucursales': false,
       'icono':
           'http://kingo.com.mx/wp-content/uploads/2019/06/LogotipoPaginaWeb.png',
     },
@@ -57,6 +62,7 @@ export class ConfiguracionService {
       'colorMenu': '#333333',
       'colorHeader': '#FFFFFF',
       'carousel': true,
+      'sucursales': false,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/logo.png?alt=media&token=21402a6f-e87a-4b5a-b450-0af322452346',
     },
@@ -66,6 +72,7 @@ export class ConfiguracionService {
       'colorMenu': '#033E73',
       'colorHeader': '#FFFFFF',
       'carousel': true,
+      'sucursales': false,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/materiales.jpg?alt=media&token=7db32105-24e7-4d28-8104-0eeeb5e7aac2',
     },
@@ -75,6 +82,7 @@ export class ConfiguracionService {
       'colorMenu': '#033E73',
       'colorHeader': '#FFFFFF',
       'carousel': false,
+      'sucursales': false,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/zapateria.jpg?alt=media&token=dfd127c5-ef95-4efc-87bb-fd3719089234',
     },
@@ -84,6 +92,7 @@ export class ConfiguracionService {
       'colorMenu': '#E30E07',
       'colorHeader': '#F1E936',
       'carousel': false,
+      'sucursales': false,
       'icono':
           'https://ii.ct-stc.com/2/logos/empresas/2019/08/26/ea155f2615fc45c29c06212600949thumbnail.png',
     },
@@ -93,6 +102,7 @@ export class ConfiguracionService {
       'colorMenu': '#f90',
       'colorHeader': '#0461dd',
       'carousel': false,
+      'sucursales': false,
       'icono':
           'https://lostarascos.com.mx/wp-content/themes/tarascos/dist/images/logo-white.png',
     },
