@@ -13,7 +13,7 @@ export class ConfiguracionService {
       'colorMenu': '#d11507',
       'colorHeader': '#292b2c',
       'carousel': true,
-      'sucursales': false,
+      'sucursales': true,
       'icono':
           'https://www.applebees.com/-/media/applebees/images/logos/logo.png?h=88&la=en&w=162&hash=167634130AC39DB0286D56EF0F8AEDF717BC3205',
     },
@@ -54,7 +54,7 @@ export class ConfiguracionService {
       'carousel': false,
       'sucursales': false,
       'icono':
-          'http://kingo.com.mx/wp-content/uploads/2019/06/LogotipoPaginaWeb.png',
+          'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo%20Kingo.png?alt=media&token=81592a50-93a6-4f0f-aef7-84a130cf6735',
     },
     {
       'id': 'autopistadelsol',

@@ -1061,9 +1061,16 @@ export class ProductosService {
   ];
 
   sucursales = [
-    {'usuario': 'gruporoca', 'sucursales' : [
+    {'usuario': 'gruporoca', 
+     'sucursales' : [
       'Acapulco - La Sabana', 'Tierra Colorada', 'Petaquillas'
-    ]}
+      ]
+    },
+    {'usuario': 'applebees',
+     'sucursales': [
+       "Applebee's Acapulco", "Applebee's Vía Vallejo", "Applebee’s Plaza Carso", "Applebee´s Galerías Saltillo",
+     ]
+    }
   ];
 
   private carrito$ = new Subject<any[]>();
