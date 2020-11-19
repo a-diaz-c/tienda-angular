@@ -55,6 +55,10 @@ div.clasificacion label {
   font-size: 25px;
 }
 
+.carousel-item img{
+  height: 50vh;
+}
+
 div.clasificacion label:hover,
 div.clasificacion label:hover ~ label,
 div.clasificacion input:checked ~ label {

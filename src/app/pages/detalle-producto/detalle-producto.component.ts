@@ -33,7 +33,6 @@ export class DetalleProductoComponent implements OnInit {
       }
     }
     
-    console.log(this.producto);
   }
 
   ngAfterViewInit(){
@@ -110,6 +109,7 @@ export class DetalleProductoComponent implements OnInit {
   }
 
   cambiarImagen(color: string ){
+    this.video = false;
     this.image = color;
   }
   

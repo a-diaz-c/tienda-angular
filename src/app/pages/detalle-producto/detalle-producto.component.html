@@ -1,6 +1,6 @@
 <div class="container">
     <div class="card m-2 ">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-lg-1 col-md-11 col-11 d-none d-lg-block">
                 <div class="btn-imagen" *ngFor="let imagen of imagenes" (click)="cambiarImagen(imagen)">
                     <img class="card-img-top m-2" [src]="imagen" alt="Foto del producto">                    
@@ -10,12 +10,12 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-11 col-11" style="height: 60vh;">
-                <img class="card-img-top m-2 d-none d-lg-block" [src]="image" alt="Foto del producto" *ngIf="!video" style="height: 50hv; width: 40hv;">
+                <img class="card-img-top m-2 d-none d-lg-block" [src]="image" alt="Foto del producto" *ngIf="!video" style="height: 50vh; width: 35vw;">
                 <div class="embed-responsive embed-responsive-16by9" *ngIf="video">
                     <iframe class="embed-responsive-item" src="https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b"></iframe>
                 </div>
                 <div id="carouselExampleControls" class="carousel slide d-lg-none" data-ride="carousel" data-interval="false">
-                    <div class="carousel-inner" #imagesCarousel>
+                    <div class="carousel-inner" #imagesCarousel >
                         <!-- <div class="carousel-item">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe class="embed-responsive-item" src="https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b"></iframe>
@@ -30,7 +30,7 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
-                  </div>
+                </div>
             </div>  
             <div class="col-lg-5 col col-md-12">
                 <h5 class="card-title m-2">{{producto.nombre}}</h5>

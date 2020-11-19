@@ -16,7 +16,6 @@ export class TiendasComponent implements OnInit {
 
   ngOnInit() {
     let sucursale = this.serviceProducto.getSucursales(this.globalconfig.getUsuario());
-    console.log(sucursale);
     this.sucursaleItem = sucursale ? sucursale.sucursales : null;
     
     if(this.sucursaleItem == null) this.sucursaleItem = [];

@@ -47,7 +47,7 @@ export class ConfiguracionService {
       'icono': 'http://kingo.com.mx/wp-content/uploads/2020/11/Logotipo-Farmacia-Bahia-azul.png'
     },
     {
-      'id': 'kingo',
+      'id': 'tienda',
       'nombre': "Kingo Systems",
       'colorMenu': '#1565C0',
       'colorHeader': '#1565C0',

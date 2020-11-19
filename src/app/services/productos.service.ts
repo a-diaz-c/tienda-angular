@@ -52,7 +52,7 @@ export class ProductosService {
       {'id': '47', 'nombre': 'Higiene Personal', 'hijos': []},
       {'id': '48', 'nombre': 'Bienestar Sexual', 'hijos': []},
     ]},
-    {'usuario': 'kingo', 'categorias': []},
+    {'usuario': 'tienda', 'categorias': []},
     {'usuario': 'zapateria', 'categorias': [
       {'id': '01', 'nombre': 'Tenis', 'hijos': []},
       {'id': '02', 'nombre': 'Botas y Botinetas', 'hijos': []},
@@ -505,7 +505,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3520',
@@ -517,7 +517,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3530',
@@ -529,7 +529,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3580',
@@ -541,7 +541,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3540',
@@ -553,7 +553,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3550',
@@ -565,7 +565,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3560',
@@ -577,7 +577,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '3570',
@@ -589,7 +589,7 @@ export class ProductosService {
       'marca': '',
       'descripcion':
           '',
-      'usuario':'kingo',
+      'usuario':'tienda',
     },
     {
       'clave_producto': '2000',

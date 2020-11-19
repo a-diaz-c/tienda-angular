@@ -60,7 +60,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
 
   private addColorHeader(){
     if(this.globalconfig.getUsuario() == 'gruporoca')
-      this.renderer.setStyle(this.header.nativeElement, 'background', `linear-gradient(-90deg, ${this.colorHader}, white)`);
+      this.renderer.setStyle(this.header.nativeElement, 'background', `linear-gradient(90deg, ${this.colorHader}, white)`);
     else{
       this.renderer.setStyle(this.header.nativeElement, 'background', this.colorHader);
     }
