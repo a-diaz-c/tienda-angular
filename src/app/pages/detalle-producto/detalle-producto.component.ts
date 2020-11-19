@@ -14,6 +14,7 @@ export class DetalleProductoComponent implements OnInit {
   cantidad: number = 1;
   image: string;
   imagenes: string [] = [];
+  video: boolean = false;
   @ViewChild('modal', {static: false}) modal: ElementRef;
   @ViewChild('imagesCarousel', {static: false}) imagesCarousel: ElementRef;
   divCarousle;
@@ -66,6 +67,17 @@ export class DetalleProductoComponent implements OnInit {
       this.renderer.setAttribute(img, 'src', element);
       this.renderer.appendChild(div, img);
     });
+    let div = this.renderer.createElement('div');
+    this.renderer.addClass(div, 'carousel-item');
+    this.renderer.appendChild(this.divCarousle, div);
+    let divVideo = this.renderer.createElement('div');
+    this.renderer.addClass(divVideo, 'embed-responsive');
+    this.renderer.addClass(divVideo, 'embed-responsive-16by9');
+    this.renderer.appendChild(div, divVideo);
+    let iframe = this.renderer.createElement('iframe');
+    this.renderer.addClass(iframe,'embed-responsive-item');
+    this.renderer.setAttribute(iframe, 'src', 'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b');
+    this.renderer.appendChild(divVideo, iframe);
   }
 
   agregarAlCarrito(){
@@ -100,7 +112,6 @@ export class DetalleProductoComponent implements OnInit {
   cambiarImagen(color: string ){
     this.image = color;
   }
-
   
 
 }
