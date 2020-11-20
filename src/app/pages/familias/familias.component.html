@@ -5,8 +5,10 @@
             <h1 class="text-secondary">No se encontraron productos</h1>
         </div>
     </div>
-    
-    <div class="card-columns">
-        <app-producto [producto]="producto" ruta="../../producto" *ngFor="let producto of productos"></app-producto>
+    <div class="d-flex justify-content-center mt-3">
+        <div class="card-columns col-12 col-lg-9">
+            <app-producto [producto]="producto" ruta="../../producto" *ngFor="let producto of productos"></app-producto>
+        </div>
     </div>
+    
 </div>
