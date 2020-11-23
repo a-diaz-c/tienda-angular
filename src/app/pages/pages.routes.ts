@@ -12,14 +12,14 @@ const pagesRoutes: Routes = [
     {path: "", 
         component: PagesComponent, 
         children: [
-            {path: "home", component: HomeComponent},
+            {path: "", component: HomeComponent},
             {path: "producto/:idProducto", component: DetalleProductoComponent},
             {path: "carrito", component: CarritoComponent},
             {path: "signup", component: IdentificarseComponent},
             {path: "pago", component: PagoComponent},
             {path: "sucursales", component: SucursalesComponent},
             {path: "productos/:familia", component: FamiliasComponent},
-            {path: "", redirectTo: "/home", pathMatch: "full" }
+            {path: "", redirectTo: "/", pathMatch: "full" }
         ],  
     }
 ];

@@ -28,6 +28,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.carouselItems = carousel ? carousel.carousel : null;
     if(this.carouselItems == null) this.carouselItems = [];
     console.log(this.productos); 
+    this.actualizarProductos();
+  }
+
+  actualizarProductos(){
+    this.serviceProducto.getProductos$().subscribe( productos => {
+      console.log(productos);
+      this.productos = productos;
+    } );
   }
 
   ngAfterViewInit(){

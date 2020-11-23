@@ -2,7 +2,7 @@
     <div class="row ml-1 pt-2 mr-1 mb-3 d-flex align-items-center ">
         <div class="col">
             <div class="ml-1">
-                <a [routerLink]="['/home']"><img [src]="icono" class=""></a>
+                <a [routerLink]="['/']"><img [src]="icono" class=""></a>
             </div>
         </div>
         <div class="col">
@@ -10,7 +10,7 @@
         </div>
         <div class="col">
             <div class="">
-                <input type="text" class="form-control input" placeholder="Buscar Producto">
+                <input type="text" class="form-control input" placeholder="Buscar Producto" (keydown.enter)="buscarProducto($event.target.value)">
             </div>
         </div>
         <div class="col">

@@ -30,7 +30,7 @@
                         <i class="fas fa-bars" (click)="drawer.toggle()" [ngClass]="globalconfig.getcolorHeader() == '#FFFFFF' ? 'text-secondary' : 'text-white'"></i>
                     </div>
                     <div class="ml-1">
-                        <a [routerLink]="['/home']"><img [src]="icono"></a>
+                        <a [routerLink]="['/']"><img [src]="icono"></a>
                     </div>
                 </div>
                 <div class="row">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input type="text" class="form-control input m-2" placeholder="Buscar Producto" style="border: 1px solid #2d9fd9; border-radius: 20px;">
+                    <input type="text" class="form-control input m-2" placeholder="Buscar Producto" style="border: 1px solid #2d9fd9; border-radius: 20px;" (keydown.enter)="buscarProducto($event.target.value)">
                 </div>
             </div>
         </div>

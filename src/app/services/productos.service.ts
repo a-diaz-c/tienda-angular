@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { element } from 'protractor';
 import { Observable, Subject } from 'rxjs';
 import { ProductoModel } from '../models/producto.model';
 
@@ -1091,6 +1092,8 @@ export class ProductosService {
   private carrito$ = new Subject<any[]>();
   private carrito = [];
 
+
+  private arrayProductos$ = new Subject<ProductoModel[]>();
   arrayProductos: ProductoModel[] = [];
 
   agregarProductoCarrito(producto){
@@ -1148,6 +1151,12 @@ export class ProductosService {
     return this.carrito$.asObservable();
   }
 
+  getProductos$(): Observable <ProductoModel[]>{
+    return this.arrayProductos$.asObservable();
+  }
+
+  
+
   
 ///Datos simulados--------
   constructor() { 
@@ -1197,6 +1206,16 @@ export class ProductosService {
       familia.push(obj);
     });
     return familia;
+  }
+
+  buscarProductoPorNombre(nombre: string){
+    let productoNombre: ProductoModel [] = []
+    this.arrayProductos.forEach( (producto: ProductoModel) => {
+      if(producto.nombre.toLowerCase().includes(nombre.toLowerCase())){
+        productoNombre.push(producto);
+      }
+    });
+    this.arrayProductos$.next(productoNombre);
   }
 
   getCategorias(usuario: string): any{

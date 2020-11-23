@@ -73,10 +73,16 @@ export class DetalleProductoComponent implements OnInit {
     this.renderer.addClass(divVideo, 'embed-responsive');
     this.renderer.addClass(divVideo, 'embed-responsive-16by9');
     this.renderer.appendChild(div, divVideo);
-    let iframe = this.renderer.createElement('iframe');
-    this.renderer.addClass(iframe,'embed-responsive-item');
-    this.renderer.setAttribute(iframe, 'src', 'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b');
-    this.renderer.appendChild(divVideo, iframe);
+    let video = this.renderer.createElement('video');
+    this.renderer.addClass(video,'embed-responsive-item');
+    this.renderer.setAttribute(video, 'controls', 'true');
+    this.renderer.setProperty(video, 'muted', 'true');
+    this.renderer.appendChild(divVideo, video);
+    let source = this.renderer.createElement('source');
+    this.renderer.setAttribute(source, 'src', 'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b');
+    this.renderer.setAttribute(source, 'type', 'video/mp4');
+    this.renderer.appendChild(video, source);
+    
   }
 
   agregarAlCarrito(){

@@ -144,4 +144,8 @@ export class PagesComponent implements OnInit, AfterViewInit {
 /*     this.renderer.setProperty(this.drawer.nativeElement,'opened','false');
  */  }
 
+ buscarProducto(nombre: string){
+  this.productosService.buscarProductoPorNombre(nombre);
+}
+
 }

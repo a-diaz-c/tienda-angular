@@ -137,6 +137,9 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
 
       this.renderer.appendChild(padre, ul);
     });
+  }
 
+  buscarProducto(nombre: string){
+    this.productosService.buscarProductoPorNombre(nombre);
   }
 }
