@@ -51,7 +51,16 @@ export class ProductosService {
       {'id': '47', 'nombre': 'Higiene Personal', 'hijos': []},
       {'id': '48', 'nombre': 'Bienestar Sexual', 'hijos': []},
     ]},
-    {'usuario': 'tienda', 'categorias': []},
+    {'usuario': 'tienda', 'categorias': [
+      {'id': '50', 'nombre': 'Adaminstración', 'hijos': []},
+      {'id': '51', 'nombre': 'Contabilidad', 'hijos': []},
+      {'id': '53', 'nombre': 'Nomina y RH', 'hijos': []},
+      {'id': '54', 'nombre': 'Producción', 'hijos': []},
+      {'id': '55', 'nombre': 'Tiendas Online', 'hijos': []},
+      {'id': '56', 'nombre': 'Facturación y Timbres', 'hijos': []},
+      {'id': '57', 'nombre': 'Punto de Venta', 'hijos': []},
+      {'id': '58', 'nombre': 'Escuelas', 'hijos': []},
+    ]},
     {'usuario': 'zapateria', 'categorias': [
       {'id': '01', 'nombre': 'Tenis', 'hijos': []},
       {'id': '02', 'nombre': 'Botas y Botinetas', 'hijos': []},
@@ -498,7 +507,7 @@ export class ProductosService {
       'clave_producto': '3510',
       'nombre': "EscuSoft-Inscripciones-Online",
       'precio': '3800.00',
-      'familia_prod': '',
+      'familia_prod': '58',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/06/1-Fichas-Online.jpg',
       'marca': '',
@@ -510,7 +519,7 @@ export class ProductosService {
       'clave_producto': '3520',
       'nombre': "Factura Electrónica Nube + 100 Timbres Fiscal",
       'precio': '800.00',
-      'familia_prod': '',
+      'familia_prod': '56',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/07/1-Factura-Electronica.jpg',
       'marca': '',
@@ -522,7 +531,7 @@ export class ProductosService {
       'clave_producto': '3530',
       'nombre': "Maines ADMIN",
       'precio': '2500.00',
-      'familia_prod': '',
+      'familia_prod': '50',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-ADMIN.jpg',
       'marca': '',
@@ -534,7 +543,7 @@ export class ProductosService {
       'clave_producto': '3580',
       'nombre': "Maines Contabilidad",
       'precio': '2500.00',
-      'familia_prod': '',
+      'familia_prod': '51',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-Contabilidad.jpg',
       'marca': '',
@@ -546,7 +555,7 @@ export class ProductosService {
       'clave_producto': '3540',
       'nombre': "Maines Nómina Electrónica",
       'precio': '',
-      'familia_prod': '',
+      'familia_prod': '53',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/07/1-Nomina.jpg',
       'marca': '',
@@ -558,7 +567,7 @@ export class ProductosService {
       'clave_producto': '3550',
       'nombre': "Maines-Restaurant",
       'precio': '2500.00',
-      'familia_prod': '',
+      'familia_prod': '57',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-Restaurant.jpg',
       'marca': '',
@@ -570,7 +579,7 @@ export class ProductosService {
       'clave_producto': '3560',
       'nombre': "Maines-XML Descargas",
       'precio': '600.00',
-      'familia_prod': '',
+      'familia_prod': '51',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/07/1-Maines-XML.jpg',
       'marca': '',
@@ -582,7 +591,7 @@ export class ProductosService {
       'clave_producto': '3570',
       'nombre': "Servidor para Clases Online",
       'precio': '',
-      'familia_prod': '',
+      'familia_prod': '58',
       'imagen':
           'http://kingo.com.mx/wp-content/uploads/2020/03/1-Clases-Online.jpg',
       'marca': '',
