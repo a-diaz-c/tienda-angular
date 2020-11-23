@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { element } from 'protractor';
 import { Observable, Subject } from 'rxjs';
 import { ProductoModel } from '../models/producto.model';
 
@@ -1056,6 +1055,13 @@ export class ProductosService {
        'http://kingo.com.mx/wp-content/uploads/2020/11/3-Tellez-Roble.jpg',
        'http://kingo.com.mx/wp-content/uploads/2020/11/1-Tellez-Roble.jpg',
        'http://www.vibromex.com.mx/img/banners/BANNER-CEMENTO2-1200X340-PX.jpg',
+     ]
+    },
+    {'usuario':'tienda',
+    'carousel': [
+       'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/1%20Banner%20Factura%20Electronica.jpg?alt=media&token=bab7b014-e336-401a-9383-dafdf0cc6e75',
+       'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/2%20Clases%20en%20Linea.jpg?alt=media&token=2d9f7c2c-6a69-4095-9d3a-2e9ef15c1cfc',
+       'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/3%20Clases%20en%20Linea.jpg?alt=media&token=9193dd57-02bb-4129-a244-6b6e95d21140'
      ]
     },
   ];

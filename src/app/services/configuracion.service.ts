@@ -51,7 +51,7 @@ export class ConfiguracionService {
       'nombre': "Kingo Systems",
       'colorMenu': '#1565C0',
       'colorHeader': '#1565C0',
-      'carousel': false,
+      'carousel': true,
       'sucursales': false,
       'icono':
           'https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Logo%20Kingo.png?alt=media&token=81592a50-93a6-4f0f-aef7-84a130cf6735',
