@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
 
   @ViewChild('menu',  {static: false}) menuFamilias: ElementRef;
   @ViewChild('header', {static: false}) header: ElementRef;
+  @ViewChild('btnCategorias', {static: false}) btnCategorias: ElementRef ; 
 
 
   categorias = [];
@@ -40,7 +41,8 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   }
 
   ngAfterViewInit(){
-    this.listaMenu();
+    //this.listaMenu();
+    this.listarSubmenu(this.categorias, this.btnCategorias.nativeElement);
     this.addColorHeader();
     console.log(this.colorHader);
   }
@@ -110,6 +112,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   }
 
   listarSubmenu(hijos: any[], padre: any){
+
     let ul = this.renderer.createElement('ul');
     this.renderer.addClass(ul, "dropdown-menu");
     this.renderer.addClass(ul, "multi-level");
@@ -117,11 +120,10 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
     this.renderer.setAttribute(ul, 'aria-labelledby', 'dropdownMenu');
     hijos.forEach(element => {
       let li = this.renderer.createElement('li');
+      this.renderer.addClass(li, 'mt-2');
       let a = this.renderer.createElement('a');
       this.renderer.appendChild(a, this.renderer.createText(element.nombre));
-      
       this.renderer.appendChild(li, a);
-     
       this.renderer.appendChild(ul, li);
 
       if(element.hijos.length > 0){
@@ -134,7 +136,6 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
           this.mover(element.id);
         });
       }
-
       this.renderer.appendChild(padre, ul);
     });
   }
