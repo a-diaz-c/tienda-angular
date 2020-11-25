@@ -1,27 +1,32 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { ConfigCliente } from '../models/clienteConfig';
 import { ConfiguracionService } from '../services/configuracion.service';
 
+@Injectable({
+    providedIn: 'root'
+  })
 export class GlobalConfig {
 
     private static instance: GlobalConfig;
-    private configService: ConfiguracionService = new ConfiguracionService();
     private usuario: string;
 
     private confingClient: ConfigCliente;
-    private constructor(url: string) {
-        console.log(url);
-        this.usuario = url;
-        this.confingClient = this.configService.getCliente(url);
+    private constructor(private configService: ConfiguracionService ) {
+        let ruta = location.href.split('/');
+        console.log(ruta[3]);
+        this.usuario = 'gruporoca';
+        this.confingClient = this.configService.getCliente('gruporoca');
     }
 
-    public static getInstance(): GlobalConfig {
+/*     public static getInstance(): GlobalConfig {
         let ruta = location.href.split('/');
         if (!GlobalConfig.instance) {
             GlobalConfig.instance = new GlobalConfig(ruta[3]);
         }
 
         return GlobalConfig.instance;
-    }
+    } */
 
 
     public getId(){

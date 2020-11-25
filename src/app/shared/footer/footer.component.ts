@@ -11,11 +11,10 @@ export class FooterComponent implements OnInit {
 
   color: string;
   icon: string;
-  globalconfig: GlobalConfig;
+ 
   
 
-  constructor() { 
-    this.globalconfig = GlobalConfig.getInstance();
+  constructor(private globalconfig: GlobalConfig) { 
   }
 
   ngOnInit() {

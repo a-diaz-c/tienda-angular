@@ -19,7 +19,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
   cantidadCarrito: number = 0;
   totalCarrito:number = 0;
   categorias: any [];
-  globalconfig: GlobalConfig;
+  
 
   lat;
   lng ;
@@ -32,8 +32,9 @@ export class PagesComponent implements OnInit, AfterViewInit {
   constructor(private productosService: ProductosService, 
               private locationService: LocationService,
               private renderer: Renderer2,
-              private route: Router) { 
-                this.globalconfig = GlobalConfig.getInstance();
+              private route: Router,
+              private globalconfig: GlobalConfig) { 
+                
   }
 
   ngOnInit() {

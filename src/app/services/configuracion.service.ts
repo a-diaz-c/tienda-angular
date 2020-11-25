@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ConfigCliente } from '../models/clienteConfig';
 
@@ -5,6 +6,10 @@ import { ConfigCliente } from '../models/clienteConfig';
   providedIn: 'root'
 })
 export class ConfiguracionService {
+
+  url = 'http://maines-rest.ddns.net:8080/mainesTiendaBack/';
+
+  constructor(private httpClient: HttpClient) { }
 
   clientes = [
     {
@@ -109,10 +114,12 @@ export class ConfiguracionService {
     
   ];
 
-  constructor() { }
-
 
   getCliente(id: String): ConfigCliente{
     return this.clientes.find( element => element.id == id);
+  }
+
+  getCarousel(id: String){
+    return this.httpClient.get(this.url + 'rec/iniciar/banner');
   }
 }

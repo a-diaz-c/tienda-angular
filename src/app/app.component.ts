@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { GlobalConfig } from './config/config';
+
 
 
 
@@ -12,7 +11,6 @@ import { GlobalConfig } from './config/config';
 export class AppComponent implements OnInit{
 
   constructor(){
-    GlobalConfig.getInstance();
   }
   
   

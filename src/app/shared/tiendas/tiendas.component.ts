@@ -8,10 +8,9 @@ import { ProductosService } from 'src/app/services/productos.service';
   styleUrls: ['./tiendas.component.css']
 })
 export class TiendasComponent implements OnInit {
-  globalconfig: GlobalConfig;
+  
   sucursaleItem: [];
-  constructor(private serviceProducto: ProductosService) { 
-    this.globalconfig = GlobalConfig.getInstance();
+  constructor(private serviceProducto: ProductosService, private globalconfig: GlobalConfig) { 
   }
 
   ngOnInit() {

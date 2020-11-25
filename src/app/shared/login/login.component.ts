@@ -10,7 +10,7 @@ import { GlobalConfig } from 'src/app/config/config';
 })
 export class LoginComponent implements OnInit {
 
-  globalconfig: GlobalConfig;
+  
   colorHeader: string;
   passwordForm: string= "";
   emailForm: string = "";
@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('modal', {static: false}) modal: ElementRef;
   @ViewChild('modalContent', {static: false}) modalContent: ElementRef
 
-  constructor(private router:Router) { 
-    this.globalconfig = GlobalConfig.getInstance();
+  constructor(private router:Router, private globalconfig: GlobalConfig) { 
   }
 
   ngOnInit() {

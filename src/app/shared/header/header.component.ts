@@ -19,15 +19,15 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
 
 
   categorias = [];
-  globalconfig: GlobalConfig;
+  
   colorHader: string;
   colorMenu: string;
   icono: string;
    
   constructor(private productosService: ProductosService, 
               private route: Router,
-              private renderer: Renderer2) { 
-                this.globalconfig = GlobalConfig.getInstance();
+              private renderer: Renderer2,
+              private globalconfig: GlobalConfig) { 
 }
 
   ngOnInit() {
