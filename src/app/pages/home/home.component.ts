@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { info } from 'console';
 import { GlobalConfig } from 'src/app/config/config';
 import { ProductoModel } from 'src/app/models/producto.model';
 import { ConfiguracionService } from 'src/app/services/configuracion.service';
@@ -25,18 +26,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
    }
 
    ngOnInit() {
-    this.productos = this.serviceProducto.getProductos(this.globalconfig.getUsuario());
+    //this.productos = this.serviceProducto.getProductos(this.globalconfig.getUsuario());
     //let carousel = this.serviceProducto.getCarousel(this.globalconfig.getUsuario());
-     this.serviceConfi.getCarousel(this.globalconfig.getUsuario()).subscribe( (datos: []) => {
-      
-      this.carouselItems = datos;
-      console.log(this.carouselItems);
-    });
-    this.cargarCarousel();
+    this.serviceConfi.iniciar();
+    this.cargarItemsCarousel();
+    
     /* this.carouselItems = carousel ? carousel.urls : null;
     if(this.carouselItems == null) this.carouselItems = []; */
     console.log(this.productos); 
-    this.actualizarProductos();
   }
 
   actualizarProductos(){
@@ -46,7 +43,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     } );
   }
 
-  cargarCarousel(){
+  cargarItemsCarousel(){
+    this.serviceConfi.loadDataObservable$.subscribe(()=>{
+      this.carouselItems = this.serviceConfi.datosInciar.banner;
+      console.log(this.serviceConfi.datosInciar.productos);
+      this.productos = this.serviceConfi.datosInciar.productos;
+      this.cargarCarousel();
+    });
+  }
+
+  cargarCarousel(){ 
     console.log('cargando carousel');
     this.carouselItems.forEach((element, index) => {
       let li = this.renderer.createElement('li');
@@ -67,6 +73,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.renderer.appendChild(div, img);
     });
   }
+
+  
 
   ngAfterViewInit(){
     /* this.carouselItems.forEach((element, index) => {

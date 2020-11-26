@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { ConfigCliente } from '../models/clienteConfig';
 
 @Injectable({
@@ -8,6 +9,10 @@ import { ConfigCliente } from '../models/clienteConfig';
 export class ConfiguracionService {
 
   url = 'http://maines-rest.ddns.net:8080/mainesTiendaBack/';
+  
+  private loadDataSub = new Subject<any>();
+  loadDataObservable$ = this.loadDataSub.asObservable();
+
 
   constructor(private httpClient: HttpClient) { }
 
@@ -114,12 +119,23 @@ export class ConfiguracionService {
     
   ];
 
+  datosInciar: any;
+
+  emitLoadDataSuccess() {
+    this.loadDataSub.next();
+  }
 
   getCliente(id: String): ConfigCliente{
     return this.clientes.find( element => element.id == id);
   }
 
-  getCarousel(id: String){
-    return this.httpClient.get(this.url + 'rec/iniciar/banner');
+  iniciar(): Promise<any>{
+    return new Promise<void>( resolve => {
+      this.httpClient.get(this.url + 'rec/iniciar/iniciar').subscribe( data => {
+        this.datosInciar = data;
+        this.emitLoadDataSuccess();
+      });
+    });
+      
   }
 }

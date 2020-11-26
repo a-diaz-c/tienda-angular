@@ -26,7 +26,7 @@ export class DetalleProductoComponent implements OnInit {
 
   ngOnInit() {
     this.producto = this.productosService.buscarProducto(this.route.snapshot.paramMap.get('idProducto'));
-    this.image = this.producto.imagen;
+    //this.image = this.producto.imagen;
     if(this.producto.otros){
       if(this.producto.otros.color){
         this.imagenes = this.producto.otros.color[0].image;

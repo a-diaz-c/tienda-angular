@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfiguracionService } from './services/configuracion.service';
 
 
 
@@ -15,6 +16,9 @@ export class AppComponent implements OnInit{
   
   
   ngOnInit() {
+  }
+
+  async cargarInicio(){
   }
   
   title = 'tienda';

@@ -10,13 +10,14 @@ export class GlobalConfig {
 
     private static instance: GlobalConfig;
     private usuario: string;
+    private contador: number = 1;
 
     private confingClient: ConfigCliente;
     private constructor(private configService: ConfiguracionService ) {
         let ruta = location.href.split('/');
         console.log(ruta[3]);
-        this.usuario = 'gruporoca';
-        this.confingClient = this.configService.getCliente('gruporoca');
+        this.usuario = 'tienda';
+        this.confingClient = this.configService.getCliente('tienda');
     }
 
 /*     public static getInstance(): GlobalConfig {
@@ -28,6 +29,10 @@ export class GlobalConfig {
         return GlobalConfig.instance;
     } */
 
+    public sumar(){
+        this.contador++;
+        return this.contador;
+    }
 
     public getId(){
         return this.confingClient.id;

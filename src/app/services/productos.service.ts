@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { element } from 'protractor';
 import { Observable, Subject } from 'rxjs';
@@ -1154,13 +1155,10 @@ export class ProductosService {
   getProductos$(): Observable <ProductoModel[]>{
     return this.arrayProductos$.asObservable();
   }
-
-  
-
   
 ///Datos simulados--------
-  constructor() { 
-    this.productos.forEach( (producto) => {
+  constructor(private httpClient: HttpClient) { 
+    /* this.productos.forEach( (producto) => {
       let obj: ProductoModel = new ProductoModel();
       obj.nombre = producto.nombre;
       obj.imagen = producto.imagen;
@@ -1170,7 +1168,7 @@ export class ProductosService {
       obj.usuario = producto.usuario;
       obj.otros = producto.otros;
       this.arrayProductos.push(obj);
-    } );
+    } ); */
   }
 
   getProductos(usuario: string){
@@ -1183,12 +1181,12 @@ export class ProductosService {
     let res = this.productos.find( (element) => element.clave_producto == claveProducto);
     let obj: ProductoModel = new ProductoModel();
     obj.nombre = res.nombre;
-      obj.imagen = res.imagen;
+      /* obj.imagen = res.imagen;
       obj.precio = parseFloat(res.precio);
       obj.claveProducto = res.clave_producto;
       obj.familiaProducto = res.familia_prod;
       obj.descripcion = res.descripcion;
-      obj.otros = res.otros;
+      obj.otros = res.otros; */
     return obj;
   }
 
@@ -1197,12 +1195,12 @@ export class ProductosService {
     let familia: ProductoModel [] = [];
     res.forEach( element => {
       let obj: ProductoModel = new ProductoModel();
-      obj.nombre = element.nombre;
+      /* obj.nombre = element.nombre;
       obj.imagen = element.imagen;
       obj.precio = parseFloat(element.precio);
       obj.claveProducto = element.clave_producto;
       obj.familiaProducto = element.familia_prod;
-      obj.descripcion = element.descripcion;
+      obj.descripcion = element.descripcion; */
       familia.push(obj);
     });
     return familia;

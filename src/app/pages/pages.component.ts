@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } fr
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { GlobalConfig } from '../config/config';
+import { ConfiguracionService } from '../services/configuracion.service';
 import { LocationService } from '../services/location.service';
 import { ProductosService } from '../services/productos.service';
 
@@ -33,7 +34,8 @@ export class PagesComponent implements OnInit, AfterViewInit {
               private locationService: LocationService,
               private renderer: Renderer2,
               private route: Router,
-              private globalconfig: GlobalConfig) { 
+              private globalconfig: GlobalConfig,
+              private serviceConfi: ConfiguracionService) { 
                 
   }
 
@@ -41,10 +43,11 @@ export class PagesComponent implements OnInit, AfterViewInit {
     this.categorias = this.productosService.getCategorias(this.globalconfig.getUsuario()).categorias;
     this.getLocation();
     this.cargarCarrito();
-    this.actualizarCarrito()
+    this.actualizarCarrito();
     this.colorHader = this.globalconfig.getcolorHeader();
     this.colorMenu = this.globalconfig.getColorMenu();
     this.icono = this.globalconfig.getIcono();
+    this.serviceConfi.iniciar();
 
     this.route.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
