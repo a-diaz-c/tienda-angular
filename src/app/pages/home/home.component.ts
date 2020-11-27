@@ -26,9 +26,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
    }
 
    ngOnInit() {
-     this.serviceConfi.loadData();
+     
      this.cargarItemsCarousel();
-
     console.log(this.productos); 
     console.log(this.serviceConfi.datosInciar);
   }
@@ -41,11 +40,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   cargarItemsCarousel(){
-    this.serviceConfi.loadDataObservable$.subscribe(()=>{
+    
+    this.serviceConfi.getDatos$().subscribe( datos =>{
       this.carouselItems = this.serviceConfi.datosInciar.banner;
-      console.log(this.serviceConfi.datosInciar.productos);
       this.productos = this.serviceConfi.datosInciar.productos;
       this.cargarCarousel();
+      console.log(this.productos);
     });
   }
 
@@ -74,6 +74,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
 
   ngAfterViewInit(){
+    setTimeout(() => {
+      this.serviceConfi.loadData(); 
+    });
     /* this.carouselItems.forEach((element, index) => {
       let li = this.renderer.createElement('li');
       this.renderer.setAttribute(li,'data-target', '#carouselExampleIndicators');

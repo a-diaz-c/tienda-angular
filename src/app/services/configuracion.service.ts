@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { ConfigCliente } from '../models/clienteConfig';
 
 @Injectable({
@@ -10,8 +10,8 @@ export class ConfiguracionService {
 
   url = 'http://maines-rest.ddns.net:8080/mainesTiendaBack/';
   
-  private loadDataSub = new Subject<any>();
-  loadDataObservable$ = this.loadDataSub.asObservable();
+  private loadDataSub$ = new Subject<any>();
+  loadDataObservable: any;
 
 
   constructor(private httpClient: HttpClient) { }
@@ -119,10 +119,13 @@ export class ConfiguracionService {
     
   ];
 
-  datosInciar: any;
+  datosInciar = {
+    'banner' : [],
+    'productos': []
+  };
 
   loadData() {
-    this.loadDataSub.next(this.datosInciar);
+    this.loadDataSub$.next(this.datosInciar);
   }
 
   getCliente(id: String): ConfigCliente{
@@ -130,9 +133,13 @@ export class ConfiguracionService {
   }
 
   iniciar(){
-    return this.httpClient.get(this.url + 'rec/iniciar/iniciar').subscribe( data => {
+    return this.httpClient.get(this.url + 'rec/iniciar/iniciar').subscribe( (data: any) => {
         this.datosInciar = data;
         this.loadData();
       });
+  }
+
+  getDatos$(): Observable<any []>{
+    return this.loadDataSub$.asObservable();
   }
 }
