@@ -121,21 +121,18 @@ export class ConfiguracionService {
 
   datosInciar: any;
 
-  emitLoadDataSuccess() {
-    this.loadDataSub.next();
+  loadData() {
+    this.loadDataSub.next(this.datosInciar);
   }
 
   getCliente(id: String): ConfigCliente{
     return this.clientes.find( element => element.id == id);
   }
 
-  iniciar(): Promise<any>{
-    return new Promise<void>( resolve => {
-      this.httpClient.get(this.url + 'rec/iniciar/iniciar').subscribe( data => {
+  iniciar(){
+    return this.httpClient.get(this.url + 'rec/iniciar/iniciar').subscribe( data => {
         this.datosInciar = data;
-        this.emitLoadDataSuccess();
+        this.loadData();
       });
-    });
-      
   }
 }

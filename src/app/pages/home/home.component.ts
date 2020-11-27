@@ -26,14 +26,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
    }
 
    ngOnInit() {
-    //this.productos = this.serviceProducto.getProductos(this.globalconfig.getUsuario());
-    //let carousel = this.serviceProducto.getCarousel(this.globalconfig.getUsuario());
-    this.serviceConfi.iniciar();
-    this.cargarItemsCarousel();
-    
-    /* this.carouselItems = carousel ? carousel.urls : null;
-    if(this.carouselItems == null) this.carouselItems = []; */
+     this.serviceConfi.loadData();
+     this.cargarItemsCarousel();
+
     console.log(this.productos); 
+    console.log(this.serviceConfi.datosInciar);
   }
 
   actualizarProductos(){

@@ -53,8 +53,9 @@ export class PagesComponent implements OnInit, AfterViewInit {
       if (!(evt instanceof NavigationEnd)) {
           return;
       }
+      
       window.scrollTo(0, 0)
-  });
+    });
   }
 
   ngAfterViewInit(){
