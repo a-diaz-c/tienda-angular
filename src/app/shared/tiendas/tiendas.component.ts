@@ -10,7 +10,7 @@ import { ProductosService } from 'src/app/services/productos.service';
 export class TiendasComponent implements OnInit {
   
   sucursaleItem: [];
-  constructor(private serviceProducto: ProductosService, private globalconfig: GlobalConfig) { 
+  constructor(private serviceProducto: ProductosService, public globalconfig: GlobalConfig) { 
   }
 
   ngOnInit() {

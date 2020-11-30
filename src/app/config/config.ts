@@ -16,8 +16,8 @@ export class GlobalConfig {
     private constructor(private configService: ConfiguracionService ) {
         let ruta = location.href.split('/');
         console.log(ruta[3]);
-        this.usuario = 'tienda';
-        this.confingClient = this.configService.getCliente('tienda');
+        this.usuario = ruta[3];
+        this.confingClient = this.configService.getCliente(ruta[3]);
     }
 
 /*     public static getInstance(): GlobalConfig {

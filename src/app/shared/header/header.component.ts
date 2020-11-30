@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit, AfterViewInit  {
   constructor(private productosService: ProductosService, 
               private route: Router,
               private renderer: Renderer2,
-              private globalconfig: GlobalConfig) { 
+              public globalconfig: GlobalConfig) { 
 }
 
   ngOnInit() {

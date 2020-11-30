@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private serviceProducto: ProductosService, 
               private renderer: Renderer2, 
               private serviceConfi: ConfiguracionService, 
-              private globalconfig: GlobalConfig) {
+              public globalconfig: GlobalConfig) {
    }
 
    ngOnInit() {

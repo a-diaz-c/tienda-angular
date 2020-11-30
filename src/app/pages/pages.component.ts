@@ -34,7 +34,7 @@ export class PagesComponent implements OnInit, AfterViewInit {
               private locationService: LocationService,
               private renderer: Renderer2,
               private route: Router,
-              private globalconfig: GlobalConfig,
+              public globalconfig: GlobalConfig,
               private serviceConfi: ConfiguracionService) { 
                 
   }

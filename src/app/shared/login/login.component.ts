@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('modal', {static: false}) modal: ElementRef;
   @ViewChild('modalContent', {static: false}) modalContent: ElementRef
 
-  constructor(private router:Router, private globalconfig: GlobalConfig) { 
+  constructor(private router:Router, public globalconfig: GlobalConfig) { 
   }
 
   ngOnInit() {

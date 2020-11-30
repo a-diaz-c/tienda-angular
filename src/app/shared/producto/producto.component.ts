@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalConfig } from 'src/app/config/config';
 import { ProductoModel } from 'src/app/models/producto.model';
 import { ProductosService } from 'src/app/services/productos.service';
 
@@ -16,7 +17,7 @@ export class ProductoComponent implements OnInit {
 
   cantidad: number = 1;
 
-  constructor(private route: Router, private productoService: ProductosService) { }
+  constructor(private route: Router, private productoService: ProductosService, public globalconfig: GlobalConfig) { }
 
   ngOnInit() {
     if(this.producto.nombre.length > 40){

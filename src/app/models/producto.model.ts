@@ -3,7 +3,7 @@ export class ProductoModel{
     nombre: string;
     precio: number;
     familiaProducto: string;
-    imagen: string [];
+    image: string [];
     descripcion: string;
     video: string [];
     usuario: string;
@@ -14,7 +14,7 @@ export class ProductoModel{
         this.nombre = "";
         this.precio = 0.0;
         this.familiaProducto = "";
-        this.imagen = [];
+        this.image = [];
         this.descripcion = "";
         this.video = [];
         this.usuario = "";

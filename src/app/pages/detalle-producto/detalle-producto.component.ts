@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalConfig } from 'src/app/config/config';
 import { ProductoModel } from 'src/app/models/producto.model';
 import { ProductosService } from 'src/app/services/productos.service';
 
@@ -22,7 +23,8 @@ export class DetalleProductoComponent implements OnInit {
   constructor(private route: ActivatedRoute, 
               private productosService: ProductosService, 
               private routes: Router,
-              private renderer: Renderer2) { }
+              private renderer: Renderer2,
+              public globalconfig: GlobalConfig) { }
 
   ngOnInit() {
     this.producto = this.productosService.buscarProducto(this.route.snapshot.paramMap.get('idProducto'));
