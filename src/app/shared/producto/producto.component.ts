@@ -20,6 +20,7 @@ export class ProductoComponent implements OnInit {
   constructor(private route: Router, private productoService: ProductosService, public globalconfig: GlobalConfig) { }
 
   ngOnInit() {
+    console.log(this.producto);
     if(this.producto.nombre.length > 40){
       this.producto.nombre = this.producto.nombre.substring(0, 40) + "...";
       
