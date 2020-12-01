@@ -21,7 +21,7 @@ import { environment } from '../environments/environment';
     NofoundpageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     APP_ROUTES,
     PagesModule,
     BrowserAnimationsModule,
