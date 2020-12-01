@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalConfig } from 'src/app/config/config';
 import { ProductoModel } from 'src/app/models/producto.model';
@@ -9,7 +10,7 @@ import { ProductosService } from 'src/app/services/productos.service';
   templateUrl: './detalle-producto.component.html',
   styleUrls: ['./detalle-producto.component.css']
 })
-export class DetalleProductoComponent implements OnInit {
+export class DetalleProductoComponent implements OnInit, OnDestroy  {
 
   producto: ProductoModel;
   cantidad: number = 1;
@@ -24,21 +25,36 @@ export class DetalleProductoComponent implements OnInit {
               private productosService: ProductosService, 
               private routes: Router,
               private renderer: Renderer2,
-              public globalconfig: GlobalConfig) { }
+              public globalconfig: GlobalConfig,
+              private metaService:Meta,
+              private titleService: Title) { }
+  
 
   ngOnInit() {
+    
+    
     this.producto = this.productosService.buscarProducto(this.route.snapshot.paramMap.get('idProducto'));
+    console.log(this.producto);
     //this.image = this.producto.imagen;
     if(this.producto.otros){
       if(this.producto.otros.color){
         this.imagenes = this.producto.otros.color[0].image;
       }
     }
+
+    this.metaService.addTags( [{name:'title', content: this.producto.nombre},{ name:'description',content:"Article Description"}]);
     
   }
 
   ngAfterViewInit(){
+    this.titleService.setTitle(this.producto.nombre);
     this.carouselProducto();
+  }
+
+  ngOnDestroy(): void {
+    this.titleService.setTitle("Tienda Kingo");
+    this.metaService.removeTag("name='title'");
+    this.metaService.removeTag("name='description'");
   }
 
   private carouselProducto(){

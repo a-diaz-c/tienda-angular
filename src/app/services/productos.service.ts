@@ -1181,12 +1181,12 @@ export class ProductosService {
     let res = this.productos.find( (element) => element.clave_producto == claveProducto);
     let obj: ProductoModel = new ProductoModel();
     obj.nombre = res.nombre;
-      /* obj.imagen = res.imagen;
+      obj.imagen[0] = res.imagen;
       obj.precio = parseFloat(res.precio);
       obj.claveProducto = res.clave_producto;
       obj.familiaProducto = res.familia_prod;
       obj.descripcion = res.descripcion;
-      obj.otros = res.otros; */
+      obj.otros = res.otros;
     return obj;
   }
 
