@@ -139,57 +139,57 @@
             <h5 style="color: #d11507;">Direccion De Envío</h5>
         </div>
         <div class="modal-body">
-            <form>
+            <form (ngSubmit)="guardarEnvio()" [formGroup]="formGroupEnvio">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="nombreEnvio">Nombre</label>
-                        <input type="text" class="form-control" id="nombreEnvio">
+                        <input type="text" class="form-control" id="nombreEnvio" formControlName="nombre">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="apellidoEnvio">Apellido</label>
-                        <input type="text" class="form-control" id="apellidoEnvio">
+                        <input type="text" class="form-control" id="apellidoEnvio" formControlName="apellido">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="empresaEnvio">Empresa Destino</label>
-                        <input type="email" class="form-control" id="empresaEnvio">
+                        <input type="email" class="form-control" id="empresaEnvio" formControlName="empresa">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="apellidoEnvio">Teléfono</label>
-                        <input type="number" class="form-control" id="apellidoEnvio">
+                        <input type="number" class="form-control" id="telefono" formControlName="telefono">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="calleEnvio">Calle</label>
-                    <input type="text" class="form-control" id="calleEnvio">
+                    <input type="text" class="form-control" id="calleEnvio" formControlName="calle">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="numExtEnvio">Número Ext</label>
-                        <input type="text" class="form-control" id="numExtEnvio">
+                        <input type="text" class="form-control" id="numExtEnvio" formControlName="numExt">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="numIntEnv">Número Int</label>
-                        <input type="text" class="form-control" id="numIntEnv">
+                        <input type="text" class="form-control" id="numIntEnv" formControlName="numInt">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="cpEnvio">Código Postal</label>
-                        <input type="text" class="form-control" id="cpEnvio">
+                        <input type="text" class="form-control" id="cpEnvio" formControlName="codigoPostal">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="ciudadEnvio">Ciudad</label>
-                        <input type="text" class="form-control" id="ciudadEnvio">
+                        <input type="text" class="form-control" id="ciudadEnvio" formControlName="ciudad">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="estadoEnvio">Estado</label>
-                        <input type="text" class="form-control" id="estadoEnvio">
+                        <input type="text" class="form-control" id="estadoEnvio" formControlName="estado">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="paisEnvio">País</label>
-                        <input type="text" class="form-control" id="paisEnvio">
+                        <input type="text" class="form-control" id="paisEnvio" formControlName="pais">
                     </div>
                 </div>
                 <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
@@ -307,7 +307,7 @@
                 </div>
                 <div class="form-group">
                     <label for="numeroTarjeta">Dirección</label>
-                    <input type="number" class="form-control" id="direccionTarjeta">
+                    <input type="number" class="form-control" id="direccionFactura">
                 </div>
                 <button type="submit" class="btn text-white" style="background-color: #d11507;">Guardar</button>
             </form>

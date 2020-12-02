@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
@@ -64,8 +65,11 @@ export class PagoComponent implements OnInit {
   email: String = "email@ejemplo.com";
   carrito: any [] = []
   total: number = 0;
+  formGroupEnvio: FormGroup;
 
-  constructor(private prodctosService: ProductosService) { }
+  constructor(private prodctosService: ProductosService, private fb: FormBuilder) { 
+    this.crearFormularioEnvio();
+  }
 
   ngOnInit() {
     this.carrito = this.prodctosService.cargarCarrito();
@@ -73,6 +77,27 @@ export class PagoComponent implements OnInit {
     this.carrito.forEach((element: any) => {
       this.total += element.precio * element.cantidad;
      });
+  }
+
+  crearFormularioEnvio(){
+    this.formGroupEnvio = this.fb.group({
+      nombre: [''],
+      apellido: [''],
+      empresa: [''],
+      telefono: [''],
+      calle: [''],
+      numExt: [''],
+      numInt: [''],
+      codigoPostal: [''],
+      ciudad: [''],
+      estado: [''],
+      pais:[''],
+    });
+  }
+
+  guardarEnvio(){
+    console.log(this.formGroupEnvio);
+    this.cerrarFormEnvio()
   }
 
   llevarChange(event){
