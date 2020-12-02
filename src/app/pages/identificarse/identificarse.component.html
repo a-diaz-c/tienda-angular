@@ -29,28 +29,31 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">¡Registrate!</h5>
-                    <form (ngSubmit)="onSingup(formSingup)" #formSingup="ngForm">
+                    <form (ngSubmit)="onSingup()" [formGroup]="formSignup">
                         <div class="form-group">
                             <label for="nombre" class="text-secondary">Nombre</label>
-                            <input [ngModel]="singup.nombre" type="text" class="form-control" name="nombre" [class.is-invalid]="nombreSingup.invalid && nombreSingup.touched" #nombreSingup="ngModel" required>
+                            <input type="text" class="form-control" name="nombre" formControlName="nombre">
                         </div>
                         <div class="form-group">
                             <label for="email" class="text-secondary">Email</label>
-                            <input [ngModel]="singup.email" type="email" class="form-control" [class.is-invalid]="emailSingup.invalid && emailSingup.touched" name="email" #emailSingup="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                            <input type="email" class="form-control" name="email" formControlName="email" [class.is-invalid]="emailNoValido">
                             <div class="invalid-feedback">
                                 Email no valido.
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="text-secondary">Constraseña</label>
-                            <input [ngModel]="singup.password" type="password" class="form-control" name="passwordSingup" [class.is-invalid]="passwordSingup.invalid && passwordSingup.touched" #passwordSingup="ngModel" required>
+                            <input type="password" class="form-control" name="passwordSingup" formControlName="password" [class.is-invalid]="passwordNoValida">
+                            <div class="invalid-feedback">
+                                La contraseña no debe tener caracteres especiales
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-secondary">Confirmar Constraseña</label>
-                            <input [ngModel]="singup.confPassword" type="password" class="form-control" name="confPasswordSingup" [class.is-invalid]="confPasswordSingup.invalid && confPasswordSingup.touched" #confPasswordSingup="ngModel" required>
-                        </div>
-                        <div class="alert alert-danger" role="alert" *ngIf="passInvalid">
-                            This is a danger alert with
+                            <label for="confPasswordSingup" class="text-secondary">Confirmar Constraseña</label>
+                            <input type="password" class="form-control" name="confPasswordSingup" formControlName="pass" [class.is-invalid]="passInvalid">
+                            <div class="invalid-feedback">
+                                Las contraseñas no son iguales
+                            </div>
                         </div>
                         <button type="submit" class="btn text-white" style="background-color: #d11507;">Crear Cuenta</button>
                     </form>

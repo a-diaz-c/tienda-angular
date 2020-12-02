@@ -8,7 +8,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { PAGES_ROUTES } from './pages.routes';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component'
 
 import {MatIconModule} from '@angular/material/icon';
@@ -31,6 +31,7 @@ import { FamiliasComponent } from './familias/familias.component';
     PAGES_ROUTES,
     SharedModule,
     FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
