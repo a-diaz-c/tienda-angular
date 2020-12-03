@@ -63,4 +63,9 @@ export class ProductoComponent implements OnInit {
     this.route.navigate(['/carrito']);
   }
 
+  cambiarRuta(){
+    this.productoService.setProductLocalStorage(this.producto);
+    this.route.navigate([this.ruta, this.producto.nombre]);
+  }
+
 }

@@ -1171,6 +1171,18 @@ export class ProductosService {
     } ); */
   }
 
+  setProductLocalStorage(producto: ProductoModel){
+    let fecha = new Date();
+    console.log(fecha);
+    producto['fecha'] = fecha;
+    console.log(producto);
+    localStorage.setItem('producto', JSON.stringify(producto));
+  }
+
+  getProductoLocalStorage(){
+    return localStorage.getItem('producto');
+  }
+
   getProductos(usuario: string){
     if(usuario === 'materialestellez')
       usuario = 'gruporoca';

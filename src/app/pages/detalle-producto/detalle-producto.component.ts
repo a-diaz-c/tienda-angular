@@ -12,7 +12,7 @@ import { ProductosService } from 'src/app/services/productos.service';
 })
 export class DetalleProductoComponent implements OnInit, OnDestroy  {
 
-  producto: ProductoModel;
+  producto: ProductoModel = new ProductoModel();
   cantidad: number = 1;
   image: string;
   imagenes: string [] = [];
@@ -27,28 +27,38 @@ export class DetalleProductoComponent implements OnInit, OnDestroy  {
               private renderer: Renderer2,
               public globalconfig: GlobalConfig,
               private metaService:Meta,
-              private titleService: Title) { }
+              private titleService: Title) { 
+    this.producto.nombre = "";
+    this.producto.descripcion = "";
+    this.producto.imagen = [];
+    this.producto.precio = 0;
+    this.producto.video = [];
+  }
   
 
   ngOnInit() {
     
-    
-    this.producto = this.productosService.buscarProducto(this.route.snapshot.paramMap.get('idProducto'));
-    console.log(this.producto);
-    //this.image = this.producto.imagen;
-    if(this.producto.otros){
-      if(this.producto.otros.color){
-        this.imagenes = this.producto.otros.color[0].image;
-      }
-    }
+  }
 
-    this.metaService.addTags( [{name:'title', content: this.producto.nombre},{ name:'description',content:"Article Description"}]);
-    
+  async cargarProducto(){
+    let producto: any = await this.productosService.getProductoLocalStorage();
+    if(producto != null){
+      producto = JSON.parse(producto);
+      console.log(producto);
+
+      this.producto.nombre = producto.nombre;
+      this.producto.descripcion = producto.descripcion;
+      this.producto.imagen = producto.imagen;
+      this.producto.precio = producto.precio;
+      this.producto.video = producto.video;
+      this.metaService.addTags( [{name:'title', content: this.producto.nombre},{ name:'description',content:"Article Description"}]);
+      this.carouselProducto();
+    }
   }
 
   ngAfterViewInit(){
+    this.cargarProducto();
     this.titleService.setTitle(this.producto.nombre);
-    this.carouselProducto();
   }
 
   ngOnDestroy(): void {
@@ -68,7 +78,7 @@ export class DetalleProductoComponent implements OnInit, OnDestroy  {
       let img = this.renderer.createElement('img');
       this.renderer.addClass(img, 'm-2');
       this.renderer.addClass(img, 'card-img-top');
-      this.renderer.setAttribute(img, 'src', this.image);
+      this.renderer.setAttribute(img, 'src', this.producto.imagen[0]);
       this.renderer.appendChild(div, img);
     }
     this.imagenes.forEach((element, index) => {

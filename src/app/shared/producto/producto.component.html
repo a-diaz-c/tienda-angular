@@ -1,12 +1,12 @@
 <div class="card">
     <div class="row justify-content-center">
-        <a routerLink="/producto/3510">
+        <a (click)="cambiarRuta()">
             <img  class="card-img-top img-card" src="{{producto.imagen[0]}}" alt="Card image cap" style="max-height: 200px; max-width: 200px;">
         </a>
     </div>
     <div class="card-body" style="flex: none;">
         <div class="row d-flex justify-content-center">
-            <a [routerLink]="[ruta, 3510]" ><h6 class="card-title">{{producto.nombre}}</h6></a>
+            <a (click)="cambiarRuta()"><h6 class="card-title">{{producto.nombre}}</h6></a>
         </div>
 
         <div class="row d-flex justify-content-center">

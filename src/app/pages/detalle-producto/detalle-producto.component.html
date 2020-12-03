@@ -2,7 +2,7 @@
     <div class="card m-2 ">
         <div class="row d-flex justify-content-center">
             <div class="col-lg-1 col-md-11 col-11 d-none d-lg-block">
-                <div class="btn-imagen" *ngFor="let imagen of imagenes" (click)="cambiarImagen(imagen)">
+                <div class="btn-imagen" *ngFor="let imagen of producto.imagen" (click)="cambiarImagen(imagen)">
                     <img class="card-img-top m-2" [src]="imagen" alt="Foto del producto">                    
                 </div>
                 <div class="btn-imagen" (click)="video = !video">
@@ -13,7 +13,8 @@
                 <img class="card-img-top m-2 d-none d-lg-block" [src]="producto.imagen[0]" alt="Foto del producto" *ngIf="!video" style="height: 40vh; max-width: 30vw;">
                 <div class="embed-responsive embed-responsive-16by9 d-none d-lg-block" *ngIf="video">
                     <video class="embed-responsive-item" controls>
-                        <source src="https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b" type="video/mp4">
+                        <iframe width="420" height="315" src="https://firebasestorage.googleapis.com/v0/b/database-app-1964b.appspot.com/o/Introducing%20Google%20Analytics%20for%20Firebase.mp4?alt=media&token=9df9a3a1-541a-4d39-8637-3198c18c879b">
+                        </iframe>
                     </video>
                 </div>
                 <div id="carouselExampleControls" class="carousel slide d-lg-none" data-ride="carousel" data-interval="false">
@@ -37,7 +38,7 @@
             <div class="col-lg-5 col col-md-12">
                 <h5 class="card-title m-2">{{producto.nombre}}</h5>
                 <h6 class="card-subtitle m-2 text-muted">Precio $ {{producto.precio | number: '1.2-2'}}</h6>
-                <div *ngIf="producto.otros">
+                <!-- <div *ngIf="producto.otros">
                     <div class="row" *ngIf="producto.otros.talla">
                         <div class="col ml-1 mt-1 mb-3">
                             <select id="inputState" class="form-control" style="border-radius: 10px; width: 100px;">
@@ -52,7 +53,7 @@
                                    (click)="cambiarColor(color.image)"></button>
                        </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="col-1 m-1">
